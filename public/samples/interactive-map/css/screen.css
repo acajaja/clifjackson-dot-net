@@ -1,0 +1,69 @@
+/* Normailize
+------------------------------------------------------------------------------*/
+html,body,button,footer,h1,h2,h3,h4,h5,h6,div,ul,ol,li,fieldset,img,p,span,form { margin: 0; padding: 0; }
+body { font-family: arial,helvetica,sans-serif; font-size: 62.5%; }
+a:active,
+a:link,
+a:visited { color: #E03497; text-decoration: underline; }
+a:hover { color: #E03497; text-decoration: none; }
+button,
+fieldset,
+img { border: none; }
+ul li,
+ol li { margin-left: 30px; }
+
+/* Page
+------------------------------------------------------------------------------*/
+#main_wrapper { overflow: hidden; margin: 0px auto; position: relative; width: 760px; }
+    #body_content { position: relative; }
+        #left-side { position: absolute; left: 0; padding: 25px 0 25px 25px; top: 0; width: 250px; z-index: 500; }
+            #left-side > h1 { color: #E03497; font-size: 2.2em; line-height: 1; margin-bottom: 6px; text-transform: uppercase; }
+            #left-side > p { line-height: 1.3; margin-bottom: 40px; }
+            #left-side p { color: #000; font-size: 1.3em; }
+            #user-cta { width: 200px; margin-top: 90px;}
+                #user-cta > h1 {
+                    background: #666666; /* Old browsers */
+                    background: -moz-linear-gradient(top, #666666 0%, #131313 59%); /* FF3.6+ */
+                    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#666666), color-stop(59%,#131313)); /* Chrome,Safari4+ */
+                    background: -webkit-linear-gradient(top, #666666 0%,#131313 59%); /* Chrome10+,Safari5.1+ */
+                    background: -o-linear-gradient(top, #666666 0%,#131313 59%); /* Opera 11.10+ */
+                    background: -ms-linear-gradient(top, #666666 0%,#131313 59%); /* IE10+ */
+                    background: linear-gradient(top, #666666 0%,#131313 59%); /* W3C */
+                    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#666666', endColorstr='#131313',GradientType=0); /* IE6-9 */
+                    border-radius: 5px 5px 0 0;
+                    color: #fff;
+                    font-size: 1.6em;
+                    line-height: 2;
+                    text-align: center;
+                }
+                #cta-body { background-color: #fff; border: 3px double #ccc; border-radius: 0 0 5px 5px; border-top: none; }
+                #cta-body p { padding: 5px 5px 15px 70px; }
+                    #cta-one { background: url('../images/user_cta_one.jpg') no-repeat 11% 40%; }
+                    #cta-two { background: url('../images/user_cta_two.jpg') no-repeat 11% 10%; }
+
+        #map_section { background-color: #f3f3f3; }
+
+    #footer { background-color: #E03497; height: 30px; padding: 5px 0; }
+
+/* Tool Tips
+------------------------------------------------------------------------------*/
+.qtip-content h1 {
+    position: absolute;
+    background-color: #E03497;
+    color: #fff;
+    font-size: 1.7em;
+    font-weight: bold;
+    height: 25px;
+    left: 5px;
+    padding-top: 5px;
+    text-align: center;
+    top: 5px;
+    width: 30px;
+}
+.qtip-content p {
+    color: #000;
+    font-size: 1.3em;
+    line-height: 1.2;
+    margin-left: 35px;
+}
+    .qtip-content p a { color: #E03497; text-decoration: none; }

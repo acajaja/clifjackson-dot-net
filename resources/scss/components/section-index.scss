@@ -1,0 +1,46 @@
+/* Index page links */
+.index-page-link
+{
+    display: block;
+    height: 180px;
+    padding: 10px 0;
+    position: relative;
+    transition-property: opacity;
+    transition-duration: 0.5s;
+    /*-webkit-transition-property: opacity;
+    -webkit-transition-duration: 0.5s;*/
+}
+    .button-image
+    {
+        border-radius: 50%;
+        height: 150px;
+        left: 15px;
+        position: absolute;
+        top: 25px;
+        width: 150px;
+    }
+    .circle-border
+    {
+        border-radius: 50%;
+        height: 180px;
+        left: 0;
+        position: absolute;
+        top: 10px;
+        width: 180px;
+    }
+    .index-page-link > span
+    {
+        color: #000;
+        display: block;
+        font-size: 48px;
+        padding: 59px 0 0 218px;
+    }
+
+html.no-touch .index-page-link
+{
+    opacity: 0.5;
+}
+html.no-touch .index-page-link:hover
+{
+    opacity: 1;
+}

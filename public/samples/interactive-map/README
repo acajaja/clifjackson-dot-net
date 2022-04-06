@@ -1,0 +1,58 @@
+March 2012 Eukanuba Europe Facebook Page
+by Clif Jackson
+
+OVERVIEW
+--------------------------------------------------------------------------------
+
+- File Structure
+- Dependencies
+- Use
+
+--------------------------------------------------------------------------------
+Structure
+
+index.html uses the following files:
+
+    /js/jQuery 1.7.1
+    /js/qtip-1.0.0-rc3 (jQuery plugin for tool tips)
+    /js/raphael-min.js Raphael Vector Library
+    /js/world.js
+    /js/map-logic.js
+
+    /css/screen.css
+
+    /images
+
+--------------------------------------------------------------------------------
+Dependencies
+
+Raphael
+
+This page uses the Raphael vector library to render the appropriate map vectors
+for a particular browser. It handles compatibility with IE 7-9.
+
+http://raphaeljs.com/
+
+jQuery & jQuery Qtip Plugin
+
+jQuery is used as the base JavaScript library and Qtip adds to that to provide
+the popup when you mouse over an active country.
+
+http://jquery.com
+http://craigsworks.com/projects/qtip/
+
+Map Logic and Events
+
+/js/map-logic.js provides the overall map logic including setting up the "paper",
+setting which countries are active and parsing the data in /js/world.js, which
+contains the coordinates and links for each country.
+
+/js/world.js is set up as a JavaScript object with the country codes as keys for
+each entry.
+
+--------------------------------------------------------------------------------
+Use
+
+The active countries can be changed simply by editing the variable
+"_active_countries" in /js/map-logic.js. Just add or remove country codes to add
+or remove active countries from the map.

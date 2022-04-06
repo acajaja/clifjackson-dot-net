@@ -1,0 +1,101 @@
+/* Home Page */
+body
+{
+    background-color: #fff;
+}
+#top-right-corner-bg
+{
+    background-position: right top;
+}
+#background-bg
+{
+	background-image: url('http://media.clifjackson.net/images/IMG_20141215_100508-ME.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+#container
+{
+    height: 420px;
+    left: 50%;
+    margin: -212px 0px 0px -272px;
+    position: absolute;
+    top: 50%;
+    width: 550px;
+}
+    #container a
+	{
+        color: #333;
+        font-family: "Japanese Brush";
+        text-decoration: none;
+    }
+    #container a:hover
+	{
+        color: #000;
+        text-decoration: underline;
+    }
+    .circle
+	{
+        background-repeat: no-repeat;
+        height: 342px;
+        position: absolute;
+        width: 342px;
+    }
+    .in-btwn-box
+	{
+        font-size: 16px;
+        left: 50%;
+        margin: -12px 0 0 -61px;
+        position: absolute;
+        text-align: center;
+        top: 50%;
+        transform: rotate(-68deg);
+        -webkit-transform: rotate(-68deg);
+        width: 118px;
+    }
+    #circleA
+	{
+        background-image: url('http://media.clifjackson.net/images/circle-1b.png');
+        left: 0px;
+        top: 0px;
+    }
+    #circleB
+	{
+        background-image: url('http://media.clifjackson.net/images/circle-2.png');
+        bottom: 0px;
+        right: 0px;
+    }
+        .circle > p:first-child
+		{
+            font-size: 34px;
+            font-weight: bold;
+            margin: 0px;
+            padding: 0px;
+            left: 50%;
+            position: absolute;
+            text-align: center;
+            top: 50%;
+        }
+        #circleA > p:first-child
+		{
+            margin: -26px 0px 0px -75px;
+            width: 110px;
+        }
+        #circleB > p:first-child
+		{
+            margin: -26px 0px 0px -47px;
+            width: 145px;
+        }
+
+#my-name {
+    position: absolute;
+}
+    #my-name > p:first-child {
+        color: #a0a0a0;
+        padding: 1px 0 0 5px;
+        font-style: italic;
+    }

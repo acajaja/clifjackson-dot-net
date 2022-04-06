@@ -1,0 +1,51 @@
+# Default setting
+FileETag MTime Size
+
+<IfModule mod_headers.c>
+    SetEnvIfNoCase Origin "^http:\/\/(([testing|www]*\.)?clifjackson\.net|sandboxes\.jazzopetry\.net|me\.local)" CLIF=$0
+    Header add Access-Control-Allow-Methods "GET"
+    Header add Access-Control-Allow-Origin %{CLIF}e env=CLIF
+</IfModule>
+
+<IfModule mod_deflate.c>
+    # compress text, html, javascript, css, xml:
+    AddOutputFilterByType DEFLATE application/json
+    <FilesMatch "\.json$">
+        SetOutputFilter DEFLATE
+    </FilesMatch>
+</IfModule>
+
+# Set expiration dates
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault "access plus 1 month"
+    ExpiresByType image/x-icon "access plus 3 months"
+    ExpiresByType application/json "access plus 2 weeks"
+    ExpiresByType image/gif "access plus 2 weeks"
+    ExpiresByType image/jpeg "access plus 2 weekss"
+    ExpiresByType image/png "access plus 2 weeks"
+    ExpiresByType application/x-shockwave-flash "access plus 6 months"
+    ExpiresByType video/webm "access plus 1 week"
+    ExpiresByType video/ogg "access plus 1 week"
+    ExpiresByType video/mp4 "access plus 1 week"
+    ExpiresByType application/ogg "access plus 1 week"
+    ExpiresByType audio/ogg "access plus 1 week"
+    ExpiresByType audio/mp3 "access plus 1 week"
+</IfModule>
+
+<IfModule mod_env.c>
+    <IfModule mod_rewrite.c>
+        RewriteEngine On
+        RewriteBase /
+
+        RewriteCond %{HTTP_REFERER} !^$
+        RewriteCond %{ENV:APPLICATION_ENV} ^testing$
+        RewriteCond %{HTTP_REFERER} !^http(s)?:\/\/(testing\.)?clifjackson.net [NC]
+        RewriteRule \.(jpg|jpeg|png|gif|mp3|ogg|mp4|webm|ogv)$ http://hpmouse.googlepages.com/hotlink.gif [NC,R,L]
+
+        RewriteCond %{HTTP_REFERER} !^$
+        RewriteCond %{ENV:APPLICATION_ENV} ^production$
+        RewriteCond %{HTTP_REFERER} !^http(s)?:\/\/(www\.)?clifjackson.net [NC]
+        RewriteRule \.(jpg|jpeg|png|gif|mp3|ogg|mp4|webm|ogv)$ http://hpmouse.googlepages.com/hotlink.gif [NC,R,L]
+    </IfModule>
+</IfModule>

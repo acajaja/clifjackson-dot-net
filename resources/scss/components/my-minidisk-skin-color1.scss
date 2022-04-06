@@ -1,0 +1,721 @@
+@import 'base';
+
+$white-circle-gradient-A: #f7f0e3;
+$white-circle-gradient-B: #efd7b6;
+
+@mixin bgGradient-general($start, $end)
+{
+    background: $start;
+    background: -moz-radial-gradient(100px 100px, ellipse cover, $start 0%, $end 47%);
+    background: -webkit-gradient(radial, 100px 100px, 0px, center center, 100%, color-stop(0%,$start), color-stop(47%,$end));
+    background: -webkit-radial-gradient(100px 100px, ellipse cover, $start 0%,$end 47%);
+    background: -o-radial-gradient(100px 100px, ellipse cover, $start 0%,$end 47%);
+    background: -ms-radial-gradient(100px 100px, ellipse cover, $start 0%,$end 47%);
+    background: radial-gradient(ellipse at 100px 100px, $start 0%,$end 47%);
+}
+
+/**/
+
+article > section {
+	height: 100%;
+	width: 100%;
+}
+input:disabled,
+button:disabled {
+	cursor: default;
+    opacity: 0.5;
+}
+
+/* HTML5 Audio Player Styles*/
+.html5-audio-player {
+	height: 450px;
+	margin: 0 auto;
+	position: relative;
+	width: 610px;
+}
+	/* All buttons */
+	.html5-audio-player button {
+		background-color: transparent;
+		border: none;
+		outline: none;
+		padding: 0;
+	}
+	.html5-audio-player > div {
+		position: absolute;
+	}
+	/* Logo */
+	.my-minidisk-skin .player-logo {
+		font-family: $header-fonts;
+		left: 280px;
+		text-align: center;
+		top: 37px;
+		width: 90px;
+	}
+		.my-minidisk-skin .player-logo > p {
+			margin: 0;
+		}
+		.my-minidisk-skin .player-logo > p:first-child {
+			font-size: 36px;
+		}
+		.my-minidisk-skin .player-logo > p:nth-child(2) {
+			font-size: 24px;
+			transform: translate(0px, -18px);
+			-webkit-transform: translate(0px, -18px);
+		}
+
+	/* Player Backgrounds */
+	.my-minidisk-skin .player-bg-box {
+		height: 100%;
+		width: 100%;
+	}
+		.my-minidisk-skin .player-bg-box > div {
+			position: absolute;
+		}
+		.my-minidisk-skin .outer-circle-bg {
+			background-color: #ddd7cc;
+			border-radius: 16px;
+			height: 250px;
+			top: 100px;
+			width: 610px;
+		}
+		.my-minidisk-skin .outer-circle-frame {
+			background-color: #ddd7cc;
+			backface-visibility: hidden;
+			border-radius: 50%;
+			height: 450px;
+			left: 100px;
+			width: 450px;
+		}
+		.my-minidisk-skin .play-stop-bg-box {
+			background-color: #f7f0e3;
+			border: 1px solid #77746e;
+			border-bottom-right-radius: 9px;
+			border-top-right-radius: 9px;
+			height: 198px;
+			right: 25px;
+			top: 125px;
+			width: 102px;
+		}
+
+		.my-minidisk-skin .white-circle {
+            @include bgGradient-general($white-circle-gradient-A, $white-circle-gradient-B);
+
+			border: 1px solid #000;
+			border-color: #ccc #77746e #77746e #ccc;
+			border-radius: 50%;
+			height: 398px;
+			left: 125px;
+			top: 25px;
+			width: 398px;
+		}
+		.my-minidisk-skin .user-screen-bg {
+			background-color: #f7f0e3;
+			border: 1px solid #77746e;
+			border-top-right-radius: 100px;
+			border-bottom-right-radius: 100px;
+			border-top-left-radius: 9px;
+			border-bottom-left-radius: 9px;
+			height: 198px;
+			left: 25px;
+			top: 125px;
+			width: 412px;
+		}
+
+	/* Player controls */
+	.my-minidisk-skin .player-controls-box {
+		height: 100%;
+		width: 100%;
+	}
+        .my-minidisk-skin .player-controls-box > div {
+            position: absolute;
+        }
+		.my-minidisk-skin .player-controls-box button {
+			display: block;
+		}
+
+		/* Play/pause button */
+		.my-minidisk-skin .play-stop-btn-box {
+			height: 196px;
+			right: 27px;
+			top: 127px;
+			width: 70px;
+		}
+			.my-minidisk-skin .play-btn {
+				height: 196px;
+                transform: translate(0px, 0px);
+				width: 100%;
+				-webkit-transform: translate(0px, 0px);
+			}
+                .my-minidisk-skin .play-btn > span {
+					background-image: url('http://media.clifjackson.net/images/player-buttons-sprite.png');
+                    background-repeat: no-repeat;
+					display: block;
+                    height: 24px;
+					width: 24px;
+					transform: translate(30px, 0px);
+                    -webkit-transform: translate(30px, 0px);
+                }
+				.my-minidisk-skin.paused .play-btn > span {
+					background-position: -1px -4px;
+				}
+                .my-minidisk-skin.playing .play-btn > span {
+                    background-position: -28px -4px;
+                }
+
+		/* Other controls */
+		.my-minidisk-skin .round-buttons {
+			height: 180px;
+			right: 84px;
+			top: 129px;
+			width: 100px;
+		}
+			.my-minidisk-skin .round-buttons p {
+				font-size: 14px;
+				margin-bottom: 0;
+			}
+
+            /* Playlist, Autoplay, Volume buttons */
+			.my-minidisk-skin .autoplay-btn-box,
+			.my-minidisk-skin .playlist-btn-box,
+			.my-minidisk-skin .volume-button-box {
+				height: 60px;
+				text-align: right;
+				width: 80px;
+			}
+				.my-minidisk-skin .autoplay-btn,
+				.my-minidisk-skin .playlist-btn,
+				.my-minidisk-skin .volume-button {
+					background-color: #3f3f3f;
+					border-bottom: 1px solid #000;
+					border-left: 1px solid #ccc;
+					border-right: 1px solid #000;
+					border-top: 1px solid #ccc;
+					border-radius: 50%;
+					height: 30px;
+					width: 30px;
+				}
+
+			/* Autoplay button */
+			.my-minidisk-skin .autoplay-btn-box {
+				transform: translate(-12px, 0px);
+				-webkit-transform: translate(-12px, 0px);
+			}
+				.my-minidisk-skin .autoplay-btn-box > p:first-child {
+					margin-right: 12px;
+				}
+					.my-minidisk-skin .autoplay-btn {
+						background-image: url('http://media.clifjackson.net/images/player-buttons-sprite.png');
+						background-position: -212px -1px;
+						background-repeat: no-repeat;
+						transform: translateX(50px);
+						-webkit-transform: translateX(50px);
+					}
+					.my-minidisk-skin.autoplay .autoplay-btn {
+						background-position: -254px -1px;
+					}
+
+			/* Volume button */
+			.my-minidisk-skin .volume-button-box {
+				transform: translate(-12px, 0px);
+				-webkit-transform: translate(-12px, 0px);
+			}
+				.my-minidisk-skin .volume-button-box > p:first-child {
+					margin-left: 37px;
+				}
+					.my-minidisk-skin .volume-button {
+						background-image: url('http://media.clifjackson.net/images/player-buttons-sprite.png');
+						background-position: -309px 0;
+						background-repeat: no-repeat;
+						transform: translateX(50px);
+						-webkit-transform: translateX(50px);
+					}
+					.my-minidisk-skin .volume-button.active
+                    {
+                        background-position: -340px 0;
+                    }
+                    .my-minidisk-skin.muted .volume-button
+                    {
+                        background-position: -371px 0;
+                    }
+
+                .my-minidisk-skin .volume-slider-mute-box
+                {
+                    background-color: #3f3f3f;
+                    border-radius: 7px;
+                    cursor: pointer;
+                    height: 120px;
+                    opacity: 0;
+                    padding: 15px;
+                    position: absolute;
+                    right: 106px;
+                    top: 103px;
+                    transition: opacity 0.3s;
+                    z-index: -1;
+                    width: 20px;
+                    -webkit-transition: opacity 0.3s;
+                }
+                .my-minidisk-skin .volume-slider-mute-box.play
+                {
+                    opacity: 1;
+                    z-index: 100;
+                }
+                    .my-minidisk-skin .volume-slider
+                    {
+                        background: none;
+                        display: block;
+                        height: 80px;
+                        margin: 0 auto 14px;
+                        width: 20px;
+                        writing-mode: bt-lr;
+                        -webkit-appearance: slider-vertical;
+                    }
+                    .my-minidisk-skin .volume-slider-mute-box > .mute-button
+                    {
+                        color: #fff;
+                        font-weight: bold;
+                        height: 25px;
+                        text-align: center;
+                        width: 100%;
+                    }
+
+                .my-minidisk-skin .range-input::-webkit-slider-thumb
+                {
+					background-image: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#f5f6f6), color-stop(21%,#dbdce2), color-stop(49%,#b8bac6), color-stop(80%,#dddfe3), color-stop(100%,#f5f6f6));
+					background-image: -webkit-radial-gradient(center, ellipse cover, #f5f6f6 0%,#dbdce2 21%,#b8bac6 49%,#dddfe3 80%,#f5f6f6 100%);
+					background-image: radial-gradient(ellipse at center, #f5f6f6 0%,#dbdce2 21%,#b8bac6 49%,#dddfe3 80%,#f5f6f6 100%);
+					border: none;
+                    box-shadow: 0 0 2px #c3c3c3;
+                    cursor: pointer;
+					height: 16px;
+                    outline: none;
+					width: 16px;
+				}
+                .my-minidisk-skin .range-input:focus::-webkit-slider-thumb
+                {
+					background-image: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(12%,#c9e2b5), color-stop(50%,#61c419), color-stop(100%,#b4e391));
+					background-image: -webkit-radial-gradient(center, ellipse cover, #c9e2b5 12%,#61c419 50%,#b4e391 100%);
+					background-image: radial-gradient(ellipse at center, #c9e2b5 12%,#61c419 50%,#b4e391 100%);
+                    outline: none;
+				}
+
+				/* Firefox */
+				.my-minidisk-skin .range-input::-moz-range-track {
+					border-radius: 3px;
+				}
+				.my-minidisk-skin .range-input::-moz-range-thumb {
+					background: #f5f6f6; /* Old browsers */
+					background: -moz-radial-gradient(center, ellipse cover, #f5f6f6 0%, #dbdce2 21%, #b8bac6 49%, #dddfe3 80%, #f5f6f6 100%); /* FF3.6+ */
+					background: radial-gradient(ellipse at center, #f5f6f6 0%,#dbdce2 21%,#b8bac6 49%,#dddfe3 80%,#f5f6f6 100%); /* W3C */
+					border: 1px solid #5f5f5f;
+					border-radius: 50%;
+					box-shadow: 0 0 2px #c3c3c3;
+					height: 14px;
+					width: 14px;
+				}
+				.my-minidisk-skin .range-input:focus::-moz-range-thumb {
+					background: #c9e2b5;
+					background: -moz-radial-gradient(center, ellipse cover, #c9e2b5 12%, #61c419 50%, #b4e391 100%);
+					background: radial-gradient(ellipse at center, #c9e2b5 12%,#61c419 50%,#b4e391 100%);
+				}
+				/*hide the outline behind the border*/
+				.my-minidisk-skin .range-input:-moz-focusring {
+					outline: none;
+					outline-offset: -1px;
+				}
+
+				/* IE */
+				.my-minidisk-skin .volume-slider::-ms-track,
+				.my-minidisk-skin .volume-slider:focus::-ms-track {
+					border: none;
+					color: transparent;
+					height: 7px;
+					width: 100%;
+				}
+				.my-minidisk-skin .volume-slider::-ms-fill-lower,
+				.my-minidisk-skin .volume-slider:focus::-ms-fill-lower {
+					background: #777;
+					outline: none;
+				}
+				.my-minidisk-skin .volume-slider::-ms-thumb {
+					background: #f5f6f6; /* Old browsers */
+					background: -ms-radial-gradient(center, ellipse cover, #f5f6f6 0%,#dbdce2 21%,#b8bac6 49%,#dddfe3 80%,#f5f6f6 100%); /* IE10+ */
+					background: radial-gradient(ellipse at center, #f5f6f6 0%,#dbdce2 21%,#b8bac6 49%,#dddfe3 80%,#f5f6f6 100%); /* W3C */
+					border: 1px solid #5f5f5f;
+					border-radius: 50%;
+					box-shadow: 0 0 2px #c3c3c3;
+					height: 14px;
+					width: 14px;
+				}
+				.my-minidisk-skin .volume-slider.active::-ms-thumb {
+					background: #c9e2b5;
+					background: -ms-radial-gradient(center, ellipse cover, #c9e2b5 12%,#61c419 50%,#b4e391 100%);
+					background: radial-gradient(ellipse at center, #c9e2b5 12%,#61c419 50%,#b4e391 100%);
+				}
+
+			/* Playlist button */
+			.my-minidisk-skin .playlist-btn-box {
+				/*transform: translate(300px, 84px);
+				-webkit-transform: translate(300px, 84px);*/
+			}
+				.my-minidisk-skin .playlist-btn-box > p:first-child {
+					margin-left: 26px;
+				}
+				.my-minidisk-skin .playlist-btn {
+					transform: translateX(50px);
+					-webkit-transform: translateX(50px);
+				}
+				.my-minidisk-skin .playlist-btn.active {
+					background: #c9de96; /* Old browsers */
+					background: -moz-radial-gradient(center, ellipse cover, #c9de96 0%, #8ab66b 44%, #398235 100%); /* FF3.6+ */
+					background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#c9de96), color-stop(44%,#8ab66b), color-stop(100%,#398235)); /* Chrome,Safari4+ */
+					background: -webkit-radial-gradient(center, ellipse cover, #c9de96 0%,#8ab66b 44%,#398235 100%); /* Chrome10+,Safari5.1+ */
+					background: -o-radial-gradient(center, ellipse cover, #c9de96 0%,#8ab66b 44%,#398235 100%); /* Opera 12+ */
+					background: -ms-radial-gradient(center, ellipse cover, #c9de96 0%,#8ab66b 44%,#398235 100%); /* IE10+ */
+					background: radial-gradient(ellipse at center, #c9de96 0%,#8ab66b 44%,#398235 100%); /* W3C */
+				}
+					.my-minidisk-skin .playlist-btn span {
+						display: block;
+					}
+					.my-minidisk-skin .playlist-btn > span {
+						background: #f2f5f6; /* Old browsers */
+						background: -moz-linear-gradient(45deg, #f2f5f6 0%, #e3eaed 37%, #c8d7dc 100%); /* FF3.6+ */
+						background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#f2f5f6), color-stop(37%,#e3eaed), color-stop(100%,#c8d7dc)); /* Chrome,Safari4+ */
+						background: -webkit-linear-gradient(45deg, #f2f5f6 0%,#e3eaed 37%,#c8d7dc 100%); /* Chrome10+,Safari5.1+ */
+						background: -o-linear-gradient(45deg, #f2f5f6 0%,#e3eaed 37%,#c8d7dc 100%); /* Opera 11.10+ */
+						background: -ms-linear-gradient(45deg, #f2f5f6 0%,#e3eaed 37%,#c8d7dc 100%); /* IE10+ */
+						background: linear-gradient(45deg, #f2f5f6 0%,#e3eaed 37%,#c8d7dc 100%); /* W3C */
+						border-radius: 1px;
+						height: 10px;
+						padding: 3px 2px;
+						transform: translateX(50%) skew(-10deg, 0deg);
+						width: 10px;
+						-webkit-transform: translateX(50%) skew(-10deg, 0deg);
+					}
+						.my-minidisk-skin .playlist-btn > span > span {
+							height: 1px;
+							border-bottom: 1px solid #333;
+							margin-bottom: 2px;
+						}
+
+		/* Time & progress display */
+        .my-minidisk-skin .time-progress-display {
+            height: 30px;
+			left: 27px;
+			top: 294px;
+            width: 347px;
+        }
+            .my-minidisk-skin .time-displays {
+                font-size: 14px;
+                height: 19px;
+                line-height: 1.3;
+                width: 50px;
+            }
+            .my-minidisk-skin .current-time {
+                text-align: right;
+				transform: translate(0px, 5px);
+				-webkit-transform: translate(0px, 5px);
+            }
+            .my-minidisk-skin .remaining-time {
+                transform: translate(296px, -14px);
+                -webkit-transform: translate(296px, -13px);
+            }
+			/* Load progress track */
+            .my-minidisk-skin .loading-progress-track {
+                border: 1px solid #000;
+				border-radius: 3.5px;
+                height: 7px;
+                margin: 0 60px;
+                transform: translateY(-27px);
+                -webkit-transform: translateY(-27px);
+            }
+				.my-minidisk-skin .loading-bar {
+                    background-color: #777;
+                    height: 7px;
+                    transform: translate(0px, 0px);
+					width: 0%;
+                    -webkit-transform: translate(0px, 0px);
+                }
+
+				/* All browsers, the whole range input element */
+                .my-minidisk-skin .seek-handle-box {
+					background: none;
+					cursor: pointer;
+                    height: 28px;
+                    margin: 0 60px;
+					transform: translateY(-47px);
+					width: 225px;
+					-webkit-appearance: none;
+					-webkit-transform: translateY(-50px);
+                }
+				.my-minidisk-skin .seek-handle-box:focus {
+					outline: none;
+				}
+				/* Webkit */
+				.my-minidisk-skin .seek-handle-box::-webkit-slider-runnable-track {
+					background: none;
+					border: none;
+					height: 7px;
+					width: 100%;
+				}
+				.my-minidisk-skin .seek-handle-box::-webkit-slider-thumb {
+					background: #f5f6f6; /* Old browsers */
+					background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#f5f6f6), color-stop(21%,#dbdce2), color-stop(49%,#b8bac6), color-stop(80%,#dddfe3), color-stop(100%,#f5f6f6)); /* Chrome,Safari4+ */
+					background: -webkit-radial-gradient(center, ellipse cover, #f5f6f6 0%,#dbdce2 21%,#b8bac6 49%,#dddfe3 80%,#f5f6f6 100%); /* Chrome10+,Safari5.1+ */
+					background: radial-gradient(ellipse at center, #f5f6f6 0%,#dbdce2 21%,#b8bac6 49%,#dddfe3 80%,#f5f6f6 100%); /* W3C */
+					border: 1px solid #5f5f5f;
+					border-radius: 50%;
+					box-shadow: 0 0 2px #c3c3c3;
+					height: 16px;
+					width: 16px;
+					-webkit-appearance: none;
+				}
+				.my-minidisk-skin .seek-handle-box.active::-webkit-slider-thumb {
+					background: #c9e2b5;
+					background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(12%,#c9e2b5), color-stop(50%,#61c419), color-stop(100%,#b4e391));
+					background: -webkit-radial-gradient(center, ellipse cover, #c9e2b5 12%,#61c419 50%,#b4e391 100%);
+					background: radial-gradient(ellipse at center, #c9e2b5 12%,#61c419 50%,#b4e391 100%);
+				}
+				.my-minidisk-skin .seek-handle-box:focus::-webkit-slider-runnable-track {
+					background: none;
+				}
+				/* Firefox */
+				.my-minidisk-skin .seek-handle-box::-moz-range-track {
+					background: none;
+					border: none;
+					height: 7px;
+					outline: none;
+					width: 100%;
+				}
+				.my-minidisk-skin .seek-handle-box::-moz-range-thumb {
+					background: #f5f6f6; /* Old browsers */
+					background: -moz-radial-gradient(center, ellipse cover, #f5f6f6 0%, #dbdce2 21%, #b8bac6 49%, #dddfe3 80%, #f5f6f6 100%); /* FF3.6+ */
+					background: radial-gradient(ellipse at center, #f5f6f6 0%,#dbdce2 21%,#b8bac6 49%,#dddfe3 80%,#f5f6f6 100%); /* W3C */
+					border: 1px solid #5f5f5f;
+					border-radius: 50%;
+					box-shadow: 0 0 2px #c3c3c3;
+					height: 14px;
+					width: 14px;
+				}
+				.my-minidisk-skin .seek-handle-box.active::-moz-range-thumb {
+					background: #c9e2b5;
+					background: -moz-radial-gradient(center, ellipse cover, #c9e2b5 12%, #61c419 50%, #b4e391 100%);
+					background: radial-gradient(ellipse at center, #c9e2b5 12%,#61c419 50%,#b4e391 100%);
+				}
+				/*hide the outline behind the border*/
+				.my-minidisk-skin .seek-handle-box:-moz-focusring {
+					outline: none;
+					outline-offset: -1px;
+				}
+				/* IE */
+				.my-minidisk-skin .seek-handle-box::-ms-track,
+				.my-minidisk-skin .seek-handle-box:focus::-ms-track {
+					border: none;
+					color: transparent;
+					height: 7px;
+					width: 100%;
+				}
+				.my-minidisk-skin .seek-handle-box::-ms-fill-lower,
+				.my-minidisk-skin .seek-handle-box:focus::-ms-fill-lower {
+					background: #777;
+					outline: none;
+				}
+				.my-minidisk-skin .seek-handle-box::-ms-thumb {
+					background: #f5f6f6; /* Old browsers */
+					background: -ms-radial-gradient(center, ellipse cover, #f5f6f6 0%,#dbdce2 21%,#b8bac6 49%,#dddfe3 80%,#f5f6f6 100%); /* IE10+ */
+					background: radial-gradient(ellipse at center, #f5f6f6 0%,#dbdce2 21%,#b8bac6 49%,#dddfe3 80%,#f5f6f6 100%); /* W3C */
+					border: 1px solid #5f5f5f;
+					border-radius: 50%;
+					box-shadow: 0 0 2px #c3c3c3;
+					height: 14px;
+					width: 14px;
+				}
+				.my-minidisk-skin .seek-handle-box.active::-ms-thumb {
+					background: #c9e2b5;
+					background: -ms-radial-gradient(center, ellipse cover, #c9e2b5 12%,#61c419 50%,#b4e391 100%);
+					background: radial-gradient(ellipse at center, #c9e2b5 12%,#61c419 50%,#b4e391 100%);
+				}
+
+		/* Previous & next track buttons */
+		.my-minidisk-skin .track-buttons-box {
+			bottom: 70px;
+			height: 32px;
+			left: 230px;
+			width: 190px;
+		}
+			.my-minidisk-skin .next-track-btn,
+			.my-minidisk-skin .prev-track-btn {
+				background-image: url('http://media.clifjackson.net/images/player-buttons-sprite.png');
+				background-color: #333;
+				background-repeat: no-repeat;
+				border-radius: 50%;
+				border-bottom: 1px solid #000;
+				border-left: 1px solid #ccc;
+				border-right: 1px solid #000;
+				border-top: 1px solid #ccc;
+				color: #fff;
+				font-size: 18px;
+				height: 30px;
+				line-height: 1;
+				text-align: center;
+				text-shadow: 0 0 2px #000, 0 0 2px #000, 0 0 2px #000;
+				width: 80px;
+			}
+			.my-minidisk-skin .next-track-btn {
+				background-position: -53px 0px;
+				transform: translate(108px, -30px);
+				-webkit-transform: translate(108px, -30px);
+			}
+			.my-minidisk-skin .prev-track-btn {
+				background-position: -120px 0px;
+			}
+
+	/* Display screen */
+    .my-minidisk-skin .user-screen {
+        height: 169px;
+        left: 27px;
+        top: 125px;
+        width: 400px;
+    }
+
+        /* Header Box */
+		.my-minidisk-skin .screen-title {
+			font-family:$header-fonts;
+			font-size: 18px;
+			margin: 0;
+			padding: 7px 0 3px 12px;
+		}
+
+        /* Playlist Box */
+        .my-minidisk-skin .playlist-container {
+            border-radius: 0 20px 20px 0;
+            border: 1px solid #b7b7b7;
+            border-left: none;
+            box-shadow: 0 10px 10px -10px #C3C3C3 inset, 0 -10px 10px -10px #C3C3C3 inset;
+            height: 115px;
+            margin: -2px 50px 0 0;
+            overflow: hidden;
+            padding: 8px 8px 8px 0;
+        }
+            .my-minidisk-skin .playlist-container-overflow {
+                height: 100%;
+                overflow-y: auto;
+            }
+            .my-minidisk-skin .playlist-scroll-box {
+                font-size: 12px;
+                list-style-position: inside;
+                margin: 0 18px 0 0;
+                padding: 0 0 0 5px;
+            }
+                .my-minidisk-skin .playlist-scroll-box > li {
+                    padding: 3px;
+                }
+                .my-minidisk-skin .playlist-scroll-box > li:last-child {
+                    margin-bottom: 25px;
+                }
+                .my-minidisk-skin .current {
+                    background-color: #5f5f5f;
+					border-radius: 0px 5px 5px 0px;
+                }
+                .my-minidisk-skin .current,
+                .my-minidisk-skin .current > button:first-child {
+                    color: #fff;
+                    font-style: italic;
+                }
+                    .my-minidisk-skin .playlist-scroll-box button {
+                        text-align: left;
+                    }
+
+            /* Sliding Info Screen */
+            .my-minidisk-skin .info-screen {
+                background-color: #e3e3e3;
+                border-top-right-radius: 19px;
+                border-bottom-right-radius: 19px;
+                height: 115px;
+                overflow: hidden;
+                padding: 8px;
+                transform: translate(360px, -123px);
+                transition-duration: 0.3s;
+                transition-timing-function: ease-in-out;
+                transition-property: transform;
+                width: 333px;
+                -webkit-transform: translate(360px, -123px);
+                -webkit-transition-duration: 0.3s;
+                -webkit-transition-timing-function: ease-in-out;
+                -webkit-transition-property: transform;
+            }
+            .my-minidisk-skin .info-screen.play {
+                transform: translate(0px, -123px);
+                -webkit-transform: translate(0px, -123px);
+            }
+            .my-minidisk-skin .info-screen.fast {
+                transition-duration: 0s;
+                -webkit-transition-duration: 0s;
+            }
+                .my-minidisk-skin .info-scroll-overflow {
+                    font-size: 12px;
+                    height: 100%;
+                    overflow-y: auto;
+                }
+                    .my-minidisk-skin .info-content-box {
+                        padding-right: 18px;
+                    }
+                        .my-minidisk-skin .info-content-box > p {
+                            line-height: 1.2;
+                            margin-bottom: 7px;
+                        }
+                        .my-minidisk-skin .info-content-box > p:first-child {
+                            font-weight: bold;
+                        }
+
+        /* AJAX Spinner */
+        .my-minidisk-skin .net-stat-box {
+			background: #EBF3F5 url('http://media.clifjackson.net/images/ajax-spinner-25sq.gif') no-repeat center;
+			display: none;
+			height: 131px;
+			opacity: 0;
+			transform: translate(0px, -254px);
+			transition-property: all;
+			transition-duration: 0.7s;
+			width: 360px;
+			-webkit-transform: translate(0px, -254px);
+			-webkit-transition-property: all;
+			-webkit-transition-duration: 0.7s;
+		}
+		.my-minidisk-skin .net-stat-box.play {
+			display: block;
+			opacity: 1;
+		}
+
+		/* Info Button */
+		.my-minidisk-skin .info-button-box {
+			height: 25px;
+            position: absolute;
+            right: 5px;
+            top: 89px;
+			width: 25px;
+		}
+            .my-minidisk-skin .info-button {
+                background: #e2e2e2; /* Old browsers */
+				background: -moz-radial-gradient(center, ellipse cover, #e2e2e2 0%, #dbdbdb 50%, #d1d1d1 51%, #fefefe 100%); /* FF3.6+ */
+				background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#e2e2e2), color-stop(50%,#dbdbdb), color-stop(51%,#d1d1d1), color-stop(100%,#fefefe)); /* Chrome,Safari4+ */
+				background: -webkit-radial-gradient(center, ellipse cover, #e2e2e2 0%,#dbdbdb 50%,#d1d1d1 51%,#fefefe 100%); /* Chrome10+,Safari5.1+ */
+				background: -o-radial-gradient(center, ellipse cover, #e2e2e2 0%,#dbdbdb 50%,#d1d1d1 51%,#fefefe 100%); /* Opera 12+ */
+				background: -ms-radial-gradient(center, ellipse cover, #e2e2e2 0%,#dbdbdb 50%,#d1d1d1 51%,#fefefe 100%); /* IE10+ */
+				background: radial-gradient(ellipse at center, #e2e2e2 0%,#dbdbdb 50%,#d1d1d1 51%,#fefefe 100%); /* W3C */
+                border-radius: 50%;
+				color: #ccc;
+				height: 25px;
+                width: 25px;
+            }
+			.my-minidisk-skin .info-button.has-info {
+				background: #c9de96; /* Old browsers */
+				background: -moz-radial-gradient(center, ellipse cover, #c9de96 0%, #8ab66b 44%, #398235 100%); /* FF3.6+ */
+				background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#c9de96), color-stop(44%,#8ab66b), color-stop(100%,#398235)); /* Chrome,Safari4+ */
+				background: -webkit-radial-gradient(center, ellipse cover, #c9de96 0%,#8ab66b 44%,#398235 100%); /* Chrome10+,Safari5.1+ */
+				background: -o-radial-gradient(center, ellipse cover, #c9de96 0%,#8ab66b 44%,#398235 100%); /* Opera 12+ */
+				background: -ms-radial-gradient(center, ellipse cover, #c9de96 0%,#8ab66b 44%,#398235 100%); /* IE10+ */
+				background: radial-gradient(ellipse at center, #c9de96 0%,#8ab66b 44%,#398235 100%); /* W3C */
+				border: 1px solid #6F6F6F;
+				color: #fff;
+				font-weight: bold;
+			}
