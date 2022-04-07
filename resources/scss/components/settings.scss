@@ -1,3 +1,20 @@
 $general-fonts: open_sansregular,helvetica,arial,sans-serif;
 $header-fonts: open_sanssemibold,sans-serif;
-$easing: .54,.3,.72,.68;
+$easing: 0.54, 0.3, 0.72, 0.68;
+
+// Colors
+$homePageLinkColor: #333;
+$homePageLinkHoverColor: #000;
+$homePageNameColor: #a0a0a0;
+
+// Images
+$rainbowLeftSide: 'http://media.clifjackson.net/images/rainbow_corner-left-BW-340x137.png';
+$rainbowTopR: 'http://media.clifjackson.net/images/rainbow_top-right-BW-142x80.png';
+$circleA: 'http://media.clifjackson.net/images/circle-1b.png';
+$circleB: 'http://media.clifjackson.net/images/circle-2.png';
+
+// Font- Sizes
+$smallFont: 1.2rem;
+$mediumSmallFont: 1.6rem;
+$mediumFont: 2.4rem;
+$largeFont: 3.4rem;

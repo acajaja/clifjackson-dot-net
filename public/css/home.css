@@ -435,66 +435,137 @@ template {
 
 /* General tag level selectors
 -----------------------------------------------------------------------------*/
-html,
-body,
-#left-side-middle-bg,
-#top-right-corner-bg {
-  height: 100%;
-  width: 100%;
+html {
+  font-size: 62.5%;
 }
 
+@media (max-width: 450px) {
+  #container > #rings-links {
+    transform: scale(70%);
+  }
+}
+@media (min-width: 320px) and (max-width: 572px) {
+  #container {
+    grid-template-areas: "header header" "center center" ". .";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  #rings-links {
+    transform: scale(80%);
+  }
+}
+@media (min-width: 572px) {
+  #container {
+    grid-template-areas: "header header header" ". center ." ". . .";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+}
 body {
-  background-color: #efefef;
   font-family: open_sansregular, helvetica, arial, sans-serif;
-  position: relative;
 }
 
-a {
-  color: inherit;
-  font-family: inherit;
+#left-side-middle-bg {
+  background-image: url("http://media.clifjackson.net/images/rainbow_corner-left-BW-340x137.png");
+  background-position: left 42%;
+  background-repeat: no-repeat;
+  background-size: 28%;
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
 }
 
-a:hover {
+#top-right-corner-bg {
+  background-image: url("http://media.clifjackson.net/images/rainbow_top-right-BW-142x80.png");
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-size: 12%;
+  height: 100vh;
+  right: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+}
+
+#container {
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+}
+#container #my-name {
+  color: #a0a0a0;
+  font-size: 1.6rem;
+  font-style: italic;
+  grid-area: header;
+  padding: 1px 0 0 5px;
+  transform: rotate(0deg);
+}
+#container #my-name > p {
+  margin: 0;
+}
+#container #rings-links {
+  align-self: center;
+  display: grid;
+  grid-area: center;
+  grid-template-columns: repeat(15, 37px);
+  grid-template-rows: repeat(20, 20px);
+  justify-self: center;
+}
+#container #rings-links a {
+  color: #333;
+  font-family: "Japanese Brush";
   text-decoration: none;
 }
-
-h1, h2, h3, h4, h5, h6, p {
-  margin-top: 0;
+#container #rings-links a:hover {
+  color: #000;
+  text-decoration: underline;
 }
-
-h1, h2, h3, h4, h5, h6, strong,
-.myh1,
-.myh2 {
-  font-family: open_sanssemibold, sans-serif;
-  letter-spacing: -1px;
+#container #rings-links .circle {
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: grid;
+  grid-template-columns: repeat(3, 33%);
+  grid-template-rows: repeat(3, 33%);
+  height: 342px;
+  transform: rotate(0deg);
+  width: 342px;
 }
-
-blockquote {
-  color: #333;
-  font-style: italic;
-  margin-left: 6vw;
-  margin-right: 6vw;
+#container #rings-links .circle > p:first-child {
+  align-self: center;
+  font-size: 3.4rem;
+  font-weight: bold;
+  grid-row-start: 2;
+  grid-column-start: 2;
+  margin: 0px;
+  padding: 0px;
 }
-
-code {
-  font-size: 14px;
-  line-height: 1.2;
+#container #rings-links .in-btwn-box {
+  font-size: 1.6rem;
+  grid-column-start: 7;
+  grid-row-start: 10;
+  margin: 11px 0px 0 -7px;
+  transform-origin: center;
+  transform: rotate(-71deg);
+  width: 118px;
 }
-
-iframe {
-  border: none;
+#container #rings-links #circleA {
+  background-image: url("http://media.clifjackson.net/images/circle-1b.png");
+  grid-column-start: 1;
+  grid-row-start: 1;
 }
-
-/* CONTENT
------------------------------------------------------------------------------*/
-#content-box {
-  background-color: #fff;
-  position: relative;
+#container #rings-links #circleA > p:first-child {
+  width: 110px;
 }
-
-#main-section {
-  padding: 70px 0;
-  position: relative;
+#container #rings-links #circleB {
+  background-image: url("http://media.clifjackson.net/images/circle-2.png");
+  grid-column-start: 7;
+  grid-row-start: 4;
+}
+#container #rings-links #circleB > p:first-child {
+  width: 145px;
 }
 
 /* Cloud Animation & decorations */
@@ -525,248 +596,6 @@ iframe {
   100% {
     left: 100%;
   }
-}
-#left-side-middle-bg {
-  background-image: url("http://media.clifjackson.net/images/rainbow_corner-left-BW-340x137.png");
-  background-position: left 42%;
-  background-repeat: no-repeat;
-  background-size: 28%;
-  left: 0;
-  position: fixed;
-  top: 0;
-}
-
-#top-right-corner-bg {
-  background-image: url("http://media.clifjackson.net/images/rainbow_top-right-BW-142x80.png");
-  background-position: right 41px;
-  background-repeat: no-repeat;
-  background-size: 12%;
-  right: 0;
-  position: fixed;
-  top: 0;
-}
-
-#top-link-box {
-  padding: 10px 0;
-  text-align: right;
-}
-
-.credits-box {
-  text-align: center;
-}
-
-blockquote > .quote-src {
-  font-size: 14px;
-  text-align: right;
-  width: 100%;
-  display: inline-block;
-}
-
-/* GENERAL CLASS LEVEL SELECTORS
-------------------------------------------------------------------------------*/
-.clearfix:after {
-  visibility: hidden;
-  display: block;
-  font-size: 0;
-  content: " ";
-  clear: both;
-  height: 0;
-}
-
-.clouds {
-  background: #f9f9f9 url("http://media.clifjackson.net/images/rainbow_top-right-BW-142x80.png") no-repeat fixed right 40px;
-}
-
-.download-link {
-  background-image: url("http://media.clifjackson.net/images/icons/arrow-down-24-sprite.png");
-  background-position: 0 -24px;
-  background-repeat: no-repeat;
-  padding-left: 28px;
-}
-
-.download-link:hover {
-  background-position: 0 0;
-}
-
-.highlight-yellow {
-  background-color: yellow;
-}
-
-.line-height-1 {
-  line-height: 1;
-}
-
-.line-height-1half {
-  line-height: 1.5;
-}
-
-.myh1 {
-  font-size: 24px !important;
-  font-weight: bold;
-}
-
-.myh2 {
-  font-size: 20px !important;
-  font-weight: bold;
-}
-
-.bold-link {
-  font-weight: bold;
-  text-decoration: underline;
-}
-
-.textcenter {
-  text-align: center;
-}
-
-.top40 {
-  padding-top: 40px;
-}
-
-/* BODY FADE
-------------------------------------------------------------------------------*/
-.body-fade-in {
-  opacity: 1;
-}
-
-.body-fade-out {
-  opacity: 0;
-}
-
-/* SAMPLES IFRAME
-------------------------------------------------------------------------------*/
-.samples-iframe {
-  border: none;
-}
-
-.thumbnail-gallery > .thumb-link {
-  text-decoration: none;
-}
-
-#gallery-modal-root {
-  background-color: rgba(0, 0, 0, 0.92);
-  left: -10000px;
-  opacity: 0;
-  position: fixed;
-  top: 0;
-  transition: opacity 0.5s;
-  -webkit-transition: opacity 0.5s;
-  -webkit-transform: translateZ(0);
-}
-
-#beta-flag {
-  height: 70px;
-  left: 0;
-  position: fixed;
-  top: 41px;
-  width: 70px;
-}
-
-/* VIDEO IFRAMES
-+------------------------------------------------------------------------------*/
-.responsive-iframe-container {
-  position: relative;
-  height: 0;
-  overflow: hidden;
-}
-
-.responsive-iframe-container-16x9 {
-  padding-bottom: 56.25%;
-}
-
-.responsive-iframe-container > iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-/* Home Page */
-body {
-  background-color: #fff;
-}
-
-#beta-flag {
-  top: 0px;
-}
-
-#top-right-corner-bg {
-  background-position: right top;
-}
-
-#background-bg {
-  background-image: url("http://media.clifjackson.net/images/IMG_20141215_100508-ME.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-
-#container {
-  height: 420px;
-  left: 50%;
-  margin: -212px 0px 0px -272px;
-  position: absolute;
-  top: 50%;
-  width: 550px;
-}
-#container a {
-  color: #333;
-  font-family: "Japanese Brush";
-  text-decoration: none;
-}
-#container a:hover {
-  color: #000;
-  text-decoration: underline;
-}
-#container .circle {
-  background-repeat: no-repeat;
-  height: 342px;
-  position: absolute;
-  width: 342px;
-}
-#container .circle > p:first-child {
-  font-size: 34px;
-  font-weight: bold;
-  margin: 0px;
-  padding: 0px;
-  left: 50%;
-  position: absolute;
-  text-align: center;
-  top: 50%;
-}
-#container .in-btwn-box {
-  font-size: 16px;
-  left: 50%;
-  margin: -12px 0 0 -61px;
-  position: absolute;
-  text-align: center;
-  top: 50%;
-  transform: rotate(-68deg);
-  -webkit-transform: rotate(-68deg);
-  width: 118px;
-}
-#container #circleA {
-  background-image: url("http://media.clifjackson.net/images/circle-1b.png");
-  left: 0px;
-  top: 0px;
-}
-#container #circleA > p:first-child {
-  margin: -26px 0px 0px -75px;
-  width: 110px;
-}
-#container #circleB {
-  background-image: url("http://media.clifjackson.net/images/circle-2.png");
-  bottom: 0px;
-  right: 0px;
-}
-#container #circleB > p:first-child {
-  margin: -26px 0px 0px -47px;
-  width: 145px;
 }
 
 /*# sourceMappingURL=home.css.map*/

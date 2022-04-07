@@ -1,91 +1,173 @@
-/* Home Page */
-body
-{
-    background-color: #fff;
+@media (max-width: 450px) {
+    #container {
+        &> #rings-links {
+            transform: scale(70%);
+        }
+    }
 }
-#beta-flag
-{
-    top: 0px;
+@media (min-width: 320px) and (max-width: 572px) {
+    #container {
+        grid-template-areas:
+            "header header"
+            "center center"
+            ". .";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    #rings-links {
+        transform: scale(80%);
+    }
 }
-#top-right-corner-bg
-{
+
+@media (min-width: 572px) {
+    #container {
+        grid-template-areas:
+            "header header header"
+            ". center ."
+            ". . .";
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+}
+
+body {
+    font-family: $general-fonts;
+}
+
+#left-side-middle-bg {
+    background-image: url($rainbowLeftSide);
+    background-position: left 42%;
+    background-repeat: no-repeat;
+    background-size: 28%;
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+}
+#top-right-corner-bg {
+    background-image: url($rainbowTopR);
     background-position: right top;
-}
-#background-bg
-{
-	background-image: url('http://media.clifjackson.net/images/IMG_20141215_100508-ME.jpg');
-	background-repeat: no-repeat;
-	background-size: cover;
-	height: 100%;
-	left: 0;
-	position: absolute;
-	top: 0;
-	width: 100%;
+    background-repeat: no-repeat;
+    background-size: 12%;
+    height: 100vh;
+    right: 0;
+    position: fixed;
+    top: 0;
+    width: 100vw;
 }
 #container {
-    height: 420px;
-    left: 50%;
-    margin: -212px 0px 0px -272px;
-    position: absolute;
-    top: 50%;
-    width: 550px;
+    display: grid;
+    height: 100vh;
+    width: 100vw;
 
-    a {
-        color: #333;
-        font-family: "Japanese Brush";
-        text-decoration: none;
-    }
-    a:hover {
-        color: #000;
-        text-decoration: underline;
-    }
+    #my-name {
+        color: $homePageNameColor;
+        font-size: $mediumSmallFont;
+        font-style: italic;
+        grid-area: header;
+        padding: 1px 0 0 5px;
+        transform: rotate(0deg);
 
-    .circle {
-        background-repeat: no-repeat;
-        height: 342px;
-        position: absolute;
-        width: 342px;
-
-        &> p:first-child {
-            font-size: 34px;
-            font-weight: bold;
-            margin: 0px;
-            padding: 0px;
-            left: 50%;
-            position: absolute;
-            text-align: center;
-            top: 50%;
+        &> p {
+            margin: 0;
         }
     }
-    .in-btwn-box {
-        font-size: 16px;
-        left: 50%;
-        margin: -12px 0 0 -61px;
-        position: absolute;
-        text-align: center;
-        top: 50%;
-        transform: rotate(-68deg);
-        -webkit-transform: rotate(-68deg);
-        width: 118px;
-    }
-    #circleA {
-        background-image: url('http://media.clifjackson.net/images/circle-1b.png');
-        left: 0px;
-        top: 0px;
 
-        &> p:first-child {
-            margin: -26px 0px 0px -75px;
-            width: 110px;
+    #rings-links {
+        align-self: center;
+        display: grid;
+        grid-area: center;
+        grid-template-columns: repeat(15, 37px);
+        grid-template-rows: repeat(20, 20px);
+        justify-self: center;
+
+        a {
+            color: $homePageLinkColor;
+            font-family: "Japanese Brush";
+            text-decoration: none;
+        }
+        a:hover {
+            color: $homePageLinkHoverColor;
+            text-decoration: underline;
+        }
+
+        .circle {
+            background-repeat: no-repeat;
+            background-size: contain;
+            display: grid;
+            grid-template-columns: repeat(3, 33%);
+            grid-template-rows: repeat(3, 33%);
+            height: 342px;
+            transform: rotate(0deg);
+            width: 342px;
+
+            &> p:first-child {
+                align-self: center;
+                font-size: $largeFont;
+                font-weight: bold;
+                grid-row-start: 2;
+                grid-column-start: 2;
+                margin: 0px;
+                padding: 0px;
+            }
+        }
+        .in-btwn-box {
+            font-size: $mediumSmallFont;
+            grid-column-start: 7;
+            grid-row-start: 10;
+            margin: 11px 0px 0 -7px;
+            transform-origin: center;
+            transform: rotate(-71deg);
+            width: 118px;
+        }
+        #circleA {
+            background-image: url($circleA);
+            grid-column-start: 1;
+            grid-row-start: 1;
+
+            &> p:first-child {
+                width: 110px;
+            }
+        }
+        #circleB {
+            background-image: url($circleB);
+            grid-column-start: 7;
+            grid-row-start: 4;
+
+            &> p:first-child {
+                width: 145px;
+            }
         }
     }
-    #circleB {
-        background-image: url('http://media.clifjackson.net/images/circle-2.png');
-        bottom: 0px;
-        right: 0px;
+}
 
-        &> p:first-child {
-            margin: -26px 0px 0px -47px;
-            width: 145px;
-        }
+/* Cloud Animation & decorations */
+#floating-cloud-1 {
+    animation: cloud1 130s cubic-bezier($easing);
+    animation-iteration-count: infinite;
+    height: 50px;
+    left: -95px;
+    position: fixed;
+    top: 120px;
+    width: 94px;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation: cloud1 130s cubic-bezier($easing);
+}
+
+@keyframes cloud1 {
+    0% {
+      left: -95px;
+    }
+    100% {
+      left: 100%;
+    }
+}
+@-webkit-keyframes cloud1 {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      left: 100%;
     }
 }
