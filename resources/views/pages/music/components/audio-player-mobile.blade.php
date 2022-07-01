@@ -9,7 +9,7 @@
             </div>
             <div class="seek-box"><input class="range-input seek-handle-box" min="0" max="" type="range"></div>
         </div>
-        <div class="control-buttons clearfix">
+        <div class="control-buttons">
             <button class="prev-track-btn"><span class="button-inner"></span></button>
             <button class="play-btn"><span class="button-inner"></span></button>
             <button class="next-track-btn"><span class="button-inner"></span></button>

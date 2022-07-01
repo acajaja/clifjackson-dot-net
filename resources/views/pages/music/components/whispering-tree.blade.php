@@ -1,9 +1,9 @@
 
-    <section class="clearfix content-entry-box">
+    <section class="content-entry-box">
         <div class="media-box-150">
             <img src="http://media.clifjackson.net/images/discography/The-Escape-Cover-150.jpg"  alt="The Whispering Tree - The Escape">
         </div>
-        <div class="clearfix content-entry-info-box">
+        <div class="content-entry-info-box">
             <h2>The Escape</h2>
             <h3>April, 2013</h3>
             <p>

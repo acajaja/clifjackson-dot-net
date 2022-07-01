@@ -1,0 +1,50 @@
+#left-side-middle-bg {
+    background-image: url($rainbowLeftSide);
+    background-position: left 42%;
+    background-repeat: no-repeat;
+    background-size: 28%;
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+}
+#top-right-corner-bg {
+    background-image: url($rainbowTopR);
+    background-repeat: no-repeat;
+    background-size: 12%;
+    height: 100vh;
+    right: 0;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+}
+/* Cloud Animation & decorations */
+#floating-cloud-1 {
+    animation: cloud1 130s cubic-bezier($easing);
+    animation-iteration-count: infinite;
+    height: 50px;
+    left: -95px;
+    position: fixed;
+    top: 120px;
+    width: 94px;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation: cloud1 130s cubic-bezier($easing);
+}
+
+@keyframes cloud1 {
+    0% {
+      left: -95px;
+    }
+    100% {
+      left: 100%;
+    }
+}
+@-webkit-keyframes cloud1 {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      left: 100%;
+    }
+}

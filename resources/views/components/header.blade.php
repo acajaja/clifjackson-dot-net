@@ -1,7 +1,7 @@
 <header id="main-header">
-    @include('components.nav', ['nav' => $nav])
-
     <div id="header-text-box">
-
+        <a href="{{ route('home') }}" id="my-header-name" title="home">clifjackson.net</a>
     </div>
+
+    @include('components.nav', ['nav' => $nav])
 </header>

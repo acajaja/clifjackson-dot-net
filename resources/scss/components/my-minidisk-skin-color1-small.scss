@@ -1,0 +1,432 @@
+#content-box
+{
+    height: 100%;
+}
+input[type="range"],
+input[type="range"]:focus
+{
+    outline: none;
+}
+.audio #main-section
+{
+    height: 100%;
+    padding: 0;
+}
+    .my-minidisk-skin
+    {
+        color: #fff;
+    }
+        .my-minidisk-skin button
+        {
+            background-color: transparent;
+            border: none;
+            outline: none;
+            padding: 0;
+        }
+        .my-minidisk-skin p
+        {
+            margin: 0;
+        }
+    #my-boom-box
+    {
+        height: 100%;
+        position: relative;
+        width: 100%;
+    }
+
+/** BACKGROUND COLOR BOX
+------------------------------------------------------------------------------*/
+        .player-bg-box
+        {
+            background-color: #333;
+            height: 100%;
+            position: absolute;
+            width: 100%;
+        }
+            .outer-circle-bg,
+            .outer-circle-frame,
+            .play-stop-bg-box,
+            .white-circle,
+            .user-screen-bg
+            {
+                display: none;
+            }
+
+/** PLAYER CONTROLS BOX
+------------------------------------------------------------------------------*/
+        .player-controls-box
+        {
+            background-color: #202020;
+            bottom: 0;
+            height: 84px;
+            position: absolute;
+            width: 100%;
+        }
+            .control-buttons
+            {
+                bottom: 0;
+                box-sizing: border-box;
+                height: 48px;
+                padding: 0 10px;
+                position: absolute;
+                width: 100%;
+            }
+            .player-controls-box button
+            {
+                background-repeat: no-repeat;
+                height: 100%;
+                min-width: 38px;
+                width: 14.285%;
+            }
+            .player-controls-box button:disabled
+            {
+                cursor: none;
+                opacity: 0.5;
+            }
+                .button-inner
+                {
+                    background-repeat: no-repeat;
+                    display: block;
+                    height: 100%;
+                    margin: 0 auto;
+                    width: 38px;
+                }
+                .play-btn
+                {
+                    float: left;
+                }
+                    .play-btn > .button-inner
+                    {
+                        background-image: url('http://media.clifjackson.net/images/player-buttons-sprite.png');
+                        background-position: 2px center;
+                        width: 30px;
+                    }
+                    .html5-audio-player.playing .play-btn > .button-inner
+                    {
+                        background-position: -24px center;
+                    }
+
+                .autoplay-btn
+                {
+                    float: right;
+                }
+                    .autoplay-btn > .button-inner
+                    {
+                        background-image: url('http://media.clifjackson.net/images/player-buttons-sprite.png');
+                        background-position: -207px center;
+                    }
+                    .my-minidisk-skin.autoplay .autoplay-btn > .button-inner
+                    {
+                        background-position: -249px center;
+                    }
+
+                .playlist-btn
+                {
+                    float: right;
+                }
+                    .playlist-btn > .button-inner
+                    {
+                        background: #f2f5f6; /* Old browsers */
+                        background: -moz-linear-gradient(45deg, #f2f5f6 0%, #e3eaed 37%, #c8d7dc 100%); /* FF3.6+ */
+                        background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#f2f5f6), color-stop(37%,#e3eaed), color-stop(100%,#c8d7dc)); /* Chrome,Safari4+ */
+                        background: -webkit-linear-gradient(45deg, #f2f5f6 0%,#e3eaed 37%,#c8d7dc 100%); /* Chrome10+,Safari5.1+ */
+                        background: -o-linear-gradient(45deg, #f2f5f6 0%,#e3eaed 37%,#c8d7dc 100%); /* Opera 11.10+ */
+                        background: -ms-linear-gradient(45deg, #f2f5f6 0%,#e3eaed 37%,#c8d7dc 100%); /* IE10+ */
+                        background: linear-gradient(45deg, #f2f5f6 0%,#e3eaed 37%,#c8d7dc 100%); /* W3C */
+                        border-radius: 1px;
+                        height: 13px;
+                        margin: 0 auto;
+                        padding: 3px 2px;
+                        transform: skew(-10deg, 0deg);
+                        width: 14px;
+                        -webkit-transform: skew(-10deg, 0deg);
+                    }
+                        .playlist-btn.active > .button-inner {
+                            background: -moz-radial-gradient(center, ellipse cover, #c9de96 0%, #8ab66b 44%, #398235 100%); /* FF3.6+ */
+                            background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#c9de96), color-stop(44%,#8ab66b), color-stop(100%,#398235)); /* Chrome,Safari4+ */
+                            background: -webkit-radial-gradient(center, ellipse cover, #c9de96 0%,#8ab66b 44%,#398235 100%); /* Chrome10+,Safari5.1+ */
+                            background: -o-radial-gradient(center, ellipse cover, #c9de96 0%,#8ab66b 44%,#398235 100%); /* Opera 12+ */
+                            background: -ms-radial-gradient(center, ellipse cover, #c9de96 0%,#8ab66b 44%,#398235 100%); /* IE10+ */
+                            background: radial-gradient(ellipse at center, #c9de96 0%,#8ab66b 44%,#398235 100%); /* W3C */
+                        }
+                        .playlist-btn > .button-inner > span
+                        {
+                            display: block;
+                            height: 1px;
+                            border-bottom: 1px solid #333;
+                            margin-bottom: 2px;
+                        }
+
+                .volume-button
+                {
+                    float: right;
+                }
+                    .volume-button > .button-inner
+                    {
+                        background-image: url('http://media.clifjackson.net/images/player-buttons-sprite.png');
+                        background-position: -308px center;
+                        width: 30px;
+                    }
+                    .volume-button.active > .button-inner
+                    {
+                        background-position: -339px center;
+                    }
+                    .muted .volume-button > .button-inner
+                    {
+                        background-position: -371px center;
+                    }
+
+                .volume-slider-mute-box
+                {
+                    background-color: #3f3f3f;
+                    border-radius: 7px;
+                    bottom: 84px;
+                    cursor: pointer;
+                    height: 120px;
+                    opacity: 0;
+                    padding: 15px;
+                    position: absolute;
+                    right: 41px;
+                    transition: opacity 0.3s;
+                    z-index: -1;
+                    width: 20px;
+                    -webkit-transition: opacity 0.3s;
+                }
+                .volume-slider-mute-box.play
+                {
+                    opacity: 1;
+                    z-index: 100;
+                }
+                    .volume-slider
+                    {
+                        background: none;
+                        display: block;
+                        height: 80px;
+                        margin: 0 auto 14px;
+                        width: 20px;
+                        writing-mode: bt-lr;
+                        -webkit-appearance: slider-vertical;
+                    }
+                    .volume-slider-mute-box > .mute-button
+                    {
+                        color: #fff;
+                        font-weight: bold;
+                        height: 25px;
+                        text-align: center;
+                        width: 100%;
+                    }
+
+                /** WEBKIT PSEUDO ELEMENTS
+                --------------------------------------------------------------*/
+                /*.volume-slider::-webkit-slider-runnable-track
+                {
+					background-color: red;
+					border: none;
+					border-radius: 13px;
+					height: 70px;
+					width: 30px;
+				}*/
+                .my-minidisk-skin .range-input::-webkit-slider-thumb
+                {
+                    background: #f5f6f6; /* Old browsers */
+                    background: -moz-radial-gradient(center, ellipse cover, #f5f6f6 0%, #dbdce2 21%, #b8bac6 49%, #dddfe3 80%, #f5f6f6 100%); /* FF3.6+ */
+                    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#f5f6f6), color-stop(21%,#dbdce2), color-stop(49%,#b8bac6), color-stop(80%,#dddfe3), color-stop(100%,#f5f6f6)); /* Chrome,Safari4+ */
+                    background: -webkit-radial-gradient(center, ellipse cover, #f5f6f6 0%,#dbdce2 21%,#b8bac6 49%,#dddfe3 80%,#f5f6f6 100%); /* Chrome10+,Safari5.1+ */
+                    background: -o-radial-gradient(center, ellipse cover, #f5f6f6 0%,#dbdce2 21%,#b8bac6 49%,#dddfe3 80%,#f5f6f6 100%); /* Opera 12+ */
+                    background: -ms-radial-gradient(center, ellipse cover, #f5f6f6 0%,#dbdce2 21%,#b8bac6 49%,#dddfe3 80%,#f5f6f6 100%); /* IE10+ */
+                    background: radial-gradient(ellipse at center, #f5f6f6 0%,#dbdce2 21%,#b8bac6 49%,#dddfe3 80%,#f5f6f6 100%); /* W3C */
+                    border: 1px solid #5f5f5f;
+                    border-radius: 13px;
+					height: 26px;
+					width: 26px;
+                    -webkit-appearance: none;
+                }
+
+                /* Firefox */
+				.my-minidisk-skin .range-input::-moz-range-track
+                {
+					border-radius: 3px;
+				}
+				.my-minidisk-skin .range-input::-moz-range-thumb
+                {
+					background-image: -moz-radial-gradient(center, ellipse cover, #f5f6f6 0%, #dbdce2 21%, #b8bac6 49%, #dddfe3 80%, #f5f6f6 100%); /* FF3.6+ */
+					background-image: radial-gradient(ellipse at center, #f5f6f6 0%,#dbdce2 21%,#b8bac6 49%,#dddfe3 80%,#f5f6f6 100%); /* W3C */
+					border: 1px solid #5f5f5f;
+					border-radius: 50%;
+					box-shadow: 0 0 1px #c3c3c3;
+                    cursor: pointer;
+					height: 14px;
+					width: 14px;
+				}
+				.my-minidisk-skin .range-input:focus::-moz-range-thumb
+                {
+					background-image: -moz-radial-gradient(center, ellipse cover, #c9e2b5 12%, #61c419 50%, #b4e391 100%);
+					background-image: radial-gradient(ellipse at center, #c9e2b5 12%,#61c419 50%,#b4e391 100%);
+				}
+				/*hide the outline behind the border*/
+				.my-minidisk-skin .range-input:-moz-focusring {
+					outline: none;
+					outline-offset: -1px;
+				}
+
+                .next-track-btn,
+                .prev-track-btn
+                {
+                    float: left;
+                }
+                    .next-track-btn > .button-inner,
+                    .prev-track-btn > .button-inner
+                    {
+                        background-image: url('http://media.clifjackson.net/images/player-buttons-sprite.png');
+                    }
+                    .next-track-btn > .button-inner
+                    {
+                        background-position: -74px center;
+                    }
+                    .prev-track-btn > .button-inner
+                    {
+                        background-position: -141px center;
+                    }
+
+                .info-button
+                {
+                    float: right;
+                }
+                    .info-button > .button-inner
+                    {
+                        font-size: 20px;
+                        font-weight: bold;
+                        line-height: 48px;
+                        text-align: center;
+                        width: 30px;
+                    }
+                    .info-button.has-info.active > .button-inner
+                    {
+                        color: #61c419;
+                    }
+                    .info-button.has-info > .button-inner
+                    {
+                        color: #fff;
+                        font-style: italic;
+                    }
+
+/** TIME & PROGRESS
+------------------------------------------------------------------------------*/
+            .time-progress-display
+            {
+                line-height: 12px;
+                position: absolute;
+                top: 5px;
+                width: 100%;
+            }
+                .time-displays
+                {
+                    font-size: 12px;
+                    line-height: 24px;
+                    position: absolute;
+                }
+                .current-time
+                {
+                    left: 10px;
+                }
+                .remaining-time
+                {
+                    right: 10px;
+                }
+                .seek-box
+                {
+                    padding: 0 48px;
+                }
+                    .seek-handle-box
+                    {
+                        display: block;
+                        height: 26px;
+                        width: 100%;
+                    }
+
+/** USER SCREEN / PLAYLIST
+------------------------------------------------------------------------------*/
+        .user-screen
+        {
+            bottom: 84px;
+            position: absolute;
+            top: 41px;
+            width: 100%;
+        }
+            .screen-header-box
+            {
+                padding: 20px 10px;
+            }
+                .screen-header-box > p
+                {
+                    font-size: 16px;
+                }
+            .playlist-container
+            {
+                bottom: 0;
+                overflow: hidden;
+                position: absolute;
+                top: 60px;
+                width: 100%;
+            }
+                .playlist-container-overflow
+                {
+                    bottom: 0;
+                    overflow-y: auto;
+                    position: absolute;
+                    top: 0;
+                    width: 100%;
+                }
+                    .playlist-scroll-box
+                    {
+                        margin: 0;
+                        padding: 0;
+                    }
+                        .playlist-scroll-box .current
+                        {
+                            background-color: #e5e5e5;
+                        }
+                        .playlist-scroll-box > li
+                        {
+                            border-top: 1px solid #3f3f3f;
+                        }
+                            .playlist-scroll-box button
+                            {
+                                color: #fff;
+                                padding: 8px 8px 8px 10px;
+                                text-align: left;
+                                width: 100%;
+                            }
+                                .playlist-scroll-box .current button
+                                {
+                                    color: #333;
+                                    font-style: italic;
+                                }
+
+            .info-screen
+            {
+                background-color: #202020;
+                bottom: 0;
+                right: -1000px;
+                position: absolute;
+                top: 0;
+                transition: right 0.3s;
+                width: 100%;
+                -webkit-transition: right 0.3s;
+            }
+            .info-screen.play
+            {
+                right: 0;
+            }
+                .info-scroll-overflow
+                {
+                    bottom: 0;
+                    overflow-y: auto;
+                    position: absolute;
+                    top: 0;
+                    width: 100%;
+                }
+                    .info-content-box
+                    {
+                        padding: 10px;
+                    }

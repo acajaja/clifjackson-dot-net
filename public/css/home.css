@@ -433,37 +433,111 @@ template {
     content: '\f00a';
 }
 
-/* General tag level selectors
------------------------------------------------------------------------------*/
 html {
   font-size: 62.5%;
 }
 
-@media (max-width: 450px) {
-  #container > #rings-links {
-    transform: scale(70%);
-  }
-}
-@media (min-width: 320px) and (max-width: 572px) {
-  #container {
-    grid-template-areas: "header header" "center center" ". .";
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-  }
-
-  #rings-links {
-    transform: scale(80%);
-  }
-}
-@media (min-width: 572px) {
-  #container {
-    grid-template-areas: "header header header" ". center ." ". . .";
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-  }
-}
 body {
+  background-color: #efefef;
   font-family: open_sansregular, helvetica, arial, sans-serif;
+}
+
+a {
+  color: inherit;
+  font-family: inherit;
+}
+
+@media (hover: hover) {
+  a:hover {
+    text-decoration: none;
+  }
+}
+h1, h2, h3, h4, h5, h6, p {
+  margin-top: 0;
+}
+
+h1, h2, h3, h4, h5, h6, strong,
+.myh1,
+.myh2 {
+  font-family: open_sanssemibold, sans-serif;
+  letter-spacing: -1px;
+}
+
+blockquote {
+  color: #333;
+  font-style: italic;
+  margin-left: 6vw;
+  margin-right: 6vw;
+}
+
+code {
+  font-size: 1.6rem;
+  line-height: 1.2;
+}
+
+iframe {
+  border: none;
+}
+
+#content-box {
+  background-color: white;
+}
+
+#main-section {
+  padding: 70px 0;
+}
+
+.page-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  transform: rotate(0deg);
+}
+.page-wrap > h1 {
+  font-size: 3.4rem;
+  grid-column: 2/span 1;
+  margin-bottom: 0.3rem;
+}
+.page-wrap > p {
+  font-size: 1.6rem;
+  grid-column: 2/span 1;
+}
+
+.clear {
+  clear: both;
+}
+
+.image-left-25 {
+  float: left;
+  margin: 0 2.5rem 2.5rem 0;
+}
+
+p {
+  line-height: 1.5;
+}
+
+#top-right-corner-bg {
+  background-position: right 4rem;
+}
+
+/* VIDEO IFRAMES
++------------------------------------------------------------------------------*/
+.responsive-iframe-container {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+}
+
+.responsive-iframe-container-16x9 {
+  padding-bottom: 56.25%;
+}
+
+.responsive-iframe-container > iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 #left-side-middle-bg {
@@ -480,7 +554,6 @@ body {
 
 #top-right-corner-bg {
   background-image: url("http://media.clifjackson.net/images/rainbow_top-right-BW-142x80.png");
-  background-position: right top;
   background-repeat: no-repeat;
   background-size: 12%;
   height: 100vh;
@@ -490,8 +563,58 @@ body {
   width: 100vw;
 }
 
+/* Cloud Animation & decorations */
+#floating-cloud-1 {
+  animation: cloud1 130s cubic-bezier(0.54, 0.3, 0.72, 0.68);
+  animation-iteration-count: infinite;
+  height: 50px;
+  left: -95px;
+  position: fixed;
+  top: 120px;
+  width: 94px;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation: cloud1 130s cubic-bezier(0.54, 0.3, 0.72, 0.68);
+}
+
+@keyframes cloud1 {
+  0% {
+    left: -95px;
+  }
+  100% {
+    left: 100%;
+  }
+}
+@-webkit-keyframes cloud1 {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+  }
+}
+@media (max-width: 500px) {
+  #container > #rings-links {
+    transform: scale(70%);
+  }
+}
+@media (min-width: 500px) and (max-width: 640px) {
+  #rings-links {
+    transform: scale(80%);
+  }
+}
+body {
+  font-family: open_sansregular, helvetica, arial, sans-serif;
+}
+
+#top-right-corner-bg {
+  background-position: right top;
+}
+
 #container {
   display: grid;
+  grid-template-areas: "header header" "center center" ". .";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   height: 100vh;
   width: 100vw;
 }
@@ -566,36 +689,6 @@ body {
 }
 #container #rings-links #circleB > p:first-child {
   width: 145px;
-}
-
-/* Cloud Animation & decorations */
-#floating-cloud-1 {
-  animation: cloud1 130s cubic-bezier(0.54, 0.3, 0.72, 0.68);
-  animation-iteration-count: infinite;
-  height: 50px;
-  left: -95px;
-  position: fixed;
-  top: 120px;
-  width: 94px;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation: cloud1 130s cubic-bezier(0.54, 0.3, 0.72, 0.68);
-}
-
-@keyframes cloud1 {
-  0% {
-    left: -95px;
-  }
-  100% {
-    left: 100%;
-  }
-}
-@-webkit-keyframes cloud1 {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    left: 100%;
-  }
 }
 
 /*# sourceMappingURL=home.css.map*/

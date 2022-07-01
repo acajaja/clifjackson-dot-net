@@ -11,10 +11,13 @@ const mix = require('laravel-mix');
  |
  */
 
-// mix.js('resources/js/app.js', 'public/js')
-mix.sass('resources/scss/home.scss', 'public/css')
+mix.js('resources/js/scrapbook.js', 'public/js')
+    .js('resources/js/audio.js', 'public/js')
+    .js('resources/js/sk8.js', 'public/js')
+    .sass('resources/scss/home.scss', 'public/css')
     .sass('resources/scss/audio-page.scss', 'public/css')
     .sass('resources/scss/section-index-page.scss', 'public/css')
-    .sass('resources/scss/gallery.scss', 'public/css')
+    .sass('resources/scss/gallery-A.scss', 'public/css')
+    .sass('resources/scss/gallery-B.scss', 'public/css')
     .sass('resources/scss/general.scss', 'public/css')
     .sourceMaps(false, 'source-map');

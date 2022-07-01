@@ -90,7 +90,7 @@
         
         <section>
             <h2>Experiments</h2>
-            <section class="clearfix content-entry-box">
+            <section class="content-entry-box">
                 <div>
                     <div class="media-box-150">
                         <a class="samples-image-link" href="{{ route('web', ['page' => 'canvas-app']) }}" title="HTML5 Canvas Sample 1"><img alt="" src="http://media.clifjackson.net/images/canvas-sample.jpg"></a>
@@ -109,7 +109,7 @@
                 </div>
             </section>
 
-            <section class="clearfix content-entry-box">
+            <section class="content-entry-box">
                 <div class="media-box-150">
                     <a class="samples-image-link" href="{{ route('web', ['page' => 'interactive-map']) }}" title="Interactive Map"><img alt="" src="http://media.clifjackson.net/images/interactive-map-sample.png"></a>
                 </div>
@@ -132,7 +132,7 @@
 
         <section>
             <h2>Past Projects</h2>
-            <section class="clearfix content-entry-box">
+            <section class="content-entry-box">
                 <div class="media-box-150">
                     <img alt="Oracle Netsuite" src="/media/images/logos/O-NetSuite_badge.svg">
                 </div>
@@ -148,7 +148,7 @@
                 </div>
             </section>
 
-            <section class="clearfix content-entry-box">
+            <section class="content-entry-box">
                 <div class="media-box-150">
                     <img alt="" src="http://media.clifjackson.net/images/havas/ATT-Email1-150w.png">
                 </div>
@@ -166,7 +166,7 @@
                 </div>
             </section>
 
-            <section class="clearfix content-entry-box">
+            <section class="content-entry-box">
                 <div class="media-box-150">
                     <a class="samples-image-link" href="http://www.speakup.com/" target="_blank" title="Speak Up"><img alt="" src="http://media.clifjackson.net/images/speakup-thumb-150sq.jpg"></a>
                 </div>
@@ -184,7 +184,7 @@
                 </div>
             </section>
 
-            <section class="clearfix content-entry-box">
+            <section class="content-entry-box">
                 <div class="media-box-150">
                     <img alt="" src="http://media.clifjackson.net/images/AFA-theme-homepage.png">
                 </div>
@@ -199,7 +199,7 @@
                 </div>
             </section>
 
-            <section class="clearfix content-entry-box">
+            <section class="content-entry-box">
                 <div class="media-box-150">
                     <img alt="" src="http://media.clifjackson.net/images/hyatt-womens-sample.jpg">
                 </div>
@@ -209,7 +209,7 @@
                 </div>
             </section>
 
-            <section class="clearfix content-entry-box">
+            <section class="content-entry-box">
                 <div class="media-box-150">
                     <img alt="" src="http://media.clifjackson.net/images/awards-meter-sample.png">
                 </div>
@@ -222,7 +222,7 @@
                 </div>
             </section>
 
-            <section class="clearfix content-entry-box">
+            <section class="content-entry-box">
                 <div class="media-box-150">
                     <img alt="" src="http://media.clifjackson.net/images/pur-daily-drop-sample.png">
                 </div>
@@ -237,7 +237,7 @@
                 </div>
             </section>
 
-            <section class="clearfix content-entry-box">
+            <section class="content-entry-box">
                 <div class="media-box-150">
                     <a class="samples-image-link" href="http://www.secretorchestra.net/" target="_blank" title="Secret Orchestra">
                         <img alt="" src="http://media.clifjackson.net/images/secret-orchestra-sample.png">
@@ -254,7 +254,7 @@
         </section>
 
         <section>
-            <section class="clearfix content-entry-box">
+            <section class="content-entry-box">
                 <h3>Columbia University's Gutenberg-e program (from 2006-7)</h3>
                 <p>
                     This is an e-book web site for a program Columbia University runs for publishing first-time authors work. I was responsible for creating a new template for the subsequent releases. This was in 2006 so at the time IE 7 had just come out and we had to solve the compatibility issues that came up for both IE 6 and 7. Moreover, I had to solve unique problems for each book as they all had their own supplemental media. For example, <em>How Taiwan Became Chinese</em> required a Flash application called Zoomify which, for this purpose, was used to view maps of the various regions discussed. Users can zoom in and out of the map and move it around to see details. Many books also used one or more foreign languages including Chinese, German and French.
@@ -264,7 +264,7 @@
                 </p>
             </section>
 
-            <section class="clearfix content-entry-box">
+            <section class="content-entry-box">
                 <div class="media-box-150">
                     <a class="samples-image-link" href="http://www.gutenberg-e.org/hodgdon/" target="_blank" title="Manhood in the Age of Aquarius: Masculinity in Two Countercultural Communities, 1965–83">
                         <img alt="" src="http://media.clifjackson.net/images/hogdon-thumb-150sq.jpg">
@@ -278,7 +278,7 @@
                 </div>
             </section>
 
-            <section class="clearfix content-entry-box">
+            <section class="content-entry-box">
                 <div class="media-box-150">
                     <a class="samples-image-link" href="http://www.gutenberg-e.org/andrade/" target="_blank" title="How Taiwan Became Chinese: Dutch, Spanish, and Han Colonization in the Seventeenth Century">
                         <img alt="" src="http://media.clifjackson.net/images/andrade-thumb-150sq.jpg">
@@ -292,7 +292,7 @@
                 </div>
             </section>
 
-            <section class="clearfix content-entry-box">
+            <section class="content-entry-box">
                 <div class="media-box-150">
                     <a class="samples-image-link" href="http://www.gutenberg-e.org/lowengard/" target="_blank" title="The Creation of Color in Eighteenth-Century Europe">
                         <img alt="" src="http://media.clifjackson.net/images/lowengard-thumb-150sq.jpg">
@@ -306,7 +306,7 @@
                 </div>
             </section>
 
-            <section class="clearfix content-entry-box">
+            <section class="content-entry-box">
                 <div class="media-box-150">
                     <a class="samples-image-link" href="http://www.gutenberg-e.org/keough/" target="_blank" title="The Slender Thread: Irish Women on the Southern Avalon, 1750-1860">
                         <img alt="" src="http://media.clifjackson.net/images/keough-thumb-150sq.jpg">
@@ -320,7 +320,7 @@
                 </div>
             </section>
 
-            <section class="clearfix content-entry-box">
+            <section class="content-entry-box">
                 <div class="media-box-150">
                     <a class="samples-image-link" href="http://www.gutenberg-e.org/maclehose/" target="_blank" title="'A Tender Age': Cultural Anxieties over the Child in the Twelfth and Thirteenth Centuries">
                         <img alt="" src="http://media.clifjackson.net/images/maclehose-thumb-150sq.jpg">

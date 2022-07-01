@@ -433,252 +433,303 @@ template {
     content: '\f00a';
 }
 
-/* General tag level selectors
------------------------------------------------------------------------------*/
 html {
   font-size: 62.5%;
 }
 
-/* Index page links */
-.index-page-link {
-  display: block;
-  height: 180px;
-  padding: 10px 0;
-  position: relative;
-  transition-property: opacity;
-  transition-duration: 0.5s;
-  /*-webkit-transition-property: opacity;
-  -webkit-transition-duration: 0.5s;*/
+body {
+  background-color: #efefef;
+  font-family: open_sansregular, helvetica, arial, sans-serif;
 }
 
-.button-image {
-  border-radius: 50%;
-  height: 150px;
-  left: 15px;
-  position: absolute;
-  top: 25px;
-  width: 150px;
+a {
+  color: inherit;
+  font-family: inherit;
 }
 
-.circle-border {
-  border-radius: 50%;
-  height: 180px;
-  left: 0;
-  position: absolute;
-  top: 10px;
-  width: 180px;
+@media (hover: hover) {
+  a:hover {
+    text-decoration: none;
+  }
+}
+h1, h2, h3, h4, h5, h6, p {
+  margin-top: 0;
 }
 
-.index-page-link > span {
-  color: #000;
-  display: block;
-  font-size: 48px;
-  padding: 59px 0 0 218px;
+h1, h2, h3, h4, h5, h6, strong,
+.myh1,
+.myh2 {
+  font-family: open_sanssemibold, sans-serif;
+  letter-spacing: -1px;
 }
 
-html.no-touch .index-page-link {
-  opacity: 0.5;
+blockquote {
+  color: #333;
+  font-style: italic;
+  margin-left: 6vw;
+  margin-right: 6vw;
 }
 
-html.no-touch .index-page-link:hover {
-  opacity: 1;
+code {
+  font-size: 1.6rem;
+  line-height: 1.2;
+}
+
+iframe {
+  border: none;
+}
+
+#content-box {
+  background-color: white;
+}
+
+#main-section {
+  padding: 70px 0;
+}
+
+.page-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  transform: rotate(0deg);
+}
+.page-wrap > h1 {
+  font-size: 3.4rem;
+  grid-column: 2/span 1;
+  margin-bottom: 0.3rem;
+}
+.page-wrap > p {
+  font-size: 1.6rem;
+  grid-column: 2/span 1;
+}
+
+.clear {
+  clear: both;
+}
+
+.image-left-25 {
+  float: left;
+  margin: 0 2.5rem 2.5rem 0;
 }
 
 p {
   line-height: 1.5;
 }
 
-/* MAIN NAVIGATION
-------------------------------------------------------------------------------*/
-#main-header {
-  background: #fff url("http://media.clifjackson.net/images/both-circles-45x35.png") no-repeat 10px center;
-  border-bottom: 1px solid #333;
-  box-shadow: 0 0 4px #ccc;
-  height: 40px;
+#top-right-corner-bg {
+  background-position: right 4rem;
+}
+
+/* VIDEO IFRAMES
++------------------------------------------------------------------------------*/
+.responsive-iframe-container {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+}
+
+.responsive-iframe-container-16x9 {
+  padding-bottom: 56.25%;
+}
+
+.responsive-iframe-container > iframe {
+  position: absolute;
+  top: 0;
   left: 0;
-  height: 40px;
-  min-width: 760px;
+  width: 100%;
+  height: 100%;
+}
+
+#main-header {
+  background: white url("http://media.clifjackson.net/images/both-circles-45x35.png") no-repeat 1rem center;
+  border-bottom: 0.1rem solid #333;
+  box-shadow: 0 0 0.4rem #ccc;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1fr;
+  height: 4rem;
+  left: 0;
   position: fixed;
   top: 0;
   width: 100%;
 }
 
-#main-nav {
-  height: 40px;
-  position: absolute;
-  right: 0;
-}
-
 #header-text-box {
-  height: 40px;
+  height: 4rem;
   margin-right: 320px;
-  padding: 0 0 0 60px;
-  position: relative;
+  padding: 0 0 0 6rem;
+}
+#header-text-box #my-header-name {
+  font-size: 1.6rem;
+  line-height: 4rem;
 }
 
-#my-header-name {
-  font-size: 16px;
-  line-height: 40px;
+#main-nav {
+  height: 4rem;
 }
-
 #main-nav .breadcrumbs {
-  font-size: 11px;
+  font-size: 1.2rem;
+}
+#main-nav ul {
+  list-style-type: none;
 }
 
 #nav-list {
-  float: right;
-  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
   margin: 0;
   padding: 0;
 }
-
-#nav-list > li {
-  float: right;
-  position: relative;
-}
-
-.top-level-link:link {
-  color: #333;
-  display: block;
-  font-size: 16px;
-  line-height: 40px;
-  padding: 0 12px;
-}
-
 #nav-list a {
   text-decoration: none;
   transition-property: all;
   transition-duration: 0.35s;
-  -webkit-transition-property: all;
-  -webkit-transition-duration: 0.35s;
 }
-
-.top-level-link.active,
-#nav-list .child-link.active,
-.top-level-link:active,
-#nav-list > li:hover > .top-level-link,
-#nav-list .child-link:hover {
-  background-color: #333;
-  color: #fff;
+#nav-list > li {
+  position: relative;
 }
-
-#nav-list > li:hover .child-menu {
-  right: 0;
+#nav-list li:hover .child-menu {
   box-shadow: 0 3px 3px #D5D5D5, 3px 3px 3px #D5D5D5, -3px 3px 3px #D5D5D5;
   opacity: 1;
+  right: 0;
 }
-
-.child-menu {
-  background-color: #fff;
+#nav-list .child-menu {
+  background-color: white;
   border-radius: 0 0 7px 7px;
-  list-style: none;
   margin: 0;
   min-width: 145px;
   opacity: 0;
   padding: 0;
   position: absolute;
-  right: 10000px;
-  top: 40px;
+  right: 50000px;
+  top: 4rem;
   transition-duration: 1s;
   transition-property: opacity, box-shadow;
-  -webkit-transition-duration: 1s;
-  -webkit-transition-property: opacity, box-shadow;
 }
-
-.child-menu .child-link {
-  border-radius: 0 0 6px 6px;
+#nav-list .child-menu .child-link {
+  border-radius: 0 0 0.6rem 0.6rem;
   display: block;
-  font-size: 12px;
+  font-size: 1.2rem;
   line-height: 28px;
   padding: 0 7px;
 }
-
-/* PAGES
-------------------------------------------------------------------------------*/
-.page-wrap {
-  margin: 0 auto;
-  max-width: 800px;
-  padding: 0 18px;
+#nav-list .top-level-link:link {
+  color: #333;
+  display: block;
+  font-size: 1.6rem;
+  line-height: 4rem;
+  padding: 0 12px;
+}
+#nav-list .top-level-link.active,
+#nav-list .child-link.active,
+#nav-list .top-level-link:active, #nav-list > li:hover > .top-level-link,
+#nav-list .child-link:hover {
+  background-color: #333;
+  color: white;
 }
 
-.music.index .page-wrap,
-.web.index .page-wrap {
-  margin: 0 auto;
-  width: 560px;
+#left-side-middle-bg {
+  background-image: url("http://media.clifjackson.net/images/rainbow_corner-left-BW-340x137.png");
+  background-position: left 42%;
+  background-repeat: no-repeat;
+  background-size: 28%;
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
 }
 
-/* CONTENT CONTAINERS
-------------------------------------------------------------------------------*/
-.content-entry-box {
-  background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 10px;
-  box-shadow: 0 0 10px #ccc;
-  margin-bottom: 75px;
-  padding: 35px;
+#top-right-corner-bg {
+  background-image: url("http://media.clifjackson.net/images/rainbow_top-right-BW-142x80.png");
+  background-repeat: no-repeat;
+  background-size: 12%;
+  height: 100vh;
+  right: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
 }
 
-.image-left-25 {
-  float: left;
-  margin: 0 25px 15px 0;
+/* Cloud Animation & decorations */
+#floating-cloud-1 {
+  animation: cloud1 130s cubic-bezier(0.54, 0.3, 0.72, 0.68);
+  animation-iteration-count: infinite;
+  height: 50px;
+  left: -95px;
+  position: fixed;
+  top: 120px;
+  width: 94px;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation: cloud1 130s cubic-bezier(0.54, 0.3, 0.72, 0.68);
 }
 
-.image-right-25 {
-  float: right;
-  margin: 0 0 15px 25px;
+@keyframes cloud1 {
+  0% {
+    left: -95px;
+  }
+  100% {
+    left: 100%;
+  }
+}
+@-webkit-keyframes cloud1 {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+  }
+}
+.page-wrap > div {
+  grid-column: 2/span 1;
+  margin-bottom: 1.4rem;
 }
 
-.media-box-150 {
-  float: left;
+@media (hover: hover) {
+  a.index-page-link {
+    opacity: 0.5;
+  }
+
+  a.index-page-link:hover {
+    opacity: 1;
+  }
+}
+a.index-page-link {
+  display: grid;
+  grid-template-columns: 1fr 1rem 2fr;
+  grid-template-rows: 1fr;
+  transition-property: opacity;
+  transition-duration: 0.5s;
+}
+a.index-page-link .button-image {
+  align-self: center;
+  border-radius: 50%;
+  grid-column: 1/span 1;
+  grid-row: 1/span 1;
+  height: 150px;
+  justify-self: center;
   width: 150px;
 }
-
-.content-entry-info-box {
-  margin-left: 176px;
-  max-width: 540px;
+a.index-page-link .circle-border {
+  align-self: center;
+  border-radius: 50%;
+  grid-column: 1/span 1;
+  grid-row: 1/span 1;
+  height: 180px;
+  justify-self: center;
+  width: 180px;
 }
-
-.content-entry-info-box > h2 {
-  margin: 0;
-}
-
-.content-entry-info-box > h3 {
-  margin: 0 0 3px;
-}
-
-.content-entry-info-box > p {
-  font-size: 14px;
-  margin-bottom: 10px;
-}
-
-/* Footer */
-#main-footer {
-  box-sizing: border-box;
-  font-size: 12px;
-  height: 250px;
-  padding: 10px 25px 25px;
-  position: relative;
-  width: 100%;
-}
-
-#footer-nav {
-  margin-bottom: 25px;
-}
-
-#footer-nav > a {
-  display: block;
-  float: left;
-  padding: 5px 7px;
-}
-
-#footer-nav > a:link,
-#footer-nav > a:visited {
-  color: #777;
-}
-
-#footer-nav > a.active,
-#footer-nav > a:active,
-#footer-nav > a:hover {
+a.index-page-link > span {
+  align-self: center;
   color: #000;
+  font-family: open_sanssemibold, sans-serif;
+  font-size: 4.8rem;
+  grid-column: 3/span 1;
+  grid-row: 1/span 1;
+  justify-self: left;
+  white-space: nowrap;
 }
 
 /*# sourceMappingURL=section-index-page.css.map*/

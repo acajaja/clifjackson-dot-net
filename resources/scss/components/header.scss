@@ -1,0 +1,25 @@
+#main-header {
+    background: white url($smallCicles) no-repeat 1rem center;
+    border-bottom: 0.1rem solid $homePageLinkColor;
+    box-shadow: 0 0 0.4rem #ccc;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr;
+    height: $header-height;
+    left: 0;
+    // min-width: 760px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+#header-text-box {
+    height: $header-height;
+    margin-right: 320px;
+    padding: 0 0 0 6rem;
+    // position: relative;
+
+    #my-header-name {
+        font-size: $mediumSmallFont;
+        line-height: $header-height;
+    }
+}

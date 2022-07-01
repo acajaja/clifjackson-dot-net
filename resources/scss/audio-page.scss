@@ -1,6 +1,15 @@
-@import './components/settings.scss';
-@import './components/normalize-8.0.1.css';
 @import '../css/fonts.css';
+@import './components/settings.scss';
+@import '../css/normalize-8.0.1.css';
 @import './components/base.scss';
-@import './components/my-minidisk-skin-color1.scss';
-@import './components/desktop.scss';
+@import './components/backgrounds.scss';
+@import './components/header.scss';
+@import './components/nav.scss';
+
+@media (width < 640px) {
+    @import './components/my-minidisk-skin-color1-small.scss';
+}
+
+@media (width >= 640px) {
+    @import './components/my-minidisk-skin-color1.scss';
+}

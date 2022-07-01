@@ -1,8 +1,3 @@
-@import 'base';
-
-$white-circle-gradient-A: #f7f0e3;
-$white-circle-gradient-B: #efd7b6;
-
 @mixin bgGradient-general($start, $end)
 {
     background: $start;
@@ -14,12 +9,6 @@ $white-circle-gradient-B: #efd7b6;
     background: radial-gradient(ellipse at 100px 100px, $start 0%,$end 47%);
 }
 
-/**/
-
-article > section {
-	height: 100%;
-	width: 100%;
-}
 input:disabled,
 button:disabled {
 	cursor: default;

@@ -1,0 +1,30 @@
+#main-footer
+{
+    box-sizing: border-box;
+    font-size: 12px;
+    height: 250px;
+    padding: 10px 25px 25px;
+    position: relative;
+    width: 100%;
+}
+	#footer-nav
+	{
+		margin-bottom: 25px;
+	}
+		#footer-nav > a
+		{
+			display: block;
+			float: left;
+			padding: 5px 7px;
+		}
+		#footer-nav > a:link,
+		#footer-nav > a:visited
+		{
+			color: #777;
+		}
+		#footer-nav > a.active,
+		#footer-nav > a:active,
+		#footer-nav > a:hover
+		{
+			color: #000;
+		}

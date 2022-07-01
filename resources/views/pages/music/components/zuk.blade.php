@@ -1,5 +1,5 @@
 
-    <section class="clearfix content-entry-box">
+    <section class="content-entry-box">
         <div class="media-box-150">
             <img src="http://media.clifjackson.net/images/discography/ZukCDCover_New.jpg" alt="Zuk: An Evening in the Clouds">
             <div class="disco-downloads">

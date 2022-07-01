@@ -1,46 +1,52 @@
-/* Index page links */
-.index-page-link
-{
-    display: block;
-    height: 180px;
-    padding: 10px 0;
-    position: relative;
+.page-wrap {
+    &> div {
+        grid-column: 2/span 1;
+        margin-bottom: $medSmallSpace;
+    }
+}
+
+@media (hover: hover) {
+    a.index-page-link {
+        opacity: 0.5;
+    }
+    a.index-page-link:hover {
+        opacity: 1;
+    }
+}
+
+a.index-page-link {
+    display: grid;
+    grid-template-columns: 1fr $smallSpace 2fr;
+    grid-template-rows: 1fr;
     transition-property: opacity;
     transition-duration: 0.5s;
-    /*-webkit-transition-property: opacity;
-    -webkit-transition-duration: 0.5s;*/
-}
-    .button-image
-    {
+
+    .button-image {
+        align-self: center;
         border-radius: 50%;
+        grid-column: 1/span 1;
+        grid-row: 1/span 1;
         height: 150px;
-        left: 15px;
-        position: absolute;
-        top: 25px;
+        justify-self: center;
         width: 150px;
     }
-    .circle-border
-    {
+    .circle-border {
+        align-self: center;
         border-radius: 50%;
+        grid-column: 1/span 1;
+        grid-row: 1/span 1;
         height: 180px;
-        left: 0;
-        position: absolute;
-        top: 10px;
+        justify-self: center;
         width: 180px;
     }
-    .index-page-link > span
-    {
-        color: #000;
-        display: block;
-        font-size: 48px;
-        padding: 59px 0 0 218px;
+    &> span {
+        align-self: center;
+        color: $homePageLinkHoverColor;
+        font-family: $header-fonts;
+        font-size: $xlFont;
+        grid-column: 3/span 1;
+        grid-row: 1/span 1;
+        justify-self: left;
+        white-space: nowrap;
     }
-
-html.no-touch .index-page-link
-{
-    opacity: 0.5;
-}
-html.no-touch .index-page-link:hover
-{
-    opacity: 1;
 }

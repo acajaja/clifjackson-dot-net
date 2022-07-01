@@ -12,11 +12,11 @@
     @include('pages.music.components.whispering-tree')
     @include('pages.music.components.symphony-of-souls')
 
-    <section class="clearfix content-entry-box">
+    <section class="content-entry-box">
         <div class="media-box-150">
             <img src="http://media.clifjackson.net/images/discography/Maximum_Mini_EP_Front_Cover-150sq.jpg" alt="The Maximum Mini EP">
         </div>
-        <div class="clearfix content-entry-info-box">
+        <div class="content-entry-info-box">
             <h2>The Maximum Mini EP</h2>
             <h3>November, 2010<br>CJ3 Music</h3>
             <p>A two-track EP of all original music.</p>
@@ -35,7 +35,7 @@
     @include('pages.music.components.sound-gathering')
     @include('pages.music.components.ras-ensemble')
 
-    <section class="clearfix content-entry-box">
+    <section class="content-entry-box">
         <div class="media-box-150">
             <img src="http://media.clifjackson.net/images/discography/bronxCD-150.jpg" alt="The Bronx New School Sings CD">
         </div>
@@ -59,7 +59,7 @@
         </div>
     </section>
 
-    <section class="clearfix content-entry-box">
+    <section class="content-entry-box">
         <div class="media-box-150">
             <img src="http://media.clifjackson.net/images/discography/mia2005_CDcvr_150x150.jpg" alt="Music Is Art 2005">
         </div>
@@ -87,7 +87,7 @@
         </div>
     </section>
 
-    <section class="clearfix content-entry-box">
+    <section class="content-entry-box">
         <div class="media-box-150">
             <img src="http://media.clifjackson.net/images/discography/mia2004_CDcvr_150x150.jpg" alt="Music Is Art 2004">
         </div>
@@ -108,7 +108,7 @@
         </div>
     </section>
 
-    <section class="clearfix content-entry-box">
+    <section class="content-entry-box">
         <div class="media-box-150">
             <img src="http://media.clifjackson.net/images/discography/MPRCDCover3_150.jpg" alt="Musicphrenic Radio: The First of Many...">
         </div>

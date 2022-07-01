@@ -1,0 +1,28 @@
+.content-entry-box {
+    background-color: $contentEntryBgColor;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem $boxShadow;
+	display: grid;
+	grid-template-columns: 3.5rem 1fr 3.5rem;
+	grid-template-rows: 3.5rem 1fr 3.5rem;
+	grid-template-areas: ". . ." ". copy ." ". . .";
+	grid-column: 2/span 1;
+    margin-bottom: 7.5rem;
+
+    &> div {
+        grid-area: copy;
+    }
+
+	h2 {
+		font-size: $mediumFont;
+		margin: 0 0 $smallSpace;
+	}
+	h3 {
+		font-size: $mediumSmallFont;
+		margin: 0 0 $xSmallSpace;
+	}
+    p {
+		font-size: $mediumSmallFont;
+        margin-bottom: $smallSpace;
+    }
+}

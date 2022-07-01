@@ -1,8 +1,8 @@
-    <section class="clearfix content-entry-box">
+    <section class="content-entry-box">
         <div class="media-box-150">
             <img src="http://media.clifjackson.net/images/discography/SabirMateen-Jubilee-Ensemble-Cover150.jpg" alt="The Sabir Mateen Jubilee Ensemble">
         </div>
-        <div class="clearfix content-entry-info-box">
+        <div class="content-entry-info-box">
             <h2>The Sabir Mateen Jubilee Ensemble</h2>
             <h3>May, 2013<br>NotTwo Records</h3>
             <p>
