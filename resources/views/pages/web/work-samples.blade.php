@@ -93,11 +93,11 @@
             <section class="content-entry-box">
                 <div>
                     <div class="media-box-150">
-                        <a class="samples-image-link" href="{{ route('web', ['page' => 'canvas-app']) }}" title="HTML5 Canvas Sample 1"><img alt="" src="http://media.clifjackson.net/images/canvas-sample.jpg"></a>
+                        <a class="samples-image-link" href="{{ route('canvas-app') }}" title="HTML5 Canvas Sample 1"><img alt="" src="http://media.clifjackson.net/images/canvas-sample.jpg"></a>
                     </div>
                     <div class="content-entry-info-box">
                         <h3>
-                            <a href="{{ route('web', ['page' => 'canvas-app']) }}" title="HTML5 Canvas Sample 1">HTML5 Canvas Sample 1</a>
+                            <a href="{{ route('canvas-app') }}" title="HTML5 Canvas Sample 1">HTML5 Canvas Sample 1</a>
                         </h3>
                         <p>
                             This was a proof of concept for a major international art gallery using the HTML5 canvas, jQuery and
@@ -111,11 +111,11 @@
 
             <section class="content-entry-box">
                 <div class="media-box-150">
-                    <a class="samples-image-link" href="{{ route('web', ['page' => 'interactive-map']) }}" title="Interactive Map"><img alt="" src="http://media.clifjackson.net/images/interactive-map-sample.png"></a>
+                    <a class="samples-image-link" href="{{ route('interactive-map') }}" title="Interactive Map"><img alt="" src="http://media.clifjackson.net/images/interactive-map-sample.png"></a>
                 </div>
                 <div class="content-entry-info-box">
                     <h3>
-                        <a href="{{ route('web', ['page' => 'interactive-map']) }}" title="Interactive Map">Interactive Map</a>
+                        <a href="{{ route('interactive-map') }}" title="Interactive Map">Interactive Map</a>
                     </h3>
                     <p>
                         This was an interactive map tab for a major pet food brand's Facebook page. Hover over highlighted countries for

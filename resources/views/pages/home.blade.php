@@ -15,12 +15,12 @@
         <div id="rings-links">
             <div class="circle" id="circleA">
                 <p>
-                    <a href="{{ route('web') }}" title="Web">Web</a>
+                    <a href="{{ route('web-index') }}" title="Web">Web</a>
                 </p>
             </div>
             <div class="circle" id="circleB">
                 <p>
-                    <a href="{{ route('music') }}" title="Music">Music</a>
+                    <a href="{{ route('music-index') }}" title="Music">Music</a>
                 </p>
             </div>
             <div class="in-btwn-box">

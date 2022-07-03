@@ -3,5 +3,5 @@
         <a href="{{ route('home') }}" id="my-header-name" title="home">clifjackson.net</a>
     </div>
 
-    @include('components.nav', ['nav' => $nav])
+    @include('components.nav')
 </header>
