@@ -1,5 +1,5 @@
 
-    <section class="content-entry-box">
+    <section class="content-entry-box-B">
         <div class="media-box-150">
             <img src="http://media.clifjackson.net/images/discography/Maximum_Mini_EP_Front_Cover-150sq.jpg" alt="The Maximum Mini EP">
         </div>

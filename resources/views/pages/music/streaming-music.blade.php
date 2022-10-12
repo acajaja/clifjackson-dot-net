@@ -1,7 +1,7 @@
 <?php $this->headTitle('on streaming music & linux') ?>
 <section class="page-wrap">
     <h1>My Scrapbook</h1>
-    <section class="content-entry-box" id="streaming-music">
+    <section class="content-entry-box-A" id="streaming-music">
         <h2>Music Streaming Services and... Linux</h2>
         <p>
             So the battle of the music streaming services is on! With all the

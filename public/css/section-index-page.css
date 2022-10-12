@@ -438,7 +438,7 @@ html {
 }
 
 body {
-  background-color: #efefef;
+  background-color: #fdfdfd;
   font-family: open_sansregular, helvetica, arial, sans-serif;
 }
 
@@ -463,6 +463,13 @@ h1, h2, h3, h4, h5, h6, strong,
   letter-spacing: -1px;
 }
 
+section > h1:first-child {
+  font-size: 3.4rem;
+}
+section > h2:first-child {
+  font-size: 3rem;
+}
+
 blockquote {
   color: #333;
   font-style: italic;
@@ -471,7 +478,7 @@ blockquote {
 }
 
 code {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   line-height: 1.2;
 }
 
@@ -489,22 +496,14 @@ iframe {
 
 .page-wrap {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 50% 1fr;
   grid-template-rows: auto;
   transform: rotate(0deg);
 }
-.page-wrap > h1 {
-  font-size: 3.4rem;
-  grid-column: 2/span 1;
-  margin-bottom: 0.3rem;
-}
-.page-wrap > p {
-  font-size: 1.6rem;
-  grid-column: 2/span 1;
-}
 
-.clear {
+my-clear {
   clear: both;
+  display: block;
 }
 
 .image-left-25 {
@@ -560,7 +559,7 @@ p {
   padding: 0 0 0 6rem;
 }
 #header-text-box #my-header-name {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   line-height: 4rem;
 }
 
@@ -618,7 +617,7 @@ p {
 #nav-list .top-level-link:link {
   color: #333;
   display: block;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   line-height: 4rem;
   padding: 0 12px;
 }
@@ -632,7 +631,7 @@ p {
 
 #left-side-middle-bg {
   background-image: url("http://media.clifjackson.net/images/rainbow_corner-left-BW-340x137.png");
-  background-position: left 42%;
+  background-position: left 14%;
   background-repeat: no-repeat;
   background-size: 28%;
   height: 100vh;

@@ -438,7 +438,7 @@ html {
 }
 
 body {
-  background-color: #efefef;
+  background-color: #fdfdfd;
   font-family: open_sansregular, helvetica, arial, sans-serif;
 }
 
@@ -463,6 +463,13 @@ h1, h2, h3, h4, h5, h6, strong,
   letter-spacing: -1px;
 }
 
+section > h1:first-child {
+  font-size: 3.4rem;
+}
+section > h2:first-child {
+  font-size: 3rem;
+}
+
 blockquote {
   color: #333;
   font-style: italic;
@@ -471,7 +478,7 @@ blockquote {
 }
 
 code {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   line-height: 1.2;
 }
 
@@ -489,22 +496,14 @@ iframe {
 
 .page-wrap {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 50% 1fr;
   grid-template-rows: auto;
   transform: rotate(0deg);
 }
-.page-wrap > h1 {
-  font-size: 3.4rem;
-  grid-column: 2/span 1;
-  margin-bottom: 0.3rem;
-}
-.page-wrap > p {
-  font-size: 1.6rem;
-  grid-column: 2/span 1;
-}
 
-.clear {
+my-clear {
   clear: both;
+  display: block;
 }
 
 .image-left-25 {
@@ -542,7 +541,7 @@ p {
 
 #left-side-middle-bg {
   background-image: url("http://media.clifjackson.net/images/rainbow_corner-left-BW-340x137.png");
-  background-position: left 42%;
+  background-position: left 14%;
   background-repeat: no-repeat;
   background-size: 28%;
   height: 100vh;
@@ -612,15 +611,15 @@ body {
 
 #container {
   display: grid;
-  grid-template-areas: "header header" "center center" ". .";
+  grid-template-areas: "header header" "center center";
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1.8rem 1fr;
   height: 100vh;
   width: 100vw;
 }
 #container #my-name {
   color: #a0a0a0;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-style: italic;
   grid-area: header;
   padding: 1px 0 0 5px;
@@ -630,7 +629,7 @@ body {
   margin: 0;
 }
 #container #rings-links {
-  align-self: center;
+  align-self: start;
   display: grid;
   grid-area: center;
   grid-template-columns: repeat(15, 37px);
@@ -652,9 +651,9 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 33%);
   grid-template-rows: repeat(3, 33%);
-  height: 342px;
+  height: 34.2rem;
   transform: rotate(0deg);
-  width: 342px;
+  width: 34.2rem;
 }
 #container #rings-links .circle > p:first-child {
   align-self: center;
@@ -662,17 +661,18 @@ body {
   font-weight: bold;
   grid-row-start: 2;
   grid-column-start: 2;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 #container #rings-links .in-btwn-box {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   grid-column-start: 7;
   grid-row-start: 10;
-  margin: 11px 0px 0 -7px;
+  margin: 0.7rem 0 -1.9rem -0.4rem;
+  text-align: center;
   transform-origin: center;
   transform: rotate(-71deg);
-  width: 118px;
+  width: 13rem;
 }
 #container #rings-links #circleA {
   background-image: url("http://media.clifjackson.net/images/circle-1b.png");
@@ -680,7 +680,7 @@ body {
   grid-row-start: 1;
 }
 #container #rings-links #circleA > p:first-child {
-  width: 110px;
+  width: 11rem;
 }
 #container #rings-links #circleB {
   background-image: url("http://media.clifjackson.net/images/circle-2.png");
@@ -688,7 +688,7 @@ body {
   grid-row-start: 4;
 }
 #container #rings-links #circleB > p:first-child {
-  width: 145px;
+  width: 14.5rem;
 }
 
 /*# sourceMappingURL=home.css.map*/

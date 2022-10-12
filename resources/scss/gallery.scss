@@ -1,11 +1,12 @@
 @import '../css/fontawesome.min.css';
 @import '../css/fa-solid.min.css';
-@import './components/settings.scss';
 @import '../css/normalize-8.0.1.css';
+@import './components/settings';
 @import '../css/fonts.css';
-@import './components/base.scss';
+@import './components/base';
 @import './components/backgrounds.scss';
 @import './components/header.scss';
 @import './components/nav.scss';
+@import './components/content-style-A.scss';
 @import './components/content-style-B.scss';
-@import 'lightgallery/scss/lightgallery';
+@import '../../node_modules/lightgallery/scss/lightgallery.scss';

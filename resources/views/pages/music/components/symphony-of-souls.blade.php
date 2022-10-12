@@ -1,4 +1,4 @@
-    <section class="content-entry-box">
+    <section class="content-entry-box-B">
         <div class="media-box-150">
             <img src="http://media.clifjackson.net/images/discography/spon-river-souls-150.jpg" alt="Spontaneous River">
         </div>

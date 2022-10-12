@@ -23,10 +23,9 @@ body {
     display: grid;
     grid-template-areas:
         "header header"
-        "center center"
-        ". .";
+        "center center";
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: $mediumSmallFont 1fr;
     height: 100vh;
     width: 100vw;
 
@@ -44,7 +43,7 @@ body {
     }
 
     #rings-links {
-        align-self: center;
+        align-self: start;
         display: grid;
         grid-area: center;
         grid-template-columns: repeat(15, 37px);
@@ -67,9 +66,9 @@ body {
             display: grid;
             grid-template-columns: repeat(3, 33%);
             grid-template-rows: repeat(3, 33%);
-            height: 342px;
+            height: 34.2rem;
             transform: rotate(0deg);
-            width: 342px;
+            width: 34.2rem;
 
             &> p:first-child {
                 align-self: center;
@@ -77,18 +76,19 @@ body {
                 font-weight: bold;
                 grid-row-start: 2;
                 grid-column-start: 2;
-                margin: 0px;
-                padding: 0px;
+                margin: 0;
+                padding: 0;
             }
         }
         .in-btwn-box {
             font-size: $mediumSmallFont;
             grid-column-start: 7;
             grid-row-start: 10;
-            margin: 11px 0px 0 -7px;
+            margin: 0.7rem 0 -1.9rem -0.4rem;
+            text-align: center;
             transform-origin: center;
             transform: rotate(-71deg);
-            width: 118px;
+            width: 13rem;
         }
         #circleA {
             background-image: url($circleA);
@@ -96,7 +96,7 @@ body {
             grid-row-start: 1;
 
             &> p:first-child {
-                width: 110px;
+                width: 11rem;
             }
         }
         #circleB {
@@ -105,7 +105,7 @@ body {
             grid-row-start: 4;
 
             &> p:first-child {
-                width: 145px;
+                width: 14.5rem;
             }
         }
     }

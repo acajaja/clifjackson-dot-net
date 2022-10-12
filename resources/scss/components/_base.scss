@@ -1,0 +1,95 @@
+html {
+    font-size: 62.5%;
+}
+body {
+    background-color: $mainBgColor;
+	font-family: $general-fonts;
+}
+a {
+    color: inherit;
+    font-family: inherit;
+}
+
+@media (hover: hover) {
+    a:hover {
+        text-decoration: none;
+    }
+}
+
+h1,h2,h3,h4,h5,h6,p {
+	margin-top: 0;
+}
+h1,h2,h3,h4,h5,h6,strong,
+.myh1,
+.myh2 {
+    font-family: $header-fonts;
+    letter-spacing: -1px;
+}
+section {
+    &> h1:first-child {
+        font-size: $largeFont;
+    }
+    &> h2:first-child {
+        font-size: $mediumLargeFont;
+    }
+}
+blockquote {
+    color: $homePageLinkColor;
+    font-style: italic;
+    margin-left: 6vw;
+    margin-right: 6vw;
+}
+code {
+	font-size: $mediumSmallFont;
+	line-height: 1.2;
+}
+iframe {
+    border: none;
+}
+
+#content-box {
+    background-color: white;
+}
+#main-section {
+    padding: 70px 0;
+}
+.page-wrap {
+	display: grid;
+	grid-template-columns: 1fr 50% 1fr;
+	grid-template-rows: auto;
+	transform: rotate(0deg);
+}
+
+my-clear {
+    clear: both;
+    display: block;
+}
+.image-left-25 {
+    float: left;
+    margin: 0 2.5rem 2.5rem 0;
+}
+
+p {
+	line-height: 1.5;
+}
+#top-right-corner-bg {
+    background-position: right $header-height;
+}
+
+/* VIDEO IFRAMES
++------------------------------------------------------------------------------*/
+.responsive-iframe-container {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+}
+.responsive-iframe-container-16x9 {
+    padding-bottom: 56.25%;
+}
+.responsive-iframe-container > iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

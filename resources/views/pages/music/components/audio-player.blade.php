@@ -1,4 +1,4 @@
-<div class="html5-audio-player my-minidisk-skin" id="my-boom-box" data-setup='{"playlists":"http://media.clifjackson.net/playlists.json"}'>
+<div class="html5-audio-player my-minidisk-skin" id="my-boom-box" data-playlists-url="{{ asset('/media/playlists.json') }}">
     <div class="player-bg-box">
         <div class="outer-circle-bg"></div>
         <div class="outer-circle-frame"></div>

@@ -1,11 +1,11 @@
-@extends('layouts.layout')
+@extends('layouts.page')
 @section('title', 'complete discography')
 @push('styles')
-<link href="{{ asset('css/gallery-B.css') }}" rel="stylesheet" type="text/css">
+<link href="{{ asset('css/gallery.css') }}" rel="stylesheet" type="text/css">
 @endpush
 
 @section('content')
-<section class="page-wrap">
+<section>
     <h1>My Complete Discography</h1>
 
     @include('pages.music.components.sabir-jubilee')
@@ -16,7 +16,7 @@
     @include('pages.music.components.sound-gathering')
     @include('pages.music.components.ras-ensemble')
 
-    <section class="content-entry-box">
+    <section class="content-entry-box-B">
         <div class="media-box-150">
             <img src="http://media.clifjackson.net/images/discography/bronxCD-150.jpg" alt="The Bronx New School Sings CD">
         </div>
@@ -41,7 +41,7 @@
 
     @include('pages.music.components.zuk')
 
-    <section class="content-entry-box">
+    <section class="content-entry-box-B">
         <div class="media-box-150">
             <img src="http://media.clifjackson.net/images/discography/mia2005_CDcvr_150x150.jpg" alt="Music Is Art 2005">
         </div>
@@ -69,7 +69,7 @@
         </div>
     </section>
 
-    <section class="content-entry-box">
+    <section class="content-entry-box-B">
         <div class="media-box-150">
             <img src="http://media.clifjackson.net/images/discography/mia2004_CDcvr_150x150.jpg" alt="Music Is Art 2004">
         </div>

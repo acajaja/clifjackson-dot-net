@@ -438,7 +438,7 @@ html {
 }
 
 body {
-  background-color: #efefef;
+  background-color: #fdfdfd;
   font-family: open_sansregular, helvetica, arial, sans-serif;
 }
 
@@ -463,6 +463,13 @@ h1, h2, h3, h4, h5, h6, strong,
   letter-spacing: -1px;
 }
 
+section > h1:first-child {
+  font-size: 3.4rem;
+}
+section > h2:first-child {
+  font-size: 3rem;
+}
+
 blockquote {
   color: #333;
   font-style: italic;
@@ -471,7 +478,7 @@ blockquote {
 }
 
 code {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   line-height: 1.2;
 }
 
@@ -489,22 +496,14 @@ iframe {
 
 .page-wrap {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 50% 1fr;
   grid-template-rows: auto;
   transform: rotate(0deg);
 }
-.page-wrap > h1 {
-  font-size: 3.4rem;
-  grid-column: 2/span 1;
-  margin-bottom: 0.3rem;
-}
-.page-wrap > p {
-  font-size: 1.6rem;
-  grid-column: 2/span 1;
-}
 
-.clear {
+my-clear {
   clear: both;
+  display: block;
 }
 
 .image-left-25 {
@@ -542,7 +541,7 @@ p {
 
 #left-side-middle-bg {
   background-image: url("http://media.clifjackson.net/images/rainbow_corner-left-BW-340x137.png");
-  background-position: left 42%;
+  background-position: left 14%;
   background-repeat: no-repeat;
   background-size: 28%;
   height: 100vh;
@@ -612,7 +611,7 @@ p {
   padding: 0 0 0 6rem;
 }
 #header-text-box #my-header-name {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   line-height: 4rem;
 }
 
@@ -670,7 +669,7 @@ p {
 #nav-list .top-level-link:link {
   color: #333;
   display: block;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   line-height: 4rem;
   padding: 0 12px;
 }
@@ -1111,6 +1110,10 @@ input[type=range]:focus {
   }
 }
 @media (width >= 640px) {
+  button {
+    cursor: pointer;
+  }
+
   input:disabled,
 button:disabled {
     cursor: default;
@@ -1157,7 +1160,6 @@ button:disabled {
   .my-minidisk-skin .player-logo > p:nth-child(2) {
     font-size: 24px;
     transform: translate(0px, -18px);
-    -webkit-transform: translate(0px, -18px);
   }
 
   /* Player Backgrounds */
@@ -1250,7 +1252,6 @@ button:disabled {
     height: 196px;
     transform: translate(0px, 0px);
     width: 100%;
-    -webkit-transform: translate(0px, 0px);
   }
 
   .my-minidisk-skin .play-btn > span {
@@ -1260,7 +1261,6 @@ button:disabled {
     height: 24px;
     width: 24px;
     transform: translate(30px, 0px);
-    -webkit-transform: translate(30px, 0px);
   }
 
   .my-minidisk-skin.paused .play-btn > span {
@@ -1321,7 +1321,6 @@ button:disabled {
     background-position: -212px -1px;
     background-repeat: no-repeat;
     transform: translateX(50px);
-    -webkit-transform: translateX(50px);
   }
 
   .my-minidisk-skin.autoplay .autoplay-btn {
@@ -1331,7 +1330,6 @@ button:disabled {
   /* Volume button */
   .my-minidisk-skin .volume-button-box {
     transform: translate(-12px, 0px);
-    -webkit-transform: translate(-12px, 0px);
   }
 
   .my-minidisk-skin .volume-button-box > p:first-child {
@@ -1343,7 +1341,6 @@ button:disabled {
     background-position: -309px 0;
     background-repeat: no-repeat;
     transform: translateX(50px);
-    -webkit-transform: translateX(50px);
   }
 
   .my-minidisk-skin .volume-button.active {
@@ -1367,7 +1364,6 @@ button:disabled {
     transition: opacity 0.3s;
     z-index: -1;
     width: 20px;
-    -webkit-transition: opacity 0.3s;
   }
 
   .my-minidisk-skin .volume-slider-mute-box.play {
@@ -1412,19 +1408,6 @@ button:disabled {
   /* Firefox */
   .my-minidisk-skin .range-input::-moz-range-track {
     border-radius: 3px;
-  }
-
-  .my-minidisk-skin .range-input::-moz-range-thumb {
-    background: #f5f6f6;
-    /* Old browsers */
-    /* FF3.6+ */
-    background: radial-gradient(ellipse at center, #f5f6f6 0%, #dbdce2 21%, #b8bac6 49%, #dddfe3 80%, #f5f6f6 100%);
-    /* W3C */
-    border: 1px solid #5f5f5f;
-    border-radius: 50%;
-    box-shadow: 0 0 2px #c3c3c3;
-    height: 14px;
-    width: 14px;
   }
 
   .my-minidisk-skin .range-input:focus::-moz-range-thumb {
@@ -1472,18 +1455,12 @@ button:disabled {
   }
 
   /* Playlist button */
-  .my-minidisk-skin .playlist-btn-box {
-    /*transform: translate(300px, 84px);
-    -webkit-transform: translate(300px, 84px);*/
-  }
-
   .my-minidisk-skin .playlist-btn-box > p:first-child {
     margin-left: 26px;
   }
 
   .my-minidisk-skin .playlist-btn {
     transform: translateX(50px);
-    -webkit-transform: translateX(50px);
   }
 
   .my-minidisk-skin .playlist-btn.active {
@@ -1517,7 +1494,6 @@ button:disabled {
     padding: 3px 2px;
     transform: translateX(50%) skew(-10deg, 0deg);
     width: 10px;
-    -webkit-transform: translateX(50%) skew(-10deg, 0deg);
   }
 
   .my-minidisk-skin .playlist-btn > span > span {
@@ -1544,12 +1520,10 @@ button:disabled {
   .my-minidisk-skin .current-time {
     text-align: right;
     transform: translate(0px, 5px);
-    -webkit-transform: translate(0px, 5px);
   }
 
   .my-minidisk-skin .remaining-time {
     transform: translate(296px, -14px);
-    -webkit-transform: translate(296px, -13px);
   }
 
   /* Load progress track */
@@ -1559,7 +1533,6 @@ button:disabled {
     height: 7px;
     margin: 0 60px;
     transform: translateY(-27px);
-    -webkit-transform: translateY(-27px);
   }
 
   .my-minidisk-skin .loading-bar {
@@ -1567,19 +1540,21 @@ button:disabled {
     height: 7px;
     transform: translate(0px, 0px);
     width: 0%;
-    -webkit-transform: translate(0px, 0px);
   }
 
   /* All browsers, the whole range input element */
   .my-minidisk-skin .seek-handle-box {
+    appearance: none;
     background: none;
     cursor: pointer;
     height: 28px;
     margin: 0 60px;
-    transform: translateY(-47px);
+    transform: translateY(-46px);
     width: 225px;
     -webkit-appearance: none;
-    -webkit-transform: translateY(-50px);
+    -webkit-transform: translateY(-51px);
+    -moz-appearance: none;
+    -moz-transform: translateY(-46px);
   }
 
   .my-minidisk-skin .seek-handle-box:focus {
@@ -1759,6 +1734,10 @@ button:disabled {
     list-style-position: inside;
     margin: 0 18px 0 0;
     padding: 0 0 0 5px;
+  }
+
+  .my-minidisk-skin .playlist-scroll-box > li:hover {
+    background-color: #fdfdfd;
   }
 
   .my-minidisk-skin .playlist-scroll-box > li {

@@ -42,7 +42,7 @@ Route::prefix('music')
     ->group(function() {
         Route::view('/discography', 'pages.music.complete-discography')
             ->name('discography');
-        Route::view('/audio', 'pages.music.audio-player')
+        Route::view('/audio', 'pages.music.audio')
             ->name('audio');
         Route::view('/scrapbook', 'pages.music.scrapbook')
             ->name('scrapbook');

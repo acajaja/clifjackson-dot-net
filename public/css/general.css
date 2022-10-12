@@ -448,7 +448,7 @@ html {
 }
 
 body {
-  background-color: #efefef;
+  background-color: #fdfdfd;
   font-family: open_sansregular, helvetica, arial, sans-serif;
 }
 
@@ -473,6 +473,13 @@ h1, h2, h3, h4, h5, h6, strong,
   letter-spacing: -1px;
 }
 
+section > h1:first-child {
+  font-size: 3.4rem;
+}
+section > h2:first-child {
+  font-size: 3rem;
+}
+
 blockquote {
   color: #333;
   font-style: italic;
@@ -481,7 +488,7 @@ blockquote {
 }
 
 code {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   line-height: 1.2;
 }
 
@@ -499,22 +506,14 @@ iframe {
 
 .page-wrap {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 50% 1fr;
   grid-template-rows: auto;
   transform: rotate(0deg);
 }
-.page-wrap > h1 {
-  font-size: 3.4rem;
-  grid-column: 2/span 1;
-  margin-bottom: 0.3rem;
-}
-.page-wrap > p {
-  font-size: 1.6rem;
-  grid-column: 2/span 1;
-}
 
-.clear {
+my-clear {
   clear: both;
+  display: block;
 }
 
 .image-left-25 {
@@ -552,7 +551,7 @@ p {
 
 #left-side-middle-bg {
   background-image: url("http://media.clifjackson.net/images/rainbow_corner-left-BW-340x137.png");
-  background-position: left 42%;
+  background-position: left 14%;
   background-repeat: no-repeat;
   background-size: 28%;
   height: 100vh;
@@ -622,7 +621,7 @@ p {
   padding: 0 0 0 6rem;
 }
 #header-text-box #my-header-name {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   line-height: 4rem;
 }
 
@@ -680,7 +679,7 @@ p {
 #nav-list .top-level-link:link {
   color: #333;
   display: block;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   line-height: 4rem;
   padding: 0 12px;
 }
@@ -692,7 +691,10 @@ p {
   color: white;
 }
 
-.content-entry-box {
+/*
+	3 columns, 3 rows
+*/
+.content-entry-box-A {
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 1rem;
   box-shadow: 0 0 1rem #ccc;
@@ -703,20 +705,80 @@ p {
   grid-column: 2/span 1;
   margin-bottom: 7.5rem;
 }
-.content-entry-box > div {
+.content-entry-box-A > div {
   grid-area: copy;
 }
-.content-entry-box h2 {
-  font-size: 2.4rem;
+.content-entry-box-A blockquote {
+  font-size: 1.8rem;
+}
+.content-entry-box-A h1 {
+  font-size: 3.4rem;
+}
+.content-entry-box-A h2 {
+  font-size: 2.6rem;
   margin: 0 0 1rem;
 }
-.content-entry-box h3 {
-  font-size: 1.6rem;
+.content-entry-box-A h3 {
+  font-size: 1.8rem;
   margin: 0 0 0.3rem;
 }
-.content-entry-box p {
-  font-size: 1.6rem;
+.content-entry-box-A p {
+  font-size: 1.8rem;
   margin-bottom: 1rem;
+}
+.content-entry-box-A ul {
+  font-size: 1.8rem;
+  grid-area: mylist;
+  list-style-type: disc;
+  margin: 0 0 2rem;
+  text-align: left;
+  padding: 0 0 0 1.6rem;
+}
+.content-entry-box-A .list-center {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: ". mylist .";
+}
+
+/*
+	5 columns, 3 rows
+*/
+.content-entry-box-B {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem #ccc;
+  display: grid;
+  grid-template-columns: 3.5rem 150px 3.5rem 1fr 3.5rem;
+  grid-template-rows: 3.5rem 1fr 3.5rem;
+  grid-template-areas: ". . . . ." ". media . copy ." ". . . . .";
+  grid-column: 2/span 1;
+  margin-bottom: 7.5rem;
+}
+.content-entry-box-B h1 {
+  font-size: 3.4rem;
+}
+.content-entry-box-B h2 {
+  font-size: 2.6rem;
+  margin: 0 0 1rem;
+}
+.content-entry-box-B h3 {
+  font-size: 2rem;
+  line-height: 1.2;
+  margin: 0 0 0.3rem;
+}
+.content-entry-box-B p {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+.content-entry-box-B .content-entry-info-box {
+  grid-area: copy;
+}
+.content-entry-box-B .content-entry-info-box p > strong {
+  font-size: 2rem;
+}
+.content-entry-box-B .media-box-150 {
+  grid-area: media;
 }
 
 /*# sourceMappingURL=general.css.map*/

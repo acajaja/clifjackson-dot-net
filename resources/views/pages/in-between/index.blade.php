@@ -1,16 +1,16 @@
-@extends('layouts.layout')
+@extends('layouts.page')
 @section('title', 'in bewteen')
 @push('styles')
-<link href="{{ asset('css/gallery-A.css') }}" rel="stylesheet" type="text/css">
+<link href="{{ asset('css/gallery.css') }}" rel="stylesheet" type="text/css">
 @endpush
 @push('body-scripts')
 <script src="{{ asset('/js/sk8.js') }}" type="text/javascript"></script>
 @endpush
 
 @section('content')
-<div class="page-wrap">
+<section>
     <h1>Other Interests</h1>
-    <section class="content-entry-box">
+    <div class="content-entry-box-A">
         <div>
             <h2>Skateboarding</h2>
             <p>
@@ -40,6 +40,6 @@
                 </a>
             </div>
         </div>
-    </section>
-</div>
+    </div>
+</section>
 @endsection

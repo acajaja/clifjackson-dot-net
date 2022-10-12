@@ -1,20 +1,20 @@
-@extends('layouts.layout')
+@extends('layouts.page')
 @section('title', 'scrapbook')
 @push('styles')
-<link href="{{ asset('css/gallery-A.css') }}" rel="stylesheet" type="text/css">
+<link href="{{ asset('css/gallery.css') }}" rel="stylesheet" type="text/css">
 @endpush
 @push('body-scripts')
 <script src="{{ asset('/js/scrapbook.js') }}" type="text/javascript"></script>
 @endpush
 
 @section('content')
-<div class="page-wrap">
+<section>
     <h1>My Scrapbook</h1>
     <p>
         <em>(in chronological order)</em>
     </p>
 
-    <section class="content-entry-box" id="moogfest2017">
+    <section class="content-entry-box-A" id="moogfest2017">
         <div>
             <h2>Moogfest 2017</h2>
             <p>
@@ -65,7 +65,7 @@
         </div>
     </section>
 
-    <section class="content-entry-box" id="secret_orchestra">
+    <section class="content-entry-box-A" id="secret_orchestra">
         <div>
             <h2>Secret Orchestra</h2>
             <p>
@@ -96,7 +96,7 @@
         </div>
     </section>
 
-    <section class="content-entry-box" id="spontaneous_river">
+    <section class="content-entry-box-A" id="spontaneous_river">
         <div>
             <h2>Spontaneous River</h2>
             <p>
@@ -135,7 +135,7 @@
         </div>
     </section>
 
-    <section class="content-entry-box" id="vf2007">
+    <section class="content-entry-box-A" id="vf2007">
         <div>
             <h2>Vision Festival XII (2007)</h2>
             <p>
@@ -150,7 +150,7 @@
         </div>
     </section>
 
-    <section class="content-entry-box">
+    <section class="content-entry-box-A">
         <div>
             <h2>Bobby Previte's Voodoo Orchestra West</h2>
 
@@ -195,7 +195,7 @@
         </div>
     </section>
 
-    <section class="content-entry-box">
+    <section class="content-entry-box-A">
         <div>
             <h2>Elavation</h2>
             <p>
@@ -251,7 +251,7 @@
         </div>
     </section>
 
-    <section class="content-entry-box">
+    <section class="content-entry-box-A">
         <div>
             <h2>Eulipion</h2>
 
@@ -286,7 +286,7 @@
         </div>
     </section>
 
-    <section class="content-entry-box">
+    <section class="content-entry-box-A">
         <div>
             <h2>Jazzopetry :: Spoken Word - Live Music</h2>
 
@@ -329,7 +329,7 @@
         </div>
     </section>
 
-    <section class="content-entry-box">
+    <section class="content-entry-box-A">
         <div>
             <h2>1975: An Underground Epic. A thin line between poetry and hip-hop.</h2>
             <p>
@@ -354,7 +354,7 @@
         </div>
     </section>
 
-    <section class="content-entry-box">
+    <section class="content-entry-box-A">
         <div>
             <h2>Misc. Scraps</h2>
             <p>
@@ -408,7 +408,7 @@
         </div>
     </section>
 
-    <section class="content-entry-box">
+    <section class="content-entry-box-A">
         <div>
             <h2>Other Performances</h2>
             <div class="responsive-iframe-container responsive-iframe-container-16x9">
@@ -416,5 +416,5 @@
             </div>
         </div>
     </section>
-</div>
+</section>
 @endsection

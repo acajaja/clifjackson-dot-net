@@ -1,4 +1,7 @@
-.content-entry-box {
+/*
+	5 columns, 3 rows
+*/
+.content-entry-box-B {
     background-color: $contentEntryBgColor;
     border-radius: 1rem;
     box-shadow: 0 0 1rem $boxShadow;
@@ -9,6 +12,9 @@
 	grid-column: 2/span 1;
     margin-bottom: 7.5rem;
 
+	h1 {
+		font-size: $largeFont;
+	}
 	h2 {
 		font-size: $mediumFont;
 		margin: 0 0 $smallSpace;

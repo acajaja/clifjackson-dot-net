@@ -17,7 +17,6 @@ mix.js('resources/js/scrapbook.js', 'public/js')
     .sass('resources/scss/home.scss', 'public/css')
     .sass('resources/scss/audio-page.scss', 'public/css')
     .sass('resources/scss/section-index-page.scss', 'public/css')
-    .sass('resources/scss/gallery-A.scss', 'public/css')
-    .sass('resources/scss/gallery-B.scss', 'public/css')
+    .sass('resources/scss/gallery.scss', 'public/css')
     .sass('resources/scss/general.scss', 'public/css')
     .sourceMaps(false, 'source-map');

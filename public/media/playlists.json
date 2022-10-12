@@ -1,8 +1,7 @@
-{
-	"playlists":[
+[
 	{
 		"name":"East 3rd Street Ensemble Samples",
-		"url":"http://media.clifjackson.net/playlists/east-third-st.json"
+		"url":"http://me.local/media/playlists/east-third-st.json"
 	},
 	{
 		"name":"Prajna Samples",
@@ -27,5 +26,5 @@
     {
 		"name":"Acoustic Mayhem Sample",
 		"url":"http://media.clifjackson.net/playlists/acoustic-mayhem.json"
-	}]
-}
+	}
+]
