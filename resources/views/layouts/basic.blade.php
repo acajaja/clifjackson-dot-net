@@ -3,9 +3,10 @@
 
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
 <title>clif jackson :: @yield('title')</title>
 @stack('styles')
+@stack('head-scripts')
 </head>
 
 <body>

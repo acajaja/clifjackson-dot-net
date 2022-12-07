@@ -1,111 +1,289 @@
-@media (max-width: 500px) {
-    #container {
-        &> #rings-links {
-            transform: scale(70%);
-        }
-    }
-}
-@media (min-width: 500px) and (max-width: 640px) {
-    #rings-links {
-        transform: scale(80%);
-    }
-}
-
-body {
-    font-family: $general-fonts;
-}
-
-#top-right-corner-bg {
+my-top-right-corner-bg {
     background-position: right top;
 }
 
-#container {
+my-name {
+    color: $homePageNameColor;
+    font-size: $mediumSmallFont;
+    font-style: italic;
+    left: 0;
+    padding: 0 0 0 0.5rem;
+    position: fixed;
+    top: 0;
+    transform: rotate(0deg);
+
+    &> p {
+        margin: 0;
+    }
+}
+
+my-container {
     display: grid;
-    grid-template-areas:
-        "header header"
-        "center center";
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: $mediumSmallFont 1fr;
-    height: 100vh;
-    width: 100vw;
+    grid-template-columns: 100vw;
+    grid-template-rows: 100vh;
+    justify-items: center;
+    max-height: 100%;
+}
 
-    #my-name {
-        color: $homePageNameColor;
-        font-size: $mediumSmallFont;
-        font-style: italic;
-        grid-area: header;
-        padding: 1px 0 0 5px;
-        transform: rotate(0deg);
+my-rings-links {
+    align-self: center;
+    display: grid;
+    grid-template-columns: repeat(15, 3.7rem);
+    grid-template-rows: repeat(20, 2rem);
 
-        &> p {
-            margin: 0;
+    a:hover {
+        color: $homePageLinkHoverColor;
+        text-decoration: underline;
+    }
+    a {
+        color: $homePageLinkColor;
+        font-family: "Japanese Brush";
+        font-weight: bold;
+        padding: 0;
+        text-decoration: none;
+    }
+
+    my-circle-A {
+        background-image: url($circleA);
+        grid-column-start: 1;
+        grid-row-start: 1;
+
+        a {
+            margin: 0 3rem 0 0;
+        }
+    }
+    my-circle-B {
+        background-image: url($circleB);
+        grid-column-start: 7;
+        grid-row-start: 4;
+
+        a {
+            margin: 0 0 0 3.7rem;
         }
     }
 
-    #rings-links {
-        align-self: start;
+    my-circle-A,
+    my-circle-B {
+        align-items: center;
+        background-repeat: no-repeat;
+        background-size: contain;
         display: grid;
-        grid-area: center;
-        grid-template-columns: repeat(15, 37px);
-        grid-template-rows: repeat(20, 20px);
-        justify-self: center;
+        height: 34.2rem;
+        justify-items: center;
+        transform: rotate(0deg);
+        width: 34.2rem;
 
         a {
-            color: $homePageLinkColor;
-            font-family: "Japanese Brush";
-            text-decoration: none;
+            font-size: $largeFont;
         }
-        a:hover {
-            color: $homePageLinkHoverColor;
-            text-decoration: underline;
-        }
+    }
+    my-inbetween {
+        grid-column-start: 7;
+        grid-row-start: 10;
+        margin: 0.2rem 0 -1.9rem -0.4rem;
+        text-align: center;
+        transform-origin: center;
+        transform: rotate(-74deg);
+        width: 13rem;
 
-        .circle {
-            background-repeat: no-repeat;
-            background-size: contain;
-            display: grid;
-            grid-template-columns: repeat(3, 33%);
-            grid-template-rows: repeat(3, 33%);
-            height: 34.2rem;
-            transform: rotate(0deg);
-            width: 34.2rem;
-
-            &> p:first-child {
-                align-self: center;
-                font-size: $largeFont;
-                font-weight: bold;
-                grid-row-start: 2;
-                grid-column-start: 2;
-                margin: 0;
-                padding: 0;
-            }
-        }
-        .in-btwn-box {
+        a {
             font-size: $mediumSmallFont;
-            grid-column-start: 7;
-            grid-row-start: 10;
-            margin: 0.7rem 0 -1.9rem -0.4rem;
-            text-align: center;
-            transform-origin: center;
-            transform: rotate(-71deg);
-            width: 13rem;
         }
-        #circleA {
-            background-image: url($circleA);
-            grid-column-start: 1;
-            grid-row-start: 1;
+    }
+}
 
-            &> p:first-child {
-                width: 11rem;
+// Portrait
+@media (orientation: portrait) {
+    my-left-side-middle-bg {
+        bottom: 3%;
+        transform-origin: left bottom;
+        transform: scale(0.6);
+    }
+    my-top-right-corner-bg {
+        transform-origin: right top;
+        transform: scale(0.6);
+    }
+
+    @media (-webkit-device-pixel-ratio: 1) {
+        @media (max-width: 640px) {
+            html > body { background-color: blueviolet; }
+            my-floating-cloud {
+                animation-duration: 60s;
+                -webkit-animation-duration: 60s;
+            }
+            my-rings-links {
+                margin-bottom: 10rem;
+                transform: scale(0.55);
             }
         }
-        #circleB {
-            background-image: url($circleB);
-            grid-column-start: 7;
-            grid-row-start: 4;
 
-            &> p:first-child {
-                width: 14.5rem;
+        @media (max-width: 320px) {
+            html > body { background-color: rgb(0, 255, 0); }
+            my-rings-links {
+                transform: scale(0.5);
+            }
+        }
+
+        @media (max-width: 240px) {
+            html > body { background-color: rgb(94, 54, 255); }
+            my-name {
+                font-size: $smallFont;
+                top: 4%;
+            }
+            my-floating-cloud {
+                animation-duration: 20s;
+                -webkit-animation-duration: 20s;
+                transform-origin: center right;
+                transform: scale(0.5);
+                top: 20%;
+            }
+            my-rings-links {
+                margin-bottom: 0;
+                transform: scale(0.25);
+            }
+            my-left-side-middle-bg {
+                bottom: 3%;
+                transform-origin: left bottom;
+                transform: scale(0.25);
+            }
+            my-top-right-corner-bg {
+                transform-origin: right top;
+                transform: scale(0.3);
+            }
+            my-rings-links {
+                my-circle-A,
+                my-circle-B {
+                    a {
+                        font-size: $largeFont + 0.6rem;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (-webkit-device-pixel-ratio: 1.5) {
+            
+    }
+
+    @media (-webkit-device-pixel-ratio: 2) {
+        @media (max-width: 640px) {
+            html > body { background-color: rgb(160, 238, 255); }
+            my-rings-links {
+                margin-bottom: 10rem;
+                transform: scale(0.45);
+            }
+        }
+
+        @media (max-width: 320px) {
+            html > body { background-color: rgb(255, 161, 94); }
+            my-rings-links {
+                transform: scale(0.3);
+            }
+        }
+
+        @media (max-width: 240px) {
+            html > body { background-color: rgb(94, 54, 255); }
+            my-name {
+                font-size: $smallFont;
+                top: 4%;
+            }
+            my-floating-cloud {
+                animation-duration: 20s;
+                -webkit-animation-duration: 20s;
+                transform-origin: center right;
+                transform: scale(0.5);
+                top: 20%;
+            }
+            my-rings-links {
+                margin-bottom: 0;
+                transform: scale(0.25);
+            }
+            my-left-side-middle-bg {
+                bottom: 3%;
+                transform-origin: left bottom;
+                transform: scale(0.25);
+            }
+            my-top-right-corner-bg {
+                transform-origin: right top;
+                transform: scale(0.3);
+            }
+            my-rings-links {
+                my-circle-A,
+                my-circle-B {
+                    a {
+                        font-size: $largeFont + 0.6rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Landscape
+@media (orientation: landscape) {
+    my-left-side-middle-bg {
+        bottom: 0;
+        transform-origin: left bottom;
+        transform: scale(0.8);
+    }
+    my-top-right-corner-bg {
+        transform-origin: right top;
+        transform: scale(0.8);
+    }
+
+    @media (-webkit-device-pixel-ratio: 1) {
+        @media (max-width: 926px) {
+            html > body { background-color: rgb(182, 126, 255); }
+            my-rings-links {
+                transform: scale(0.75);
+            }
+            my-left-side-middle-bg {
+                bottom: 0;
+                transform-origin: left bottom;
+                transform: scale(0.75);
+            }
+            my-top-right-corner-bg {
+                transform-origin: right top;
+                transform: scale(0.75);
+            }
+        }
+
+        @media (max-width: 568px) {
+            html > body { background-color: rgb(220, 43, 226); }
+            my-rings-links {
+                transform: scale(0.6);
+            }
+            my-left-side-middle-bg {
+                bottom: 0;
+                transform-origin: left bottom;
+                transform: scale(0.65);
+            }
+            my-top-right-corner-bg {
+                transform-origin: right top;
+                transform: scale(0.65);
+            }
+        }
+
+        @media (-webkit-device-pixel-ratio: 2) {
+            html > body { background-color: rgb(236, 230, 122); }
+            my-rings-links {
+                transform: scale(0.53);
+            }
+        }
+    }
+
+    @media (-webkit-device-pixel-ratio: 2) {
+        @media (max-width: 926px) {
+            html > body { background-color: rgb(160, 238, 255); }
+            my-rings-links {
+                transform: scale(0.5);
+            }
+        }
+
+        @media (max-width: 568px) {
+            html > body { background-color: rgb(255, 161, 94); }
+            my-rings-links {
+                transform: scale(0.35);
             }
         }
     }

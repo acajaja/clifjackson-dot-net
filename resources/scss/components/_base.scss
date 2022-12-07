@@ -1,9 +1,17 @@
+@import 'settings';
+@import 'fonts';
+@import '../../css/normalize-8.0.1';
+@import '../../css/fontawesome.min';
+@import '../../css/fa-solid.min';
+
 html {
     font-size: 62.5%;
-}
-body {
-    background-color: $mainBgColor;
-	font-family: $general-fonts;
+    line-height: 1.5;
+
+    body {
+        background-color: $mainBgColor;
+        font-family: $general-fonts;
+    }
 }
 a {
     color: inherit;
@@ -23,7 +31,7 @@ h1,h2,h3,h4,h5,h6,strong,
 .myh1,
 .myh2 {
     font-family: $header-fonts;
-    letter-spacing: -1px;
+    letter-spacing: -0.1rem;
 }
 section {
     &> h1:first-child {
@@ -41,7 +49,6 @@ blockquote {
 }
 code {
 	font-size: $mediumSmallFont;
-	line-height: 1.2;
 }
 iframe {
     border: none;
@@ -69,10 +76,7 @@ my-clear {
     margin: 0 2.5rem 2.5rem 0;
 }
 
-p {
-	line-height: 1.5;
-}
-#top-right-corner-bg {
+my-top-right-corner-bg {
     background-position: right $header-height;
 }
 

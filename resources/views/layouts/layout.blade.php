@@ -3,7 +3,7 @@
 
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
 <title>clif jackson :: @yield('title')</title>
 @stack('styles')
 @stack('head-scripts')
@@ -14,9 +14,7 @@
 <span id="page-top"></span>
 
 <div id="content-box">
-    <div id="floating-cloud-1"><img alt="" src="http://media.clifjackson.net/images/floating-cloud-BW-94x50.png"></div>
-    <div id="left-side-middle-bg"></div>
-    <div id="top-right-corner-bg"></div>
+    @include('components.clouds')
 
     <div id="main-section">
         @yield('content')

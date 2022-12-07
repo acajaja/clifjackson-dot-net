@@ -15,12 +15,25 @@ $white-circle-gradient-B: #efd7b6;
 // Shadows
 $boxShadow: #ccc;
 
+// Clouds
+$floaterHeight: 5rem;
+$floaterWidth: 9.4rem;
+
 // Images
-$rainbowLeftSide: 'http://media.clifjackson.net/images/rainbow_corner-left-BW-340x137.png';
-$rainbowTopR: 'http://media.clifjackson.net/images/rainbow_top-right-BW-142x80.png';
-$circleA: 'http://media.clifjackson.net/images/circle-1b.png';
-$circleB: 'http://media.clifjackson.net/images/circle-2.png';
-$smallCicles: 'http://media.clifjackson.net/images/both-circles-45x35.png';
+// $rainbowLeftSide: '/media/images/rainbow_corner-left-BW-340x137.png';
+// $rainbowTopR: '/media/images/rainbow_top-right-BW-142x80.png';
+// $circleA: '/media/images/circle-1b.png';
+// $circleB: '/media/images/circle-2.png';
+// $smallCircles: '/media/images/both-circles-45x35.png';
+
+$rainbowLeftSide: '/me.local/media/images/rainbow_corner-left-BW-340x137.png';
+$rainbowTopR: '/me.local/media/images/rainbow_top-right-BW-142x80.png';
+$circleA: '/me.local/media/images/circle-1b.png';
+$circleB: '/me.local/media/images/circle-2.png';
+$smallCircles: '/me.local/media/images/both-circles-45x35.png';
+
+// Font dir
+$baseFontsDir: '/me.local/fonts';
 
 // Font- Sizes
 $smallFont: 1.2rem;

@@ -1,35 +1,32 @@
 @extends('layouts.basic')
 @section('title', 'home')
 @push('styles')
-<link href="{{ asset('css/home.css') }}" rel="stylesheet" type="text/css">
+<link href="{{ asset(mix('css/home.css')) }}" rel="stylesheet" type="text/css">
+@endpush
+@push('scripts')
+<script type="text/javascript">
+    let text = 'DVP: ' + window.devicePixelRatio + " - Total width/height: " + screen.width + "*" + screen.height + "<br>" +
+    "Available width/height: " + screen.availWidth + "*" + screen.availHeight + "<br>" +
+    "Color depth: " + screen.colorDepth + "<br>" +
+    "Color resolution: " + screen.pixelDepth;
+    alert(text)
+</script>
 @endpush
 
 @section('content')
-    <div id="floating-cloud-1">
-        <img alt="" src="http://media.clifjackson.net/images/floating-cloud-BW-94x50.png">
-    </div>
-    <div id="left-side-middle-bg"></div>
-    <div id="top-right-corner-bg"></div>
+    @include('components.clouds')
 
-    <div id="container">
-        <div id="rings-links">
-            <div class="circle" id="circleA">
-                <p>
-                    <a href="{{ route('web-index') }}" title="Web">Web</a>
-                </p>
-            </div>
-            <div class="circle" id="circleB">
-                <p>
-                    <a href="{{ route('music-index') }}" title="Music">Music</a>
-                </p>
-            </div>
-            <div class="in-btwn-box">
+    <my-container>
+        <my-rings-links>
+            <my-circle-A class="circle">
+                <a href="{{ route('web-index') }}" title="Web">Web</a>
+            </my-circle-A>
+            <my-circle-B class="circle">
+                <a href="{{ route('music-index') }}" title="Music">Music</a>
+            </my-circle-B>
+            <my-inbetween>
                 <a href="{{ route('in-between') }}" title="in between">in between</a>
-            </div>
-        </div>
-
-        <div id="my-name">
-            <p>clifjackson.net</p>
-        </div>
-    </div>
+            </my-inbetween>
+        </my-rings-links>
+    </my-container>
 @endsection

@@ -20,3 +20,4 @@ mix.js('resources/js/scrapbook.js', 'public/js')
     .sass('resources/scss/gallery.scss', 'public/css')
     .sass('resources/scss/general.scss', 'public/css')
     .sourceMaps(false, 'source-map');
+mix.version();

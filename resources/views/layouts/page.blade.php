@@ -14,9 +14,7 @@
 <span id="page-top"></span>
 
 <div id="content-box">
-    <div id="floating-cloud-1"><img alt="" src="http://media.clifjackson.net/images/floating-cloud-BW-94x50.png"></div>
-    <div id="left-side-middle-bg"></div>
-    <div id="top-right-corner-bg"></div>
+    @include('components.clouds')
 
     <div id="main-section" class="page-wrap">
         <div></div>
