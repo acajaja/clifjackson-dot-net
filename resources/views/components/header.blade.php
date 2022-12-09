@@ -1,7 +1,7 @@
-<header id="main-header">
-    <div id="header-text-box">
-        <a href="{{ route('home') }}" id="my-header-name" title="home">clifjackson.net</a>
-    </div>
+<header>
+    <header-textbox>
+        <a href="{{ route('home') }}" title="home">clifjackson.net</a>
+    </header-textbox>
 
     <x-main-nav />
 </header>

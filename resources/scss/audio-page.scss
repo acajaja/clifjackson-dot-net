@@ -1,12 +1,15 @@
 @import './components/base.scss';
 @import './components/backgrounds.scss';
 @import './components/header.scss';
-@import './components/nav.scss';
 
-@media (width < 640px) {
+@media (min-width: 640px) {
+    @import './components/nav.scss';
+}
+
+@media (max-width: 640px) {
     @import './components/my-minidisk-skin-color1-small.scss';
 }
 
-@media (width >= 640px) {
+@media (min-width: 641px) {
     @import './components/my-minidisk-skin-color1.scss';
 }

@@ -1,13 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project name="FooBar" default="dist">
+<project name="MySite" basedir="." default="dist">
+
+    <property name="package"  value="${phing.project.name}" override="true" />
+    <property name="builddir" value="./build" override="true" />
+    <property name="archive" value="build.tar.gz" />
+    <property name="devserverpath" value="~/public_html/testing.clifjackson.net" />
+    <property name="dprodserverpath" value="~/public_html/clifjackson.net" />
+
+    <!-- Fileset for public files -->
+    <fileset dir="./public" id="publicfiles">
+        <include name="**" />
+        <exclude name="*.json" />
+        <exclude name="*.map" />
+    </fileset>
+
+    <!-- Filesets for Laravel files -->
+    <fileset dir="./app" id="laravelappfiles">
+        <include name="Exceptions/*.php" />
+        <include name="Http/*.php" />
+        <include name="Providers/*.php" />
+        <include name="View/*.php" />
+    </fileset>
+    <fileset dir="./bootstrap" id="laravelbootstrapfiles">
+        <include name="**/*.php" />
+    </fileset>
+    <fileset dir="./config" id="laravelconfigfiles">
+        <include name="**/*.php" />
+    </fileset>
+    <fileset dir="./resources/views" id="laravelviewfiles">
+        <include name="**" />
+    </fileset>
+    <fileset dir="./routes" id="laravelroutefiles">
+        <include name="web.php" />
+    </fileset>
+
+    <target name="removebuild">
+        <echo msg="Remove ${builddir} folder" />
+		<exec executable="rm" os="Linux">
+            <arg value="-rf" />
+            <arg path="${builddir}" />
+        </exec>
+    </target>
 
     <!-- ============================================  -->
     <!-- Target: prepare                               -->
     <!-- ============================================  -->
-    <target name="prepare">
-        <echo msg="Making directory ./build" />
-		<mkdir dir="./build" />
+    <target name="prepare" depends="removebuild">
+        <echo msg="Making directories..." />
+		<mkdir dir="${builddir}" />
+        <waitfor maxwaitunit="second" maxwait="10">
+            <available file="${builddir}" type="dir" />
+        </waitfor>
+		<mkdir dir="${builddir}/app" />
+		<mkdir dir="${builddir}/bootstrap" />
+		<mkdir dir="${builddir}/config" />
+		<mkdir dir="${builddir}/public" />
+		<mkdir dir="${builddir}/resources" />
+		<mkdir dir="${builddir}/resources/views" />
+		<mkdir dir="${builddir}/storage" mode="0700" />
+		<mkdir dir="${builddir}/storage/app" mode="0700" />
+		<mkdir dir="${builddir}/storage/framework" mode="0700" />
+		<mkdir dir="${builddir}/storage/logs" mode="0700" />
+
+        <echo msg="Running NodeJS" />
+		<exec executable="npm" os="Linux">
+            <arg value="run" />
+            <arg value="dev" />
+        </exec>
     </target>
 
     <!-- ============================================  -->
@@ -16,19 +76,84 @@
     <target name="build" depends="prepare">
         <echo msg="Copying files to build directory..." />
 
-        <echo msg="Copying ./about.php to ./build directory..." />
+        <copy file=".env" tofile="${builddir}/.env" />
 
-        <echo msg="Copying ./browsers.php to ./build directory..." />
+        <echo msg="Copying public files to ./public directory..." />
+        <copy todir="${builddir}/public">
+            <fileset refid="publicfiles" />
+        </copy>
 
-        <echo msg="Copying ./contact.php to ./build directory..." />
+        <echo msg="Copying Laravel app files..." />
+        <copy todir="${builddir}/app">
+            <fileset refid="laravelappfiles" />
+        </copy>
+
+        <echo msg="Copying Laravel bootstrap files..." />
+        <copy todir="${builddir}/bootstrap">
+            <fileset refid="laravelbootstrapfiles" />
+        </copy>
+
+        <echo msg="Copying Laravel config files..." />
+        <copy todir="${builddir}/config">
+            <fileset refid="laravelconfigfiles" />
+        </copy>
+
+        <echo msg="Copying Laravel route files..." />
+        <copy todir="${builddir}/routes">
+            <fileset refid="laravelroutefiles" />
+        </copy>
+
+        <echo msg="Copying Laravel view files..." />
+        <copy todir="${builddir}/resources/views">
+            <fileset refid="laravelviewfiles" />
+        </copy>
+    </target>
+
+    <target name="composerinstall" depends="build">
+        <echo msg="Remove current vendor folder..." />
+		<exec executable="rm" os="Linux">
+            <arg value="-rf" />
+            <arg path="./vendor" />
+        </exec>
+
+        <echo msg="Install Composer depedencies..." />
+        <composer command="install" composer="/usr/bin/composer" php="/usr/bin/php">
+            <arg value="--no-dev" />
+            <arg value="--no-interaction" />
+        </composer>
+
+        <echo msg="Move Composer depedencies..." />
+        <move file="./vendor" todir="${builddir}" />
     </target>
 
     <!-- ============================================  -->
     <!-- (DEFAULT)  Target: dist                       -->
     <!-- ============================================  -->
-    <target name="dist" depends="build">
+    <target name="dist" depends="composerinstall">
         <echo msg="Creating archive..." />
+        <tar destfile="${builddir}/${archive}" compression="gzip">
+            <fileset dir="${builddir}">
+                <include name="*" />
+            </fileset>
+        </tar>
+
         <echo msg="Files copied and compressed in build directory OK!" />
+
+        <echo msg="Restore Composer depedencies..." />
+        <composer command="install" composer="/usr/bin/composer" php="/usr/bin/php">
+            <arg value="--no-interaction" />
+        </composer>
+
+        <echo msg="SCP to dev server..." />
+        <exec executable="scp">
+            <arg value="${builddir}/${archive}" />
+            <arg value="jazzopet@jazzopetry.net:${devserverpath}"/>
+        </exec>
+
+        <echo msg="Unpack archive on server..." />
+        <exec executable="ssh" escape="false">
+            <arg line="jazzopet@jazzopetry.net 'cd ${devserverpath} && tar -xzf ${archive}'" />
+        </exec>
     </target>
 </project>
 

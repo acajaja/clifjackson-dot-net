@@ -1,4 +1,4 @@
-#main-header {
+header {
     background: white url($smallCircles) no-repeat 1rem center;
     border-bottom: 0.1rem solid $homePageLinkColor;
     box-shadow: 0 0 0.4rem #ccc;
@@ -7,18 +7,15 @@
     grid-template-rows: 1fr;
     height: $header-height;
     left: 0;
-    // min-width: 760px;
     position: fixed;
     top: 0;
     width: 100%;
 }
-#header-text-box {
+header-textbox {
     height: $header-height;
-    margin-right: 320px;
     padding: 0 0 0 6rem;
-    // position: relative;
 
-    #my-header-name {
+    &>a {
         font-size: $mediumSmallFont;
         line-height: $header-height;
     }
