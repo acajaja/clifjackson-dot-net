@@ -3,15 +3,6 @@
 @push('styles')
 <link href="{{ asset(mix('css/home.css')) }}" rel="stylesheet" type="text/css">
 @endpush
-@push('scripts')
-<script type="text/javascript">
-    let text = 'DVP: ' + window.devicePixelRatio + " - Total width/height: " + screen.width + "*" + screen.height + "<br>" +
-    "Available width/height: " + screen.availWidth + "*" + screen.availHeight + "<br>" +
-    "Color depth: " + screen.colorDepth + "<br>" +
-    "Color resolution: " + screen.pixelDepth;
-    alert(text)
-</script>
-@endpush
 
 @section('content')
     @include('components.clouds')

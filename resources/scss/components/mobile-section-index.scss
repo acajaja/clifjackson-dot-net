@@ -1,0 +1,40 @@
+// Portrait
+@media (orientation: portrait) {
+    @media (max-width: 640px) {
+        html > body { background-color: rgb(176, 211, 240); }
+        my-left-side-middle-bg {
+            bottom: 55%;
+            transform: scale(0.6);
+        }
+    }
+    @media (max-width: 320px) {
+        html > body { background-color: rgb(138, 159, 229); }
+        my-left-side-middle-bg {
+            bottom: 55%;
+            transform: scale(0.4);
+        }
+    }
+    @media (max-width: 240px) {
+        html > body { background-color: rgb(109, 106, 178); }
+        my-left-side-middle-bg {
+            bottom: 55%;
+            transform: scale(0.25);
+        }
+    }
+}
+
+// Landscape
+// @media (orientation: landscape) {
+//     @media (max-width: 926px) {
+//         my-left-side-middle-bg {
+//             bottom: 50%;
+//             transform: scale(0.6);
+//         }
+//     }
+//     @media (max-width: 568px) {
+//         my-left-side-middle-bg {
+//             bottom: 55%;
+//             transform: scale(0.6);
+//         }
+//     }
+// }

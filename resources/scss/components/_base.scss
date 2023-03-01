@@ -80,6 +80,9 @@ my-clear {
 my-top-right-corner-bg {
     background-position: right $header-height;
 }
+my-left-side-middle-bg {
+    transform-origin: left bottom;
+}
 
 /* VIDEO IFRAMES
 +------------------------------------------------------------------------------*/

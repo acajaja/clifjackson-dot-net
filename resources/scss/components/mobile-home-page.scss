@@ -1,0 +1,102 @@
+my-rings-links {
+    a {
+        color: $homePageLinkHoverColor;
+    }
+}
+
+// Portrait
+@media (orientation: portrait) {
+    @media (max-width: 640px) {
+        html > body { background-color: blueviolet; }
+        my-floating-cloud {
+            animation-duration: 60s;
+            -webkit-animation-duration: 60s;
+        }
+        my-rings-links {
+            margin-bottom: 10rem;
+            transform: scale(0.45);
+        }
+    }
+
+    @media (max-width: 320px) {
+        html > body { background-color: rgb(0, 255, 0); }
+        my-rings-links {
+            transform: scale(0.45);
+        }
+    }
+
+    @media (max-width: 240px) {
+        html > body { background-color: rgb(94, 54, 255); }
+        my-name {
+            font-size: $smallFont;
+            top: 4%;
+        }
+        my-floating-cloud {
+            animation-duration: 20s;
+            -webkit-animation-duration: 20s;
+            transform-origin: center right;
+            transform: scale(0.5);
+            top: 20%;
+        }
+        my-rings-links {
+            margin-bottom: 0;
+            transform: scale(0.25);
+        }
+        my-left-side-middle-bg {
+            bottom: 3%;
+            transform: scale(0.25);
+        }
+        my-top-right-corner-bg {
+            transform-origin: right top;
+            transform: scale(0.3);
+        }
+        my-rings-links {
+            my-circle-A,
+            my-circle-B {
+                a {
+                    font-size: $largeFont + 0.6rem;
+                }
+            }
+        }
+    }
+}
+
+// Landscape
+@media (orientation: landscape) {
+    @media (max-width: 926px) {
+        html > body { background-color: rgb(182, 126, 255); }
+        my-rings-links {
+            transform: scale(0.75);
+        }
+        my-left-side-middle-bg {
+            bottom: 0;
+            transform: scale(0.75);
+        }
+        my-top-right-corner-bg {
+            transform-origin: right top;
+            transform: scale(0.75);
+        }
+    }
+
+    @media (max-width: 568px) {
+        html > body { background-color: rgb(220, 43, 226); }
+        my-rings-links {
+            transform: scale(0.6);
+        }
+        my-left-side-middle-bg {
+            bottom: 0;
+            transform: scale(0.65);
+        }
+        my-top-right-corner-bg {
+            transform-origin: right top;
+            transform: scale(0.65);
+        }
+    }
+
+    @media (-webkit-device-pixel-ratio: 2) {
+        html > body { background-color: rgb(236, 230, 122); }
+        my-rings-links {
+            transform: scale(0.53);
+        }
+    }
+}

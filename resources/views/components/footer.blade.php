@@ -1,8 +1,8 @@
-<footer id="main-footer">
+<footer>
     <div id="top-link-box">
         <a href="#page-top" id="b2topLink" title="top of page">top</a>
     </div>
-    <nav id="footer-nav">
+    <nav>
 <?php //echo $this->navigation('default')->menu()->setPartial('elements/footer-menu.phtml'); ?>
     </nav>
     <?php //echo $this->partial('elements/credits.phtml'); ?>

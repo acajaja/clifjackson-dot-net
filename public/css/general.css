@@ -4032,6 +4032,10 @@ my-top-right-corner-bg {
   background-position: right 4rem;
 }
 
+my-left-side-middle-bg {
+  transform-origin: left bottom;
+}
+
 /* VIDEO IFRAMES
 +------------------------------------------------------------------------------*/
 .responsive-iframe-container {

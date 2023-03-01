@@ -1,0 +1,9 @@
+my-rings-links {
+    a {
+        color: $homePageLinkColor;
+    }
+    a:hover {
+        color: $homePageLinkHoverColor;
+        text-decoration: underline;
+    }
+}

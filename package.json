@@ -6,6 +6,7 @@
         "watch": "mix watch",
         "watch-poll": "mix watch -- --watch-options-poll=1000",
         "hot": "mix watch --hot",
+        "stage": "./vendor/bin/phing -f build-testing.xml",
         "prod": "npm run production",
         "production": "mix --production"
     },

@@ -1,3 +1,127 @@
 @import './components/base.scss';
 @import './components/backgrounds.scss';
-@import './components/home-page.scss';
+
+// Desktop & mobile
+my-top-right-corner-bg {
+    background-position: right top;
+    transform-origin: right top;
+}
+
+my-name {
+    color: $homePageNameColor;
+    font-size: $mediumSmallFont;
+    font-style: italic;
+    left: 0;
+    padding: 0 0 0 0.5rem;
+    position: fixed;
+    top: 0;
+    transform: rotate(0deg);
+
+    &> p {
+        margin: 0;
+    }
+}
+
+my-container {
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: 100vh;
+    justify-items: center;
+    max-height: 100%;
+}
+
+my-rings-links {
+    align-self: center;
+    display: grid;
+    grid-template-columns: repeat(15, 3.7rem);
+    grid-template-rows: repeat(20, 2rem);
+
+    a {
+        font-family: "Japanese Brush";
+        font-weight: bold;
+        padding: 0;
+        text-decoration: none;
+    }
+
+    my-circle-A {
+        background-image: url($circleA);
+        grid-column-start: 1;
+        grid-row-start: 1;
+
+        a {
+            margin: 0 3rem 0 0;
+        }
+    }
+    my-circle-B {
+        background-image: url($circleB);
+        grid-column-start: 7;
+        grid-row-start: 4;
+
+        a {
+            margin: 0 0 0 3.7rem;
+        }
+    }
+
+    my-circle-A,
+    my-circle-B {
+        align-items: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: grid;
+        height: 34.2rem;
+        justify-items: center;
+        transform: rotate(0deg);
+        width: 34.2rem;
+
+        a {
+            font-size: $largeFont;
+        }
+    }
+    my-inbetween {
+        grid-column-start: 7;
+        grid-row-start: 10;
+        margin: 0.2rem 0 -1.9rem -0.4rem;
+        text-align: center;
+        transform-origin: center;
+        transform: rotate(-74deg);
+        width: 13rem;
+
+        a {
+            font-size: $mediumSmallFont;
+        }
+    }
+}
+
+// Portrait - Mobile
+@media (orientation: portrait) {
+    my-left-side-middle-bg {
+        bottom: 3%;
+        transform: scale(0.6);
+    }
+    my-top-right-corner-bg {
+        transform: scale(0.6);
+    }
+
+    @media (max-width: 640px) {
+        @import './components/mobile-home-page.scss';
+    }
+}
+
+// Landscape - Mobile
+@media (orientation: landscape) {
+    my-left-side-middle-bg {
+        bottom: 0;
+        transform: scale(0.8);
+    }
+    my-top-right-corner-bg {
+        transform: scale(0.8);
+    }
+
+    @media (max-width: 926px) {
+        @import './components/mobile-home-page.scss';
+    }
+
+    @media (min-width: 640px) {
+        @import './components/desktop-home-page.scss';
+    }    
+}

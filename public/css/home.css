@@ -4032,6 +4032,10 @@ my-top-right-corner-bg {
   background-position: right 4rem;
 }
 
+my-left-side-middle-bg {
+  transform-origin: left bottom;
+}
+
 /* VIDEO IFRAMES
 +------------------------------------------------------------------------------*/
 .responsive-iframe-container {
@@ -4084,6 +4088,7 @@ my-floating-cloud {
 }
 my-top-right-corner-bg {
   background-position: right top;
+  transform-origin: right top;
 }
 
 my-name {
@@ -4114,12 +4119,7 @@ my-rings-links {
   grid-template-columns: repeat(15, 3.7rem);
   grid-template-rows: repeat(20, 2rem);
 }
-my-rings-links a:hover {
-  color: #000;
-  text-decoration: underline;
-}
 my-rings-links a {
-  color: #333;
   font-family: "Japanese Brush";
   font-weight: bold;
   padding: 0;
@@ -4172,16 +4172,19 @@ my-rings-links my-inbetween a {
 @media (orientation: portrait) {
   my-left-side-middle-bg {
     bottom: 3%;
-    transform-origin: left bottom;
     transform: scale(0.6);
   }
 
   my-top-right-corner-bg {
-    transform-origin: right top;
     transform: scale(0.6);
   }
 }
 @media (orientation: portrait) and (max-width: 640px) {
+  my-rings-links a {
+    color: #000;
+  }
+}
+@media (orientation: portrait) and (max-width: 640px) and (orientation: portrait) and (max-width: 640px) {
   html > body {
     background-color: blueviolet;
   }
@@ -4193,19 +4196,19 @@ my-rings-links my-inbetween a {
 
   my-rings-links {
     margin-bottom: 10rem;
-    transform: scale(0.55);
+    transform: scale(0.45);
   }
 }
-@media (orientation: portrait) and (max-width: 320px) {
+@media (orientation: portrait) and (max-width: 640px) and (orientation: portrait) and (max-width: 320px) {
   html > body {
     background-color: rgb(0, 255, 0);
   }
 
   my-rings-links {
-    transform: scale(0.5);
+    transform: scale(0.45);
   }
 }
-@media (orientation: portrait) and (max-width: 240px) {
+@media (orientation: portrait) and (max-width: 640px) and (orientation: portrait) and (max-width: 240px) {
   html > body {
     background-color: rgb(94, 54, 255);
   }
@@ -4230,7 +4233,6 @@ my-rings-links my-inbetween a {
 
   my-left-side-middle-bg {
     bottom: 3%;
-    transform-origin: left bottom;
     transform: scale(0.25);
   }
 
@@ -4244,19 +4246,7 @@ my-rings-links my-circle-B a {
     font-size: 4rem;
   }
 }
-@media (orientation: landscape) {
-  my-left-side-middle-bg {
-    bottom: 0;
-    transform-origin: left bottom;
-    transform: scale(0.8);
-  }
-
-  my-top-right-corner-bg {
-    transform-origin: right top;
-    transform: scale(0.8);
-  }
-}
-@media (orientation: landscape) and (max-width: 926px) {
+@media (orientation: portrait) and (max-width: 640px) and (orientation: landscape) and (max-width: 926px) {
   html > body {
     background-color: rgb(182, 126, 255);
   }
@@ -4267,7 +4257,6 @@ my-rings-links my-circle-B a {
 
   my-left-side-middle-bg {
     bottom: 0;
-    transform-origin: left bottom;
     transform: scale(0.75);
   }
 
@@ -4276,7 +4265,7 @@ my-rings-links my-circle-B a {
     transform: scale(0.75);
   }
 }
-@media (orientation: landscape) and (max-width: 568px) {
+@media (orientation: portrait) and (max-width: 640px) and (orientation: landscape) and (max-width: 568px) {
   html > body {
     background-color: rgb(220, 43, 226);
   }
@@ -4287,7 +4276,6 @@ my-rings-links my-circle-B a {
 
   my-left-side-middle-bg {
     bottom: 0;
-    transform-origin: left bottom;
     transform: scale(0.65);
   }
 
@@ -4296,13 +4284,146 @@ my-rings-links my-circle-B a {
     transform: scale(0.65);
   }
 }
-@media (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+@media (orientation: portrait) and (max-width: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
   html > body {
     background-color: rgb(236, 230, 122);
   }
 
   my-rings-links {
     transform: scale(0.53);
+  }
+}
+@media (orientation: landscape) {
+  my-left-side-middle-bg {
+    bottom: 0;
+    transform: scale(0.8);
+  }
+
+  my-top-right-corner-bg {
+    transform: scale(0.8);
+  }
+}
+@media (orientation: landscape) and (max-width: 926px) {
+  my-rings-links a {
+    color: #000;
+  }
+}
+@media (orientation: landscape) and (max-width: 926px) and (orientation: portrait) and (max-width: 640px) {
+  html > body {
+    background-color: blueviolet;
+  }
+
+  my-floating-cloud {
+    animation-duration: 60s;
+    -webkit-animation-duration: 60s;
+  }
+
+  my-rings-links {
+    margin-bottom: 10rem;
+    transform: scale(0.45);
+  }
+}
+@media (orientation: landscape) and (max-width: 926px) and (orientation: portrait) and (max-width: 320px) {
+  html > body {
+    background-color: rgb(0, 255, 0);
+  }
+
+  my-rings-links {
+    transform: scale(0.45);
+  }
+}
+@media (orientation: landscape) and (max-width: 926px) and (orientation: portrait) and (max-width: 240px) {
+  html > body {
+    background-color: rgb(94, 54, 255);
+  }
+
+  my-name {
+    font-size: 1.2rem;
+    top: 4%;
+  }
+
+  my-floating-cloud {
+    animation-duration: 20s;
+    -webkit-animation-duration: 20s;
+    transform-origin: center right;
+    transform: scale(0.5);
+    top: 20%;
+  }
+
+  my-rings-links {
+    margin-bottom: 0;
+    transform: scale(0.25);
+  }
+
+  my-left-side-middle-bg {
+    bottom: 3%;
+    transform: scale(0.25);
+  }
+
+  my-top-right-corner-bg {
+    transform-origin: right top;
+    transform: scale(0.3);
+  }
+
+  my-rings-links my-circle-A a,
+my-rings-links my-circle-B a {
+    font-size: 4rem;
+  }
+}
+@media (orientation: landscape) and (max-width: 926px) and (orientation: landscape) and (max-width: 926px) {
+  html > body {
+    background-color: rgb(182, 126, 255);
+  }
+
+  my-rings-links {
+    transform: scale(0.75);
+  }
+
+  my-left-side-middle-bg {
+    bottom: 0;
+    transform: scale(0.75);
+  }
+
+  my-top-right-corner-bg {
+    transform-origin: right top;
+    transform: scale(0.75);
+  }
+}
+@media (orientation: landscape) and (max-width: 926px) and (orientation: landscape) and (max-width: 568px) {
+  html > body {
+    background-color: rgb(220, 43, 226);
+  }
+
+  my-rings-links {
+    transform: scale(0.6);
+  }
+
+  my-left-side-middle-bg {
+    bottom: 0;
+    transform: scale(0.65);
+  }
+
+  my-top-right-corner-bg {
+    transform-origin: right top;
+    transform: scale(0.65);
+  }
+}
+@media (orientation: landscape) and (max-width: 926px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+  html > body {
+    background-color: rgb(236, 230, 122);
+  }
+
+  my-rings-links {
+    transform: scale(0.53);
+  }
+}
+@media (orientation: landscape) and (min-width: 640px) {
+  my-rings-links a {
+    color: #333;
+  }
+  my-rings-links a:hover {
+    color: #000;
+    text-decoration: underline;
   }
 }
 
