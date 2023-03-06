@@ -1,10 +1,10 @@
 @extends('layouts.page')
 @section('title', 'in bewteen')
 @push('styles')
-<link href="{{ asset('css/gallery.css') }}" rel="stylesheet" type="text/css">
+<link href="{{ mix('css/gallery.css') }}" rel="stylesheet" type="text/css">
 @endpush
 @push('body-scripts')
-<script src="{{ asset('/js/sk8.js') }}" type="text/javascript"></script>
+<script src="{{ mix('/js/sk8.js') }}" type="text/javascript"></script>
 @endpush
 
 @section('content')
@@ -23,20 +23,20 @@
                 locations in NYC. Can't seem to find any from back in the day yet.
             </p>
             <div id="sk8-gall" class="thumbnail-gallery">
-                <a class="thumb-link" href="http://media.clifjackson.net/images/sk8/FRP_1317-321x480.jpg" title="Autumn - FS Wall Ride">
-                    <img src="http://media.clifjackson.net/images/sk8/thumbs/FRP_1317-150x224.jpg" alt="Autumn - FS Wall Ride">
+                <a class="thumb-link" href="{{ asset('images/sk8/FRP_1317-321x480.jpg') }}" title="Autumn - FS Wall Ride">
+                    <img src="{{ asset('images/sk8/thumbs/FRP_1317-150x224.jpg') }}" alt="Autumn - FS Wall Ride">
                 </a>
-                <a class="thumb-link" href="http://media.clifjackson.net/images/sk8/IMG_0302.jpg" title="Autumn - FS Grind">
-                    <img src="http://media.clifjackson.net/images/sk8/thumbs/IMG_0302-150x113.jpg" alt="Autumn - FS Grind">
+                <a class="thumb-link" href="{{ asset('images/sk8/IMG_0302.jpg') }}" title="Autumn - FS Grind">
+                    <img src="{{ asset('images/sk8/thumbs/IMG_0302-150x113.jpg') }}" alt="Autumn - FS Grind">
                 </a>
-                <a class="thumb-link" href="http://media.clifjackson.net/images/sk8/IMG_0527-640x480.jpg" title="Heli-port Bowl 3">
-                    <img src="http://media.clifjackson.net/images/sk8/thumbs/IMG_0527-150sq.jpg" alt="Heli-port Bowl 3">
+                <a class="thumb-link" href="{{ asset('images/sk8/IMG_0527-640x480.jpg') }}" title="Heli-port Bowl 3">
+                    <img src="{{ asset('images/sk8/thumbs/IMG_0527-150sq.jpg') }}" alt="Heli-port Bowl 3">
                 </a>
-                <a class="thumb-link" href="http://media.clifjackson.net/images/sk8/IMG_0143-2.jpg" title="Heli-port Bowl 1">
-                    <img src="http://media.clifjackson.net/images/sk8/thumbs/IMG_0143-2-150x113.jpg" alt="Heli-port Bowl 1">
+                <a class="thumb-link" href="{{ asset('images/sk8/IMG_0143-2.jpg') }}" title="Heli-port Bowl 1">
+                    <img src="{{ asset('images/sk8/thumbs/IMG_0143-2-150x113.jpg') }}" alt="Heli-port Bowl 1">
                 </a>
-                <a class="thumb-link" href="http://media.clifjackson.net/images/sk8/IMG_0132-2.jpg" title="Heli-port Bowl 2">
-                    <img src="http://media.clifjackson.net/images/sk8/thumbs/IMG_0132-2-150x113.jpg" alt="Heli-port Bowl 2">
+                <a class="thumb-link" href="{{ asset('images/sk8/IMG_0132-2.jpg') }}" title="Heli-port Bowl 2">
+                    <img src="{{ asset('images/sk8/thumbs/IMG_0132-2-150x113.jpg') }}" alt="Heli-port Bowl 2">
                 </a>
             </div>
         </div>

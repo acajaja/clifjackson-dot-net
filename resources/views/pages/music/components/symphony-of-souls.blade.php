@@ -1,6 +1,6 @@
     <section class="content-entry-box-B">
         <div class="media-box-150">
-            <img src="http://media.clifjackson.net/images/discography/spon-river-souls-150.jpg" alt="Spontaneous River">
+            <img src="{{ asset('images/discography/spon-river-souls-150.jpg') }}" alt="Spontaneous River">
         </div>
         <div class="content-entry-info-box">
             <h2>Symphony of Souls</h2>
@@ -8,7 +8,7 @@
             <p>
                 New York, NY
                 <br><a href="https://jasonkaohwang.com/spontaneous-river" title="Mulatta Records" target="_blank">https://jasonkaohwang.com/spontaneous-river</a>
-                <br>The album was reviewed by many others, but here is the review from the <a href="http://media.clifjackson.net/pdf/nyc-jazz-record-hwang-souls-review.pdf" target="_blank" title="NYC Jazz Record review">NYC Jazz Record</a>.
+                <br>The album was reviewed by many others, but here is the review from the <a href="{{ asset('pdf/nyc-jazz-record-hwang-souls-review.pdf') }}" target="_blank" title="NYC Jazz Record review">NYC Jazz Record</a>.
                 <br>
                 More reviews are <a href="http://www.jasonkaohwang.com/spontaneous-river-reviews" target="_blank" title="More Spontaneous River reviews">here</a>.
             </p>

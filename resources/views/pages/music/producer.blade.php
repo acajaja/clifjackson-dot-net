@@ -1,7 +1,7 @@
 @extends('layouts.page')
 @section('title', 'producer')
 @push('styles')
-<link href="{{ asset('css/gallery.css') }}" rel="stylesheet" type="text/css">
+<link href="{{ mix('css/gallery.css') }}" rel="stylesheet" type="text/css">
 @endpush
 
 @section('content')

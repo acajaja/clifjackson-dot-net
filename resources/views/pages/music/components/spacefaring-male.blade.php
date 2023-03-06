@@ -1,6 +1,6 @@
     <section class="content-entry-box-B">
         <div class="media-box-150">
-            <img src="http://media.clifjackson.net/images/discography/Spacefaring_Male.jpg" alt="Tyler Walker - Spacefaring Male">
+            <img src="{{ asset('images/discography/Spacefaring_Male.jpg') }}" alt="Tyler Walker - Spacefaring Male">
         </div>
         <div class="content-entry-info-box">
             <h2>Spacefaring Male</h2>

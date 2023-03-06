@@ -1,6 +1,6 @@
     <section class="content-entry-box-B">
         <div class="media-box-150">
-            <img src="http://media.clifjackson.net/images/discography/rasMosheEnsemble-150w.jpg" alt="The Ras Ensemble">
+            <img src="{{ asset('images/discography/rasMosheEnsemble-150w.jpg') }}" alt="The Ras Ensemble">
         </div>
         <div class="content-entry-info-box">
             <h2>The Ras Ensemble</h2>

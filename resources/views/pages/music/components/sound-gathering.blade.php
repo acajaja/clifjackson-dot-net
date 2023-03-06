@@ -1,6 +1,6 @@
     <section class="content-entry-box-B">
         <div class="media-box-150">
-            <img src="http://media.clifjackson.net/images/discography/Sound_Gathering_150.jpg" alt="Sound Gathering">
+            <img src="{{ asset('images/discography/Sound_Gathering_150.jpg') }}" alt="Sound Gathering">
         </div>
         <div class="content-entry-info-box">
             <h2>Sound Gathering</h2>

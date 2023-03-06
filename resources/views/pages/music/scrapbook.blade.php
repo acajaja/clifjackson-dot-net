@@ -1,10 +1,10 @@
 @extends('layouts.page')
 @section('title', 'scrapbook')
 @push('styles')
-<link href="{{ asset('css/gallery.css') }}" rel="stylesheet" type="text/css">
+<link href="{{ mix('css/gallery.css') }}" rel="stylesheet" type="text/css">
 @endpush
 @push('body-scripts')
-<script src="{{ asset('/js/scrapbook.js') }}" type="text/javascript"></script>
+<script src="{{ mix('/js/scrapbook.js') }}" type="text/javascript"></script>
 @endpush
 
 @section('content')
@@ -18,7 +18,7 @@
         <div>
             <h2>Moogfest 2017</h2>
             <p>
-                <img alt="Sounds of Commerce" class="image-left-25" src="http://media.clifjackson.net/images/SoC-moog-fest-2017/thumbs/TSOC-Logo-150w.jpg">
+                <img alt="Sounds of Commerce" class="image-left-25" src="{{ asset('images/SoC-moog-fest-2017/thumbs/TSOC-Logo-150w.jpg') }}">
                 While working at Bronto I had a volunteer opportunity to co-lead the "Sounds Of Commerce"
                 installation &mdash; a concept project to turn some of our tracking data
                 in to music via MIDI.
@@ -43,23 +43,23 @@
                 <a href="http://blog.bronto.com/news/moogfest-display-transforms-commerce-data/" target="_blank" title="Moogfest Display Transforms Commerce Data Into Sight and Sound">http://blog.bronto.com/news/moogfest-display-transforms-commerce-data/</a>
             </p> -->
             <div id="moog-gall" class="thumbnail-gallery">
-                <a class="thumb-link" href="http://media.clifjackson.net/images/SoC-moog-fest-2017/Drum-Machine-Idea-740w.jpg" title="Drum Machine Concept">
-                    <img src="http://media.clifjackson.net/images/SoC-moog-fest-2017/thumbs/Drum-Machine-Idea-150sq.jpg" alt="Drum Machine Concept">
+                <a class="thumb-link" href="{{ asset('images/SoC-moog-fest-2017/Drum-Machine-Idea-740w.jpg') }}" title="Drum Machine Concept">
+                    <img src="{{ asset('images/SoC-moog-fest-2017/thumbs/Drum-Machine-Idea-150sq.jpg') }}" alt="Drum Machine Concept">
                 </a>
-                <a class="thumb-link" href="http://media.clifjackson.net/images/SoC-moog-fest-2017/Controller-2-740w.gif" title="MIDI Controller Cutting Template">
-                    <img src="http://media.clifjackson.net/images/SoC-moog-fest-2017/thumbs/Controller-2-150sq.gif" alt="MIDI Controller Cutting Template">
+                <a class="thumb-link" href="{{ asset('images/SoC-moog-fest-2017/Controller-2-740w.gif') }}" title="MIDI Controller Cutting Template">
+                    <img src="{{ asset('images/SoC-moog-fest-2017/thumbs/Controller-2-150sq.gif') }}" alt="MIDI Controller Cutting Template">
                 </a>
-                <a class="thumb-link" href="http://media.clifjackson.net/images/SoC-moog-fest-2017/5-10-2017-circuit-prototype-1-740w.jpg" title="Breadboard prototype">
-                    <img src="http://media.clifjackson.net/images/SoC-moog-fest-2017/thumbs/5-10-2017-circuit-prototype-1-150sq.jpg" alt="Breadboard prototype">
+                <a class="thumb-link" href="{{ asset('images/SoC-moog-fest-2017/5-10-2017-circuit-prototype-1-740w.jpg') }}" title="Breadboard prototype">
+                    <img src="{{ asset('images/SoC-moog-fest-2017/thumbs/5-10-2017-circuit-prototype-1-150sq.jpg') }}" alt="Breadboard prototype">
                 </a>
-                <a class="thumb-link" href="http://media.clifjackson.net/images/SoC-moog-fest-2017/MIDI-Controllers-1-740w.jpg" title="Finished MIDI Controllers">
-                    <img src="http://media.clifjackson.net/images/SoC-moog-fest-2017/thumbs/MIDI-Controllers-1-150sq.jpg" alt="Finished MIDI Controllers">
+                <a class="thumb-link" href="{{ asset('images/SoC-moog-fest-2017/MIDI-Controllers-1-740w.jpg') }}" title="Finished MIDI Controllers">
+                    <img src="{{ asset('images/SoC-moog-fest-2017/thumbs/MIDI-Controllers-1-150sq.jpg') }}" alt="Finished MIDI Controllers">
                 </a>
-                <a class="thumb-link" href="http://media.clifjackson.net/images/SoC-moog-fest-2017/SoC-crowd-1-740w.jpg" title="SoC Crowd">
-                    <img src="http://media.clifjackson.net/images/SoC-moog-fest-2017/thumbs/SoC-crowd-1-150sq.jpg" alt="SoC Crowd">
+                <a class="thumb-link" href="{{ asset('images/SoC-moog-fest-2017/SoC-crowd-1-740w.jpg') }}" title="SoC Crowd">
+                    <img src="{{ asset('images/SoC-moog-fest-2017/thumbs/SoC-crowd-1-150sq.jpg') }}" alt="SoC Crowd">
                 </a>
-                <a class="thumb-link" href="http://media.clifjackson.net/images/SoC-moog-fest-2017/action-1.jpg" title="Participant">
-                    <img src="http://media.clifjackson.net/images/SoC-moog-fest-2017/thumbs/action-1-150sq.jpg" alt="Participant">
+                <a class="thumb-link" href="{{ asset('images/SoC-moog-fest-2017/action-1.jpg') }}" title="Participant">
+                    <img src="{{ asset('images/SoC-moog-fest-2017/thumbs/action-1-150sq.jpg') }}" alt="Participant">
                 </a>
             </div>
         </div>
@@ -69,7 +69,7 @@
         <div>
             <h2>Secret Orchestra</h2>
             <p>
-                <img alt="" class="image-left-25" src="http://media.clifjackson.net/images/secret-orchestra/IMG_2931-FIX1-280sq.jpg">
+                <img alt="" class="image-left-25" src="{{ asset('images/secret-orchestra/IMG_2931-FIX1-280sq.jpg') }}">
                 <!--Check out our
                 <a href="http://roulettenyc.wordpress.com/2010/10/15/interview-with-secret-orchestra/" title="Roulette Interview">interview with Roulette</a>!
                 <br><br>-->
@@ -113,23 +113,23 @@
                 Performance photos are from <a href="http://www.galapagosdetroit.com/" target="_blank" title="Galapagos Art Space">Galapagos Art Space</a> (formerly of Brooklyn, NY).
             </p>
             <div id="river-gall" class="thumbnail-gallery">
-                <a class="thumb-link" href="http://media.clifjackson.net/images/spontaneous-river/Galapagos-1.jpg" title="Performance Photo 1">
-                    <img src="http://media.clifjackson.net/images/spontaneous-river/thumbs/Galapagos-1-150sq.jpg" alt="Performance Photo 1">
+                <a class="thumb-link" href="{{ asset('images/spontaneous-river/Galapagos-1.jpg') }}" title="Performance Photo 1">
+                    <img src="{{ asset('images/spontaneous-river/thumbs/Galapagos-1-150sq.jpg') }}" alt="Performance Photo 1">
                 </a>
-                <a class="thumb-link" href="http://media.clifjackson.net/images/spontaneous-river/Galapagos-2.jpg" title="Performance Photo 2">
-                    <img src="http://media.clifjackson.net/images/spontaneous-river/thumbs/Galapagos-2-150sq.jpg" alt="Performance Photo 2">
+                <a class="thumb-link" href="{{ asset('images/spontaneous-river/Galapagos-2.jpg') }}" title="Performance Photo 2">
+                    <img src="{{ asset('images/spontaneous-river/thumbs/Galapagos-2-150sq.jpg') }}" alt="Performance Photo 2">
                 </a>
-                <a class="thumb-link" href="http://media.clifjackson.net/images/spontaneous-river/Galapagos-3.jpg" title="Performance Photo 3">
-                    <img src="http://media.clifjackson.net/images/spontaneous-river/thumbs/Galapagos-3-150sq.jpg" alt="Performance Photo 3">
+                <a class="thumb-link" href="{{ asset('images/spontaneous-river/Galapagos-3.jpg') }}" title="Performance Photo 3">
+                    <img src="{{ asset('images/spontaneous-river/thumbs/Galapagos-3-150sq.jpg') }}" alt="Performance Photo 3">
                 </a>
-                <a class="thumb-link" href="http://media.clifjackson.net/images/spontaneous-river/Galapagos-4.jpg" title="Performance Photo 4">
-                    <img src="http://media.clifjackson.net/images/spontaneous-river/thumbs/Galapagos-4-150sq.jpg" alt="Performance Photo 4">
+                <a class="thumb-link" href="{{ asset('images/spontaneous-river/Galapagos-4.jpg') }}" title="Performance Photo 4">
+                    <img src="{{ asset('images/spontaneous-river/thumbs/Galapagos-4-150sq.jpg') }}" alt="Performance Photo 4">
                 </a>
-                <a class="thumb-link" href="http://media.clifjackson.net/images/spontaneous-river/Galapagos-5.jpg" title="Performance Photo 5">
-                    <img src="http://media.clifjackson.net/images/spontaneous-river/thumbs/Galapagos-5-150sq.jpg" alt="Performance Photo 5">
+                <a class="thumb-link" href="{{ asset('images/spontaneous-river/Galapagos-5.jpg') }}" title="Performance Photo 5">
+                    <img src="{{ asset('images/spontaneous-river/thumbs/Galapagos-5-150sq.jpg') }}" alt="Performance Photo 5">
                 </a>
-                <a class="thumb-link" href="http://media.clifjackson.net/images/spontaneous-river/Recording-Session-1.jpg" title="Recording Session">
-                    <img src="http://media.clifjackson.net/images/spontaneous-river/thumbs/Recording-Session-1-150sq.jpg" alt="Recording Session">
+                <a class="thumb-link" href="{{ asset('images/spontaneous-river/Recording-Session-1.jpg') }}" title="Recording Session">
+                    <img src="{{ asset('images/spontaneous-river/thumbs/Recording-Session-1-150sq.jpg') }}" alt="Recording Session">
                 </a>
             </div>
         </div>
@@ -145,7 +145,7 @@
                 Unfortunately, the occassion was celebrating the passing of the great Leroy Jenkins. We played Billy Bang's arrangement of Leroy's classic <em>New York</em>.
             </p>
             <p>
-                <img alt="50 String for Leroy" class="img-100" src="http://media.clifjackson.net/images/vision07/strings_for_LJ-640.jpg">
+                <img alt="50 String for Leroy" class="img-100" src="{{ asset('images/vision07/strings_for_LJ-640.jpg') }}">
             </p>
         </div>
     </section>
@@ -173,23 +173,23 @@
             </p>
 
             <div id="voodoo-gall" class="thumbnail-gallery">
-                <a class="thumb-link" href="http://media.clifjackson.net/images/brew/Brew_Poster_319x500.jpg" title="Promo Poster">
-                    <img src="http://media.clifjackson.net/images/brew/thumbs/Brew_Poster_319x500.jpg" alt="Promo Poster">
+                <a class="thumb-link" href="{{ asset('images/brew/Brew_Poster_319x500.jpg') }}" title="Promo Poster">
+                    <img src="{{ asset('images/brew/thumbs/Brew_Poster_319x500.jpg') }}" alt="Promo Poster">
                 </a>
-                <a class="thumb-link" href="http://media.clifjackson.net/images/brew/BrewPR1bb_500x339.gif" title="Press Photo 1">
-                    <img src="http://media.clifjackson.net/images/brew/thumbs/BrewPR1bb_500x339.jpg" alt="Press Photo 1">
+                <a class="thumb-link" href="{{ asset('images/brew/BrewPR1bb_500x339.gif') }}" title="Press Photo 1">
+                    <img src="{{ asset('images/brew/thumbs/BrewPR1bb_500x339.jpg') }}" alt="Press Photo 1">
                 </a>
-                <a class="thumb-link" href="http://media.clifjackson.net/images/brew/BrewPR2bb_314x500.gif" title="Press Coverage 1">
-                    <img src="http://media.clifjackson.net/images/brew/thumbs/BrewPR2bb_314x500.gif" alt="Press Coverage 1">
+                <a class="thumb-link" href="{{ asset('images/brew/BrewPR2bb_314x500.gif') }}" title="Press Coverage 1">
+                    <img src="{{ asset('images/brew/thumbs/BrewPR2bb_314x500.gif') }}" alt="Press Coverage 1">
                 </a>
-                <a class="thumb-link" href="http://media.clifjackson.net/images/brew/BrewPR3_558x500.jpg" title="Press Photo 2">
-                    <img src="http://media.clifjackson.net/images/brew/thumbs/BrewPR3_558x500.jpg" alt="Press Photo 2">
+                <a class="thumb-link" href="{{ asset('images/brew/BrewPR3_558x500.jpg') }}" title="Press Photo 2">
+                    <img src="{{ asset('images/brew/thumbs/BrewPR3_558x500.jpg') }}" alt="Press Photo 2">
                 </a>
-                <a class="thumb-link" href="http://media.clifjackson.net/images/brew/BrewReviewA_394x400.gif" title="Press Coverage 2">
-                    <img src="http://media.clifjackson.net/images/brew/thumbs/BrewReviewA_394x400.gif" alt="Press Coverage 2">
+                <a class="thumb-link" href="{{ asset('images/brew/BrewReviewA_394x400.gif') }}" title="Press Coverage 2">
+                    <img src="{{ asset('images/brew/thumbs/BrewReviewA_394x400.gif') }}" alt="Press Coverage 2">
                 </a>
-                <a class="thumb-link" href="http://media.clifjackson.net/images/brew/BrewReviewB_400x786.gif" title="Press Coverage 3">
-                    <img src="http://media.clifjackson.net/images/brew/thumbs/BrewReviewB_400x786.gif" alt="Press Coverage 3">
+                <a class="thumb-link" href="{{ asset('images/brew/BrewReviewB_400x786.gif') }}" title="Press Coverage 3">
+                    <img src="{{ asset('images/brew/thumbs/BrewReviewB_400x786.gif') }}" alt="Press Coverage 3">
                 </a>
             </div>
         </div>
@@ -205,47 +205,47 @@
             </p>
 
             <div id="ela-gall" class="thumbnail-gallery">
-                <a class="thumb-link" href="http://media.clifjackson.net/images/elavation/003_3A-640.jpg" title="Elavation @ Central Park Grill. Buffalo, NY-1">
-                    <img src="http://media.clifjackson.net/images/elavation/thumbs/003_3A-62sq.jpg" alt="Elavation @ Central Park Grill. Buffalo, NY-1">
+                <a class="thumb-link" href="{{ asset('images/elavation/003_3A-640.jpg') }}" title="Elavation @ Central Park Grill. Buffalo, NY-1">
+                    <img src="{{ asset('images/elavation/thumbs/003_3A-62sq.jpg') }}" alt="Elavation @ Central Park Grill. Buffalo, NY-1">
                 </a>
-                <a class="thumb-link" href="http://media.clifjackson.net/images/elavation/017_31A-640.jpg" title="Elavation @ Emergenza Fest. Buffalo, NY-1">
-                    <img src="http://media.clifjackson.net/images/elavation/thumbs/017_31A-62sq.jpg" alt="Elavation @ Emergenza Fest. Buffalo, NY-1">
+                <a class="thumb-link" href="{{ asset('images/elavation/017_31A-640.jpg') }}" title="Elavation @ Emergenza Fest. Buffalo, NY-1">
+                    <img src="{{ asset('images/elavation/thumbs/017_31A-62sq.jpg') }}" alt="Elavation @ Emergenza Fest. Buffalo, NY-1">
                 </a>
-                <a class="thumb-link" href="http://media.clifjackson.net/images/elavation/020_20A-640.jpg" title="Elavation @ Central Park Grill. Buffalo, NY-2">
-                    <img src="http://media.clifjackson.net/images/elavation/thumbs/020_20A-62sq.jpg" alt="Elavation @ Central Park Grill. Buffalo, NY-2">
+                <a class="thumb-link" href="{{ asset('images/elavation/020_20A-640.jpg') }}" title="Elavation @ Central Park Grill. Buffalo, NY-2">
+                    <img src="{{ asset('images/elavation/thumbs/020_20A-62sq.jpg') }}" alt="Elavation @ Central Park Grill. Buffalo, NY-2">
                 </a>
-                <a class="thumb-link" href="http://media.clifjackson.net/images/elavation/034_9-640.jpg" title="Elavation @ Emergenza Fest. Buffalo, NY-2">
-                    <img src="http://media.clifjackson.net/images/elavation/thumbs/034_9-62sq.jpg" alt="Elavation @ Emergenza Fest. Buffalo, NY-2">
+                <a class="thumb-link" href="{{ asset('images/elavation/034_9-640.jpg') }}" title="Elavation @ Emergenza Fest. Buffalo, NY-2">
+                    <img src="{{ asset('images/elavation/thumbs/034_9-62sq.jpg') }}" alt="Elavation @ Emergenza Fest. Buffalo, NY-2">
                 </a>
-                <a class="thumb-link" href="http://media.clifjackson.net/images/elavation/Billboard-640.jpg" title="Billboard CD Release">
-                    <img src="http://media.clifjackson.net/images/elavation/thumbs/Billboard-62sq.jpg" alt="Billboard CD Release">
+                <a class="thumb-link" href="{{ asset('images/elavation/Billboard-640.jpg') }}" title="Billboard CD Release">
+                    <img src="{{ asset('images/elavation/thumbs/Billboard-62sq.jpg') }}" alt="Billboard CD Release">
                 </a>
-                <a class="thumb-link" href="http://media.clifjackson.net/images/elavation/Elavation_Diablo_321.gif" title="Club Diablo Performance Clipping from The Buffalo News">
-                    <img src="http://media.clifjackson.net/images/elavation/thumbs/Elavation_Diablo_321-62sq.gif" alt="Club Diablo Performance Clipping from The Buffalo News">
+                <a class="thumb-link" href="{{ asset('images/elavation/Elavation_Diablo_321.gif') }}" title="Club Diablo Performance Clipping from The Buffalo News">
+                    <img src="{{ asset('images/elavation/thumbs/Elavation_Diablo_321-62sq.gif') }}" alt="Club Diablo Performance Clipping from The Buffalo News">
                 </a>
-                <a class="thumb-link" href="http://media.clifjackson.net/images/elavation/Elavation_Summer_2002.jpg" title="Elavation @ The Elmwood Art Festival 2002">
-                    <img src="http://media.clifjackson.net/images/elavation/thumbs/Elavation_Summer_2002-62sq.jpg" alt="Elavation @ The Elmwood Art Festival 2002">
+                <a class="thumb-link" href="{{ asset('images/elavation/Elavation_Summer_2002.jpg') }}" title="Elavation @ The Elmwood Art Festival 2002">
+                    <img src="{{ asset('images/elavation/thumbs/Elavation_Summer_2002-62sq.jpg') }}" alt="Elavation @ The Elmwood Art Festival 2002">
                 </a>
-                <a class="thumb-link" href="http://media.clifjackson.net/images/elavation/Elavation-007-640.jpg" title="Group shot 1">
-                    <img src="http://media.clifjackson.net/images/elavation/thumbs/Elavation-007-62sq.jpg" alt="Group shot 1">
+                <a class="thumb-link" href="{{ asset('images/elavation/Elavation-007-640.jpg') }}" title="Group shot 1">
+                    <img src="{{ asset('images/elavation/thumbs/Elavation-007-62sq.jpg') }}" alt="Group shot 1">
                 </a>
-                <a class="thumb-link" href="http://media.clifjackson.net/images/elavation/Elavation049_webA.jpg" title="Group shot 1 for web">
-                    <img src="http://media.clifjackson.net/images/elavation/thumbs/Elavation049_webA-62sq.jpg" alt="Group shot 1 for web">
+                <a class="thumb-link" href="{{ asset('images/elavation/Elavation049_webA.jpg') }}" title="Group shot 1 for web">
+                    <img src="{{ asset('images/elavation/thumbs/Elavation049_webA-62sq.jpg') }}" alt="Group shot 1 for web">
                 </a>
-                <a class="thumb-link" href="http://media.clifjackson.net/images/elavation/Emergenza_B-640.jpg" title="Elavation @ Emergenza Fest. Buffalo, NY-3">
-                    <img src="http://media.clifjackson.net/images/elavation/thumbs/Emergenza_B-62sq.jpg" alt="Elavation @ Emergenza Fest. Buffalo, NY-3">
+                <a class="thumb-link" href="{{ asset('images/elavation/Emergenza_B-640.jpg') }}" title="Elavation @ Emergenza Fest. Buffalo, NY-3">
+                    <img src="{{ asset('images/elavation/thumbs/Emergenza_B-62sq.jpg') }}" alt="Elavation @ Emergenza Fest. Buffalo, NY-3">
                 </a>
-                <a class="thumb-link" href="http://media.clifjackson.net/images/elavation/Emergenza_F-640.jpg" title="Elavation @ Emergenza Fest. Buffalo, NY-4">
-                    <img src="http://media.clifjackson.net/images/elavation/thumbs/Emergenza_F-62sq.jpg" alt="Elavation @ Emergenza Fest. Buffalo, NY-4">
+                <a class="thumb-link" href="{{ asset('images/elavation/Emergenza_F-640.jpg') }}" title="Elavation @ Emergenza Fest. Buffalo, NY-4">
+                    <img src="{{ asset('images/elavation/thumbs/Emergenza_F-62sq.jpg') }}" alt="Elavation @ Emergenza Fest. Buffalo, NY-4">
                 </a>
-                <a class="thumb-link" href="http://media.clifjackson.net/images/elavation/NeitA-640.jpg" title="Elavation @ Neitzsche's. Buffalo, NY">
-                    <img src="http://media.clifjackson.net/images/elavation/thumbs/NeitA-62sq.jpg" alt="Elavation @ Neitzsche's. Buffalo, NY">
+                <a class="thumb-link" href="{{ asset('images/elavation/NeitA-640.jpg') }}" title="Elavation @ Neitzsche's. Buffalo, NY">
+                    <img src="{{ asset('images/elavation/thumbs/NeitA-62sq.jpg') }}" alt="Elavation @ Neitzsche's. Buffalo, NY">
                 </a>
-                <a class="thumb-link" href="http://media.clifjackson.net/images/elavation/Nightlife_Article-640.gif" title="Elavation Review in Nightlife">
-                    <img src="http://media.clifjackson.net/images/elavation/thumbs/Nightlife_Article-62sq.gif" alt="Elavation Review in Nightlife">
+                <a class="thumb-link" href="{{ asset('images/elavation/Nightlife_Article-640.gif') }}" title="Elavation Review in Nightlife">
+                    <img src="{{ asset('images/elavation/thumbs/Nightlife_Article-62sq.gif') }}" alt="Elavation Review in Nightlife">
                 </a>
-                <a class="thumb-link" href="http://media.clifjackson.net/images/elavation/Sticker_Big-640.jpg" title="Elavation Promo Sticker">
-                    <img src="http://media.clifjackson.net/images/elavation/thumbs/Sticker_Big-62sq.jpg" alt="Elavation Promo Sticker">
+                <a class="thumb-link" href="{{ asset('images/elavation/Sticker_Big-640.jpg') }}" title="Elavation Promo Sticker">
+                    <img src="{{ asset('images/elavation/thumbs/Sticker_Big-62sq.jpg') }}" alt="Elavation Promo Sticker">
                 </a>
             </div>
         </div>
@@ -270,17 +270,17 @@
             </p>
 
             <div id="eulip-gall" class="thumbnail-gallery">
-                <a class="thumb-link" href="http://media.clifjackson.net/images/eulipion/Eulip_EJF_646w.gif" title="Ellicottville Jazz Fest. Announcements">
-                    <img src="http://media.clifjackson.net/images/eulipion/thumbs/Eulip_EJF_62sq.gif" alt="Ellicottville Jazz Fest. Announcements">
+                <a class="thumb-link" href="{{ asset('images/eulipion/Eulip_EJF_646w.gif') }}" title="Ellicottville Jazz Fest. Announcements">
+                    <img src="{{ asset('images/eulipion/thumbs/Eulip_EJF_62sq.gif') }}" alt="Ellicottville Jazz Fest. Announcements">
                 </a>
-                <a class="thumb-link" href="http://media.clifjackson.net/images/eulipion/EulipA_592x500.gif" title="Buffalo News Group Shot">
-                    <img src="http://media.clifjackson.net/images/eulipion/thumbs/EulipA_62sq.jpg" alt="Buffalo News Group Shot">
+                <a class="thumb-link" href="{{ asset('images/eulipion/EulipA_592x500.gif') }}" title="Buffalo News Group Shot">
+                    <img src="{{ asset('images/eulipion/thumbs/EulipA_62sq.jpg') }}" alt="Buffalo News Group Shot">
                 </a>
-                <a class="thumb-link" href="http://media.clifjackson.net/images/eulipion/EulipPR1bb_658x500.gif" title="Buffalo News Group Shot @ Tralf, Buffalo, NY">
-                    <img src="http://media.clifjackson.net/images/eulipion/thumbs/EulipPR1bb_62sq.jpg" alt="Buffalo News Group Shot @ Tralf, Buffalo, NY">
+                <a class="thumb-link" href="{{ asset('images/eulipion/EulipPR1bb_658x500.gif') }}" title="Buffalo News Group Shot @ Tralf, Buffalo, NY">
+                    <img src="{{ asset('images/eulipion/thumbs/EulipPR1bb_62sq.jpg') }}" alt="Buffalo News Group Shot @ Tralf, Buffalo, NY">
                 </a>
-                <a class="thumb-link" href="http://media.clifjackson.net/images/eulipion/EulipPr2_493x500.gif" title="Special Effects Announcement">
-                    <img src="http://media.clifjackson.net/images/eulipion/thumbs/EulipPr2_62sq.gif" alt="Special Effects Announcement">
+                <a class="thumb-link" href="{{ asset('images/eulipion/EulipPr2_493x500.gif') }}" title="Special Effects Announcement">
+                    <img src="{{ asset('images/eulipion/thumbs/EulipPr2_62sq.gif') }}" alt="Special Effects Announcement">
                 </a>
             </div>
         </div>
@@ -304,26 +304,26 @@
             </p>
 
             <div id="opetry-gall" class="thumbnail-gallery">
-                <a class="thumb-link" href="http://media.clifjackson.net/images/JO/JO_EFOA_227x580.gif" title="JO - Elmwood FOA Schedule">
-                    <img src="http://media.clifjackson.net/images/JO/thumbs/JO_EFOA_62sq.gif" alt="JO - Elmwood FOA Schedule">
+                <a class="thumb-link" href="{{ asset('images/JO/JO_EFOA_227x580.gif') }}" title="JO - Elmwood FOA Schedule">
+                    <img src="{{ asset('images/JO/thumbs/JO_EFOA_62sq.gif') }}" alt="JO - Elmwood FOA Schedule">
                 </a>
-                <a class="thumb-link" href="http://media.clifjackson.net/images/JO/JO_Hllween_580x380.gif" title="JO - Halloween LHI">
-                    <img src="http://media.clifjackson.net/images/JO/thumbs/JO_Hllween_62sq.gif" alt="JO - Halloween LHI">
+                <a class="thumb-link" href="{{ asset('images/JO/JO_Hllween_580x380.gif') }}" title="JO - Halloween LHI">
+                    <img src="{{ asset('images/JO/thumbs/JO_Hllween_62sq.gif') }}" alt="JO - Halloween LHI">
                 </a>
-                <a class="thumb-link" href="http://media.clifjackson.net/images/JO/JO1_353x498.jpg" title="JO - JO1 Promo">
-                    <img src="http://media.clifjackson.net/images/JO/thumbs/JO1_62sq.jpg" alt="JO - JO1 Promo">
+                <a class="thumb-link" href="{{ asset('images/JO/JO1_353x498.jpg') }}" title="JO - JO1 Promo">
+                    <img src="{{ asset('images/JO/thumbs/JO1_62sq.jpg') }}" alt="JO - JO1 Promo">
                 </a>
-                <a class="thumb-link" href="http://media.clifjackson.net/images/JO/JO1_PR1_580x434.gif" title="JO - JO1 Listing">
-                    <img src="http://media.clifjackson.net/images/JO/thumbs/JO1_PR1_62sq.gif" alt="JO - JO1 Listing">
+                <a class="thumb-link" href="{{ asset('images/JO/JO1_PR1_580x434.gif') }}" title="JO - JO1 Listing">
+                    <img src="{{ asset('images/JO/thumbs/JO1_PR1_62sq.gif') }}" alt="JO - JO1 Listing">
                 </a>
-                <a class="thumb-link" href="http://media.clifjackson.net/images/JO/JO8ab_245x300.gif" title="JO - JO8 Listing">
-                    <img src="http://media.clifjackson.net/images/JO/thumbs/JO8ab_62sq.gif" alt="JO - JO8 Listing">
+                <a class="thumb-link" href="{{ asset('images/JO/JO8ab_245x300.gif') }}" title="JO - JO8 Listing">
+                    <img src="{{ asset('images/JO/thumbs/JO8ab_62sq.gif') }}" alt="JO - JO8 Listing">
                 </a>
-                <a class="thumb-link" href="http://media.clifjackson.net/images/JO/JO9ab_459x200.gif" title="JO - JO9 Listing">
-                    <img src="http://media.clifjackson.net/images/JO/thumbs/JO9ab_62sq.gif" alt="JO - JO9 Listing">
+                <a class="thumb-link" href="{{ asset('images/JO/JO9ab_459x200.gif') }}" title="JO - JO9 Listing">
+                    <img src="{{ asset('images/JO/thumbs/JO9ab_62sq.gif') }}" alt="JO - JO9 Listing">
                 </a>
-                <a class="thumb-link" href="http://media.clifjackson.net/images/JO/JO11ab_454x200.gif" title="JO - JO11 Listing">
-                    <img src="http://media.clifjackson.net/images/JO/thumbs/JO11ab_62sq.gif" alt="JO - JO11 Listing">
+                <a class="thumb-link" href="{{ asset('images/JO/JO11ab_454x200.gif') }}" title="JO - JO11 Listing">
+                    <img src="{{ asset('images/JO/thumbs/JO11ab_62sq.gif') }}" alt="JO - JO11 Listing">
                 </a>
             </div>
         </div>
@@ -344,11 +344,11 @@
             </p>
 
             <div id="epic-gall" class="thumbnail-gallery">
-                <a class="thumb-link" href="http://media.clifjackson.net/images/1975/1975_Cover_240wx320.jpg" title="Program Cover">
-                    <img src="http://media.clifjackson.net/images/1975/thumbs/1975_Cover_62sq.jpg" alt="Program Cover">
+                <a class="thumb-link" href="{{ asset('images/1975/1975_Cover_240wx320.jpg') }}" title="Program Cover">
+                    <img src="{{ asset('images/1975/thumbs/1975_Cover_62sq.jpg') }}" alt="Program Cover">
                 </a>
-                <a class="thumb-link" href="http://media.clifjackson.net/images/1975/1975_Excerpt1_424x500.gif" title="Program Excerpt">
-                    <img src="http://media.clifjackson.net/images/1975/thumbs/1975_Excerpt1_62sq.gif" alt="Program Excerpt">
+                <a class="thumb-link" href="{{ asset('images/1975/1975_Excerpt1_424x500.gif') }}" title="Program Excerpt">
+                    <img src="{{ asset('images/1975/thumbs/1975_Excerpt1_62sq.gif') }}" alt="Program Excerpt">
                 </a>
             </div>
         </div>
@@ -362,47 +362,47 @@
             </p>
 
             <div id="misc-gall" class="thumbnail-gallery">
-                <a class="thumb-link" href="http://media.clifjackson.net/images/misc-press/dinahwas_268x500.jpg" title="Dinah Was Article">
-                    <img src="http://media.clifjackson.net/images/misc-press/thumbs/dinahwas_268x500.jpg" alt="Dinah Was Article">
+                <a class="thumb-link" href="{{ asset('images/misc-press/dinahwas_268x500.jpg') }}" title="Dinah Was Article">
+                    <img src="{{ asset('images/misc-press/thumbs/dinahwas_268x500.jpg') }}" alt="Dinah Was Article">
                 </a>
-                <a class="thumb-link" href="http://media.clifjackson.net/images/misc-press/IMG_0146-SabirM-sm1.jpg" title="Sabir Mateen Band @ Brecht Forum">
-                    <img src="http://media.clifjackson.net/images/misc-press/thumbs/IMG_0146-SabirM-sm1.jpg" alt="Sabir Mateen Band @ Brecht Forum">
+                <a class="thumb-link" href="{{ asset('images/misc-press/IMG_0146-SabirM-sm1.jpg') }}" title="Sabir Mateen Band @ Brecht Forum">
+                    <img src="{{ asset('images/misc-press/thumbs/IMG_0146-SabirM-sm1.jpg') }}" alt="Sabir Mateen Band @ Brecht Forum">
                 </a>
-                <a class="thumb-link" href="http://media.clifjackson.net/images/misc-press/LeMetroPR_370x500.gif" title="Le Metro Review from Artifackt">
-                    <img src="http://media.clifjackson.net/images/misc-press/thumbs/LeMetroPR_370x500.gif" alt="Le Metro Review from Artifackt">
+                <a class="thumb-link" href="{{ asset('images/misc-press/LeMetroPR_370x500.gif') }}" title="Le Metro Review from Artifackt">
+                    <img src="{{ asset('images/misc-press/thumbs/LeMetroPR_370x500.gif') }}" alt="Le Metro Review from Artifackt">
                 </a>
-                <a class="thumb-link" href="http://media.clifjackson.net/images/misc-press/MIA2004Patch_363x500.jpg" title="Artist Patch from 2004 Festival">
-                    <img src="http://media.clifjackson.net/images/misc-press/thumbs/MIA2004Patch_363x500.jpg" alt="Artist Patch from 2004 Festival">
+                <a class="thumb-link" href="{{ asset('images/misc-press/MIA2004Patch_363x500.jpg') }}" title="Artist Patch from 2004 Festival">
+                    <img src="{{ asset('images/misc-press/thumbs/MIA2004Patch_363x500.jpg') }}" alt="Artist Patch from 2004 Festival">
                 </a>
-                <a class="thumb-link" href="http://media.clifjackson.net/images/misc-press/MIA2005Patch_358x500.jpg" title="Artist Patch from 2005 Festival">
-                    <img src="http://media.clifjackson.net/images/misc-press/thumbs/MIA2005Patch_358x500.jpg" alt="Artist Patch from 2005 Festival">
+                <a class="thumb-link" href="{{ asset('images/misc-press/MIA2005Patch_358x500.jpg') }}" title="Artist Patch from 2005 Festival">
+                    <img src="{{ asset('images/misc-press/thumbs/MIA2005Patch_358x500.jpg') }}" alt="Artist Patch from 2005 Festival">
                 </a>
-                <a class="thumb-link" href="http://media.clifjackson.net/images/misc-press/MPRa_720x500.gif" title="Buffalo News Performance Announcement">
-                    <img src="http://media.clifjackson.net/images/misc-press/thumbs/MPRa_720x500.gif" alt="Buffalo News Performance Announcement">
+                <a class="thumb-link" href="{{ asset('images/misc-press/MPRa_720x500.gif') }}" title="Buffalo News Performance Announcement">
+                    <img src="{{ asset('images/misc-press/thumbs/MPRa_720x500.gif') }}" alt="Buffalo News Performance Announcement">
                 </a>
-                <a class="thumb-link" href="http://media.clifjackson.net/images/misc-press/rionegro1_383x500.jpg" title="Artists and Models Flyer">
-                    <img src="http://media.clifjackson.net/images/misc-press/thumbs/rionegro1_383x500.jpg" alt="Artists and Models Flyer">
+                <a class="thumb-link" href="{{ asset('images/misc-press/rionegro1_383x500.jpg') }}" title="Artists and Models Flyer">
+                    <img src="{{ asset('images/misc-press/thumbs/rionegro1_383x500.jpg') }}" alt="Artists and Models Flyer">
                 </a>
-                <a class="thumb-link" href="http://media.clifjackson.net/images/misc-press/RioNegro1B_298x500.gif" title="Hop & Bean Music Festival Clipping">
-                    <img src="http://media.clifjackson.net/images/misc-press/thumbs/RioNegro1B_298x500.jpg" alt="Hop & Bean Music Festival Clipping">
+                <a class="thumb-link" href="{{ asset('images/misc-press/RioNegro1B_298x500.gif') }}" title="Hop & Bean Music Festival Clipping">
+                    <img src="{{ asset('images/misc-press/thumbs/RioNegro1B_298x500.jpg') }}" alt="Hop & Bean Music Festival Clipping">
                 </a>
-                <a class="thumb-link" href="http://media.clifjackson.net/images/misc-press/RLTrio1_600x138.gif" title="Ron LoCurto Trio Rendezvous Announcement">
-                    <img src="http://media.clifjackson.net/images/misc-press/thumbs/RLTrio1_600x138.gif" alt="Ron LoCurto Trio Rendezvous Announcement">
+                <a class="thumb-link" href="{{ asset('images/misc-press/RLTrio1_600x138.gif') }}" title="Ron LoCurto Trio Rendezvous Announcement">
+                    <img src="{{ asset('images/misc-press/thumbs/RLTrio1_600x138.gif') }}" alt="Ron LoCurto Trio Rendezvous Announcement">
                 </a>
-                <a class="thumb-link" href="http://media.clifjackson.net/images/misc-press/Round_Robin_600x193.gif" title="Buffalo News Performance Announcement">
-                    <img src="http://media.clifjackson.net/images/misc-press/thumbs/Round_Robin_600x193.gif" alt="Buffalo News Performance Announcement">
+                <a class="thumb-link" href="{{ asset('images/misc-press/Round_Robin_600x193.gif') }}" title="Buffalo News Performance Announcement">
+                    <img src="{{ asset('images/misc-press/thumbs/Round_Robin_600x193.gif') }}" alt="Buffalo News Performance Announcement">
                 </a>
-                <a class="thumb-link" href="http://media.clifjackson.net/images/misc-press/Soto_373x500.jpg" title="Certificate of Appreciation from Leandro Soto">
-                    <img src="http://media.clifjackson.net/images/misc-press/thumbs/Soto_373x500.jpg" alt="Certificate of Appreciation from Leandro Soto">
+                <a class="thumb-link" href="{{ asset('images/misc-press/Soto_373x500.jpg') }}" title="Certificate of Appreciation from Leandro Soto">
+                    <img src="{{ asset('images/misc-press/thumbs/Soto_373x500.jpg') }}" alt="Certificate of Appreciation from Leandro Soto">
                 </a>
-                <a class="thumb-link" href="http://media.clifjackson.net/images/misc-press/Toronto03A.jpg" title="Photo from Sneaky Dee's w/ Robinson & Momin">
-                    <img src="http://media.clifjackson.net/images/misc-press/thumbs/Toronto03A.jpg" alt="Photo from Sneaky Dee's w/ Robinson & Momin">
+                <a class="thumb-link" href="{{ asset('images/misc-press/Toronto03A.jpg') }}" title="Photo from Sneaky Dee's w/ Robinson & Momin">
+                    <img src="{{ asset('images/misc-press/thumbs/Toronto03A.jpg') }}" alt="Photo from Sneaky Dee's w/ Robinson & Momin">
                 </a>
-                <a class="thumb-link" href="http://media.clifjackson.net/images/misc-press/w_JoeFord_640.jpg" title="Buffalo News Review of Joe Ford Performance">
-                    <img src="http://media.clifjackson.net/images/misc-press/thumbs/w_JoeFord_640.jpg" alt="Buffalo News Review of Joe Ford Performance">
+                <a class="thumb-link" href="{{ asset('images/misc-press/w_JoeFord_640.jpg') }}" title="Buffalo News Review of Joe Ford Performance">
+                    <img src="{{ asset('images/misc-press/thumbs/w_JoeFord_640.jpg') }}" alt="Buffalo News Review of Joe Ford Performance">
                 </a>
-                <a class="thumb-link" href="http://media.clifjackson.net/images/misc-press/Zuk_Demo_Rev-640.jpg" title="Artvoice Review of Zuk Demo">
-                    <img src="http://media.clifjackson.net/images/misc-press/thumbs/Zuk_Demo_Rev-640.jpg" alt="Artvoice Review of Zuk Demo">
+                <a class="thumb-link" href="{{ asset('images/misc-press/Zuk_Demo_Rev-640.jpg') }}" title="Artvoice Review of Zuk Demo">
+                    <img src="{{ asset('images/misc-press/thumbs/Zuk_Demo_Rev-640.jpg') }}" alt="Artvoice Review of Zuk Demo">
                 </a>
             </div>
         </div>

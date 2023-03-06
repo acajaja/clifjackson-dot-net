@@ -1,7 +1,7 @@
 
     <section class="content-entry-box-B">
         <div class="media-box-150">
-            <img src="http://media.clifjackson.net/images/discography/MPRCDCover3_150.jpg" alt="Musicphrenic Radio: The First of Many...">
+            <img src="{{ asset('images/discography/MPRCDCover3_150.jpg') }}" alt="Musicphrenic Radio: The First of Many...">
         </div>
         <div class="content-entry-info-box">
             <h2>Musicphrenic Radio:The First of Many...</h2>

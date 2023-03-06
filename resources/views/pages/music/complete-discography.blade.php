@@ -1,7 +1,7 @@
 @extends('layouts.page')
 @section('title', 'complete discography')
 @push('styles')
-<link href="{{ asset('css/gallery.css') }}" rel="stylesheet" type="text/css">
+<link href="{{ mix('css/gallery.css') }}" rel="stylesheet" type="text/css">
 @endpush
 
 @section('content')
@@ -18,7 +18,7 @@
 
     <section class="content-entry-box-B">
         <div class="media-box-150">
-            <img src="http://media.clifjackson.net/images/discography/bronxCD-150.jpg" alt="The Bronx New School Sings CD">
+            <img src="{{ asset('images/discography/bronxCD-150.jpg') }}" alt="The Bronx New School Sings CD">
         </div>
         <div class="content-entry-info-box">
             <h2>The Bronx New School Sings</h2>
@@ -43,7 +43,7 @@
 
     <section class="content-entry-box-B">
         <div class="media-box-150">
-            <img src="http://media.clifjackson.net/images/discography/mia2005_CDcvr_150x150.jpg" alt="Music Is Art 2005">
+            <img src="{{ asset('images/discography/mia2005_CDcvr_150x150.jpg') }}" alt="Music Is Art 2005">
         </div>
         <div class="content-entry-info-box">
             <h2>Music Is Art 2005</h2>
@@ -71,7 +71,7 @@
 
     <section class="content-entry-box-B">
         <div class="media-box-150">
-            <img src="http://media.clifjackson.net/images/discography/mia2004_CDcvr_150x150.jpg" alt="Music Is Art 2004">
+            <img src="{{ asset('images/discography/mia2004_CDcvr_150x150.jpg') }}" alt="Music Is Art 2004">
         </div>
         <div class="content-entry-info-box">
             <h2>Music Is Art 2004</h2>

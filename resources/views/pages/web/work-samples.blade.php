@@ -1,7 +1,7 @@
 @extends('layouts.page')
 @section('title', 'work samples')
 @push('styles')
-<link href="{{ asset('css/general.css') }}" rel="stylesheet" type="text/css">
+<link href="{{ mix('css/general.css') }}" rel="stylesheet" type="text/css">
 @endpush
 
 @section('content')
@@ -11,7 +11,7 @@
             <div>
                 <p>
                     <a href="https://www.zend-zce.com/en/yellow-pages/ZEND027688" target="_blank" title="Zend Yellow Pages">
-                        <img alt="Zend Certified PHP Engineer" class="image-left-25" src="http://media.clifjackson.net/images/logos/zend-certified-php-Engineer-150x140.png">
+                        <img alt="Zend Certified PHP Engineer" class="image-left-25" src="{{ asset('images/logos/zend-certified-php-Engineer-150x140.png') }}">
                     </a>
 
                     Below is a small sample of work I have done over the years. Of course, some of the work I
@@ -106,7 +106,7 @@
             <h2>Experiments</h2>
             <section class="content-entry-box-B">
                 <div class="media-box-150">
-                    <a class="samples-image-link" href="{{ route('canvas-app') }}" title="HTML5 Canvas Sample 1"><img alt="" src="http://media.clifjackson.net/images/canvas-sample.jpg"></a>
+                    <a class="samples-image-link" href="{{ route('canvas-app') }}" title="HTML5 Canvas Sample 1"><img alt="" src="{{ asset('images/canvas-sample.jpg') }}"></a>
                 </div>
                 <div class="content-entry-info-box">
                     <h3>
@@ -123,7 +123,7 @@
 
             <section class="content-entry-box-B">
                 <div class="media-box-150">
-                    <img alt="" class="image-left-25" src="http://media.clifjackson.net/images/interactive-map-sample.png">
+                    <img alt="" class="image-left-25" src="{{ asset('images/interactive-map-sample.png') }}">
                 </div>
                 <div class="content-entry-info-box">
                     <h2>
@@ -162,7 +162,7 @@
 
             <section class="content-entry-box-B">
                 <div class="media-box-150">
-                    <img alt="" src="http://media.clifjackson.net/images/havas/ATT-Email1-150w.png">
+                    <img alt="" src="{{ asset('images/havas/ATT-Email1-150w.png') }}">
                 </div>
                 <div class="content-entry-info-box">
                     <h3>Havas HPS<sup>1</sup></h3>
@@ -180,7 +180,7 @@
 
             <section class="content-entry-box-B">
                 <div class="media-box-150">
-                    <a class="samples-image-link" href="http://www.speakup.com/" target="_blank" title="Speak Up"><img alt="" src="http://media.clifjackson.net/images/speakup-thumb-150sq.jpg"></a>
+                    <a class="samples-image-link" href="http://www.speakup.com/" target="_blank" title="Speak Up"><img alt="" src="{{ asset('images/speakup-thumb-150sq.jpg') }}"></a>
                 </div>
                 <div class="content-entry-info-box">
                     <h3>Speak Up!</h3>
@@ -198,7 +198,7 @@
 
             <section class="content-entry-box-B">
                 <div class="media-box-150">
-                    <img alt="" src="http://media.clifjackson.net/images/AFA-theme-homepage.png">
+                    <img alt="" src="{{ asset('images/AFA-theme-homepage.png') }}">
                 </div>
                 <div class="content-entry-info-box">
                     <h3>Arts For Art, Inc.*</h3>
@@ -213,7 +213,7 @@
 
             <section class="content-entry-box-B">
                 <div class="media-box-150">
-                    <img alt="" src="http://media.clifjackson.net/images/hyatt-womens-sample.jpg">
+                    <img alt="" src="{{ asset('images/hyatt-womens-sample.jpg') }}">
                 </div>
                 <div class="content-entry-info-box">
                     <h3>Hyatt Experience*</h3>
@@ -223,7 +223,7 @@
 
             <section class="content-entry-box-B">
                 <div class="media-box-150">
-                    <img alt="" src="http://media.clifjackson.net/images/awards-meter-sample.png">
+                    <img alt="" src="{{ asset('images/awards-meter-sample.png') }}">
                 </div>
                 <div class="content-entry-info-box">
                     <h3>Awards Meter*</h3>
@@ -236,7 +236,7 @@
 
             <section class="content-entry-box-B">
                 <div class="media-box-150">
-                    <img alt="" src="http://media.clifjackson.net/images/pur-daily-drop-sample.png">
+                    <img alt="" src="{{ asset('images/pur-daily-drop-sample.png') }}">
                 </div>
                 <div class="content-entry-info-box">
                     <h3>The PUR Daily Drop on Facebook*</h3>
@@ -252,7 +252,7 @@
             <section class="content-entry-box-B">
                 <div class="media-box-150">
                     <a class="samples-image-link" href="http://www.secretorchestra.net/" target="_blank" title="Secret Orchestra">
-                        <img alt="" src="http://media.clifjackson.net/images/secret-orchestra-sample.png">
+                        <img alt="" src="{{ asset('images/secret-orchestra-sample.png') }}">
                     </a>
                 </div>
                 <div class="content-entry-info-box">
@@ -281,7 +281,7 @@
             <section class="content-entry-box-B">
                 <div class="media-box-150">
                     <a class="samples-image-link" href="http://www.gutenberg-e.org/hodgdon/" target="_blank" title="Manhood in the Age of Aquarius: Masculinity in Two Countercultural Communities, 1965–83">
-                        <img alt="" src="http://media.clifjackson.net/images/hogdon-thumb-150sq.jpg">
+                        <img alt="" src="{{ asset('images/hogdon-thumb-150sq.jpg') }}">
                     </a>
                 </div>
                 <div class="content-entry-info-box">
@@ -295,7 +295,7 @@
             <section class="content-entry-box-B">
                 <div class="media-box-150">
                     <a class="samples-image-link" href="http://www.gutenberg-e.org/andrade/" target="_blank" title="How Taiwan Became Chinese: Dutch, Spanish, and Han Colonization in the Seventeenth Century">
-                        <img alt="" src="http://media.clifjackson.net/images/andrade-thumb-150sq.jpg">
+                        <img alt="" src="{{ asset('images/andrade-thumb-150sq.jpg') }}">
                     </a>
                 </div>
                 <div class="content-entry-info-box">
@@ -309,7 +309,7 @@
             <section class="content-entry-box-B">
                 <div class="media-box-150">
                     <a class="samples-image-link" href="http://www.gutenberg-e.org/lowengard/" target="_blank" title="The Creation of Color in Eighteenth-Century Europe">
-                        <img alt="" src="http://media.clifjackson.net/images/lowengard-thumb-150sq.jpg">
+                        <img alt="" src="{{ asset('images/lowengard-thumb-150sq.jpg') }}">
                     </a>
                 </div>
                 <div class="content-entry-info-box">
@@ -323,7 +323,7 @@
             <section class="content-entry-box-B">
                 <div class="media-box-150">
                     <a class="samples-image-link" href="http://www.gutenberg-e.org/keough/" target="_blank" title="The Slender Thread: Irish Women on the Southern Avalon, 1750-1860">
-                        <img alt="" src="http://media.clifjackson.net/images/keough-thumb-150sq.jpg">
+                        <img alt="" src="{{ asset('images/keough-thumb-150sq.jpg') }}">
                     </a>
                 </div>
                 <div class="content-entry-info-box">
@@ -337,7 +337,7 @@
             <section class="content-entry-box-B">
                 <div class="media-box-150">
                     <a class="samples-image-link" href="http://www.gutenberg-e.org/maclehose/" target="_blank" title="'A Tender Age': Cultural Anxieties over the Child in the Twelfth and Thirteenth Centuries">
-                        <img alt="" src="http://media.clifjackson.net/images/maclehose-thumb-150sq.jpg">
+                        <img alt="" src="{{ asset('images/maclehose-thumb-150sq.jpg') }}">
                     </a>
                 </div>
                 <div class="content-entry-info-box">

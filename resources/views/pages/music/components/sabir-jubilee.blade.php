@@ -1,6 +1,6 @@
     <section class="content-entry-box-B">
         <div class="media-box-150">
-            <img src="http://media.clifjackson.net/images/discography/SabirMateen-Jubilee-Ensemble-Cover150.jpg" alt="The Sabir Mateen Jubilee Ensemble">
+            <img src="{{ asset('images/discography/SabirMateen-Jubilee-Ensemble-Cover150.jpg') }}" alt="The Sabir Mateen Jubilee Ensemble">
         </div>
         <div class="content-entry-info-box">
             <h2>The Sabir Mateen Jubilee Ensemble</h2>

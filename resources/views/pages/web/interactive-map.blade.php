@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 @section('title', 'interactive map')
 @push('styles')
-<link href="{{ asset('css/general.css') }}" rel="stylesheet" type="text/css">
+<link href="{{ mix('css/general.css') }}" rel="stylesheet" type="text/css">
 @endpush
 
 @section('content')

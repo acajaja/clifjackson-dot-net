@@ -7,7 +7,7 @@
 <title>clif jackson page :: @yield('title')</title>
 @stack('styles')
 @stack('head-scripts')
-<script src="{{ asset('js/dims.test.js') }}" type="text/javascript"></script>
+<script src="{{ mix('js/dims.test.js') }}" type="text/javascript"></script>
 </head>
 
 <body>
@@ -17,7 +17,7 @@
 <div id="content-box">
     @include('components.clouds')
 
-    <main-section class="page-wrap">
+    <main-section>
         <div></div>
         <div>
             @yield('content')

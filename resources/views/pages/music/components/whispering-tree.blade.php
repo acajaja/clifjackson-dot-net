@@ -1,7 +1,7 @@
 
     <section class="content-entry-box-B">
         <div class="media-box-150">
-            <img src="http://media.clifjackson.net/images/discography/The-Escape-Cover-150.jpg"  alt="The Whispering Tree - The Escape">
+            <img src="{{ asset('images/discography/The-Escape-Cover-150.jpg') }}"  alt="The Whispering Tree - The Escape">
         </div>
         <div class="content-entry-info-box">
             <h2>The Escape</h2>

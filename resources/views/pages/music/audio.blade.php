@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 @section('audio')
 @push('styles')
-<link href="{{ asset('/css/audio-page.css') }}" rel="stylesheet" type="text/css">
+<link href="{{ mix('/css/audio-page.css') }}" rel="stylesheet" type="text/css">
 @endpush
 @push('head-scripts')
 <script type="module">
