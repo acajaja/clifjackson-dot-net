@@ -1,7 +1,7 @@
-// @media (pointer: fine), (pointer: none) {
+@media (pointer: fine), (pointer: none) {
     @media (orientation: landscape) {
-        @import './header.scss';
-        @import './nav.scss';
+        @import './desktop-header.scss';
+        @import './main-nav.scss';
 
         my-left-side-middle-bg {
             bottom: 53%;
@@ -63,4 +63,4 @@
             }
         }
     }
-// }
+}

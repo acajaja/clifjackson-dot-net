@@ -7,30 +7,34 @@
 <title>clif jackson page :: @yield('title')</title>
 @stack('styles')
 @stack('head-scripts')
-<script src="{{ mix('js/dims.test.js') }}" type="text/javascript"></script>
+<!-- <script src="/js/dims.test.js" type="text/javascript"></script> -->
 </head>
 
 <body>
 
-<span id="page-top"></span>
+    <span id="page-top"></span>
 
-<div id="content-box">
+    <my-name>
+        <p>clifjackson.net</p>
+    </my-name>
+
     @include('components.clouds')
 
-    <main-section>
-        <div></div>
-        <div>
-            @yield('content')
-        </div>
-        <div></div>
-    </main-section>
-</div>
+    <div id="content-box">
+        <main-section>
+            <div></div>
+            <div>
+                @yield('content')
+            </div>
+            <div></div>
+        </main-section>
+    </div>
 
-@include('components.footer')
+    @include('components.footer')
 
-@include('components.header')
+    @include('components.header')
 
-@stack('body-scripts')
+    @stack('body-scripts')
 
 </body>
 </html>

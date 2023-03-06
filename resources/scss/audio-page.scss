@@ -1,15 +1,15 @@
 @import './components/base.scss';
 @import './components/backgrounds.scss';
-@import './components/header.scss';
+@import './components/desktop-header.scss';
 
-@media (min-width: 640px) {
-    @import './components/nav.scss';
-}
+// @media (min-width: 640px) {
+//     @import './components/nav.scss';
+// }
 
-@media (max-width: 640px) {
-    @import './components/my-minidisk-skin-color1-small.scss';
-}
+// @media (max-width: 640px) {
+//     @import './components/my-minidisk-skin-color1-small.scss';
+// }
 
-@media (min-width: 641px) {
-    @import './components/my-minidisk-skin-color1.scss';
-}
+// @media (min-width: 641px) {
+//     @import './components/my-minidisk-skin-color1.scss';
+// }

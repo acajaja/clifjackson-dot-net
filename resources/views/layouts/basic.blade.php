@@ -7,12 +7,12 @@
 <title>clif jackson basic :: @yield('title')</title>
 @stack('styles')
 @stack('head-scripts')
-<script src="{{ mix('js/dims.test.js') }}" type="text/javascript"></script>
+<!-- <script src="/js/dims.test.js" type="text/javascript"></script> -->
 </head>
 
 <body>
 
-@yield('content')
+    @yield('content')
 
 </body>
 </html>

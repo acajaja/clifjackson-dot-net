@@ -2,9 +2,6 @@ header {
     background: white url($smallCircles) no-repeat 1rem center;
     border-bottom: 0.1rem solid $homePageLinkColor;
     box-shadow: 0 0 0.4rem #ccc;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 1fr;
     height: $header-height;
     left: 0;
     position: fixed;
@@ -12,6 +9,7 @@ header {
     width: 100%;
 }
 header-textbox {
+    display: block;
     height: $header-height;
     padding: 0 0 0 6rem;
 

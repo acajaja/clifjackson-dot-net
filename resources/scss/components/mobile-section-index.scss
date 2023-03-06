@@ -1,89 +1,88 @@
-// @media and (pointer: coarse) {
+// @media (pointer: coarse) {
+    main-section {
+        padding: $header-height 0 $largeSpace;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        position: relative;
+    }
+
+    page-linkbox {
+        display: grid;
+        grid-template-rows: 1fr;
+
+        &> a {
+            align-items: center;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            grid-template-areas: "linkcontent";
+            justify-items: center;
+            margin-bottom: $smallSpace;
+            text-decoration: none;
+    
+            &> img {
+                width: 100%;
+                grid-area: linkcontent;
+            }
+    
+            &> .button-image {
+                border-radius: 50%;
+                width: 88%;
+            }
+    
+            &> .circle-border {
+                width: 100%;
+            }
+        }
+
+        &> span {
+            &> strong {
+                text-shadow: 0 0.2rem 0.2rem white,
+                    0.2rem 0 0.2rem white,
+                    -0.2rem 0 0.2rem white,
+                    0 -0.2rem 0.2rem white;
+            }
+        }
+    }
+
     // Portrait
     @media (orientation: portrait) {
         @media (max-width: 640px) {
             html > body { background-color: rgb(90, 248, 172); }
             my-left-side-middle-bg {
-                bottom: 55%;
+                bottom: 3%;
                 transform: scale(0.6);
             }
         }
         @media (max-width: 320px) {
             html > body { background-color: rgb(138, 159, 229); }
             my-left-side-middle-bg {
-                bottom: 55%;
+                bottom: 3%;
                 transform: scale(0.4);
             }
         }
         @media (max-width: 240px) {
             html > body { background-color: rgb(24, 18, 139); }
             my-left-side-middle-bg {
-                bottom: 55%;
+                bottom: 3%;
                 transform: scale(0.25);
             }
         }
-    }
 
-    // Landscape
-    @media (orientation: landscape) {
-        @media (max-width: 926px) {
-            my-left-side-middle-bg {
-                bottom: 50%;
-                transform: scale(0.6);
-            }
+        main-section {
+            align-items: center;
         }
-        @media (max-width: 568px) {
-            my-left-side-middle-bg {
-                bottom: 55%;
-                transform: scale(0.6);
-            }
-        }
-    }
 
-    main-section {
-        padding: $largeSpace 0;
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        // justify-content: center;
-    
         page-linkbox {
             align-items: center;
-            display: grid;
             grid-template-columns: 1fr;
-            grid-template-rows: 1fr;
             grid-template-areas: "boxlayout";
             justify-items: center;
 
             &> a {
-                align-items: center;
-                display: grid;
                 grid-area: boxlayout;
-                grid-template-columns: 1fr;
-                grid-template-rows: 1fr;
-                grid-template-areas: "linkcontent";
-                justify-items: center;
-                margin-bottom: $smallSpace;
-                text-decoration: none;
                 width: 60vw;
-        
-                &> img {
-                    width: 100%;
-                }
-        
-                &> img, span {
-                    grid-area: linkcontent;
-                }
-        
-                &> .button-image {
-                    border-radius: 50%;
-                    width: 88%;
-                }
-        
-                &> .circle-border {
-                    width: 100%;
-                }
             }
 
             &> span {
@@ -97,11 +96,47 @@
                         content: "\a";
                         white-space: pre;
                     }
-                    text-shadow: 0 0.2rem 0.2rem white,
-                        0.2rem 0 0.2rem white,
-                        -0.2rem 0 0.2rem white,
-                        0 -0.2rem 0.2rem white;
                 }
+            }
+        }
+    }
+
+    // Landscape
+    @media (orientation: landscape) {
+        @media (max-width: 926px) {
+            my-left-side-middle-bg {
+                bottom: 20%;
+                transform: scale(1);
+            }
+        }
+        @media (max-width: 568px) {
+            my-left-side-middle-bg {
+                bottom: 20%;
+                transform: scale(1);
+            }
+        }
+
+        main-section {
+            align-items: flex-start;
+        }
+
+        page-linkbox {
+            align-items: center;
+            grid-template-columns: 48vw 4vw 48vw;
+            grid-template-areas: "images . text";
+            padding: 0 17rem;
+
+            &> a {
+                grid-area: images;
+                justify-self: end;
+                width: 50vw;
+            }
+
+            &> span {
+                font-size: $xlFont;
+                grid-area: text;
+                line-height: 1;
+                text-align: left;
             }
         }
     }
