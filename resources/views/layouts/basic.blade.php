@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, height=device-height">
-<title>clif jackson :: @yield('title')</title>
+<title>clif jackson basic :: @yield('title')</title>
 @stack('styles')
 @stack('head-scripts')
 <script src="{{ asset('js/dims.test.js') }}" type="text/javascript"></script>

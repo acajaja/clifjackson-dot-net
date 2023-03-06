@@ -17,9 +17,9 @@
 <div id="content-box">
     @include('components.clouds')
 
-    <div id="main-section">
+    <main-section>
         @yield('content')
-    </div>
+    </main-section>
 </div>
 
 @include('components.footer')

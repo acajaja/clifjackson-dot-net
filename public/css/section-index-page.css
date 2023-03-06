@@ -4007,17 +4007,6 @@ iframe {
   background-color: white;
 }
 
-#main-section {
-  padding: 70px 0;
-}
-
-.page-wrap {
-  display: grid;
-  grid-template-columns: 1fr 50% 1fr;
-  grid-template-rows: auto;
-  transform: rotate(0deg);
-}
-
 my-clear {
   clear: both;
   display: block;
@@ -4088,7 +4077,7 @@ my-floating-cloud {
 }
 @media (orientation: portrait) and (max-width: 640px) {
   html > body {
-    background-color: rgb(176, 211, 240);
+    background-color: rgb(90, 248, 172);
   }
 
   my-left-side-middle-bg {
@@ -4108,13 +4097,78 @@ my-floating-cloud {
 }
 @media (orientation: portrait) and (max-width: 240px) {
   html > body {
-    background-color: rgb(109, 106, 178);
+    background-color: rgb(24, 18, 139);
   }
 
   my-left-side-middle-bg {
     bottom: 55%;
     transform: scale(0.25);
   }
+}
+@media (orientation: landscape) and (max-width: 926px) {
+  my-left-side-middle-bg {
+    bottom: 50%;
+    transform: scale(0.6);
+  }
+}
+@media (orientation: landscape) and (max-width: 568px) {
+  my-left-side-middle-bg {
+    bottom: 55%;
+    transform: scale(0.6);
+  }
+}
+main-section {
+  padding: 4rem 0;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+main-section page-linkbox {
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "boxlayout";
+  justify-items: center;
+}
+main-section page-linkbox > a {
+  align-items: center;
+  display: grid;
+  grid-area: boxlayout;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "linkcontent";
+  justify-items: center;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  width: 60vw;
+}
+main-section page-linkbox > a > img {
+  width: 100%;
+}
+main-section page-linkbox > a > img, main-section page-linkbox > a span {
+  grid-area: linkcontent;
+}
+main-section page-linkbox > a > .button-image {
+  border-radius: 50%;
+  width: 88%;
+}
+main-section page-linkbox > a > .circle-border {
+  width: 100%;
+}
+main-section page-linkbox > span {
+  font-size: 3.4rem;
+  grid-area: boxlayout;
+  line-height: 1.2;
+  text-align: center;
+}
+main-section page-linkbox > span > strong {
+  text-shadow: 0 0.2rem 0.2rem white, 0.2rem 0 0.2rem white, -0.2rem 0 0.2rem white, 0 -0.2rem 0.2rem white;
+}
+main-section page-linkbox > span > strong .first-word::after {
+  content: "\a";
+  white-space: pre;
 }
 
 /*# sourceMappingURL=section-index-page.css.map*/

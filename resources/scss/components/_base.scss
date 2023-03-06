@@ -58,15 +58,13 @@ iframe {
 #content-box {
     background-color: white;
 }
-#main-section {
-    padding: 70px 0;
-}
-.page-wrap {
-	display: grid;
-	grid-template-columns: 1fr 50% 1fr;
-	grid-template-rows: auto;
-	transform: rotate(0deg);
-}
+
+// .page-wrap {
+// 	display: grid;
+// 	grid-template-columns: 1fr 50% 1fr;
+// 	grid-template-rows: auto;
+// 	transform: rotate(0deg);
+// }
 
 my-clear {
     clear: both;

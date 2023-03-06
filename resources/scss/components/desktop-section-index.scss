@@ -1,4 +1,4 @@
-@media (orientation: landscape) and (min-width: 926px) {
+@media (orientation: landscape) and (pointer: fine), (pointer: none) {
     @import './header.scss';
     @import './nav.scss';
 
@@ -7,46 +7,51 @@
     }
 
     .page-wrap {
-        &> div {
+        &> page-linkbox {
             grid-column: 2/span 1;
             margin-bottom: $medSmallSpace;
         }
     }
 
     @media (hover: hover) {
-        a.index-page-link {
-            opacity: 0.5;
-        }
-        a.index-page-link:hover {
-            opacity: 1;
+        page-linkbox {
+            &> a {
+                opacity: 0.5;
+            }
+            &> a:hover {
+                opacity: 1;
+            }
         }
     }
 
-    a.index-page-link {
-        display: grid;
-        grid-template-columns: 1fr $smallSpace 2fr;
-        grid-template-rows: 1fr;
-        transition-property: opacity;
-        transition-duration: 0.5s;
+    page-linkbox {
+        &> a {
+            display: grid;
+            grid-template-columns: 1fr $smallSpace 2fr;
+            grid-template-rows: 1fr;
+            transition-property: opacity;
+            transition-duration: 0.5s;
 
-        .button-image {
-            align-self: center;
-            border-radius: 50%;
-            grid-column: 1/span 1;
-            grid-row: 1/span 1;
-            height: 150px;
-            justify-self: center;
-            width: 150px;
+            .button-image {
+                align-self: center;
+                border-radius: 50%;
+                grid-column: 1/span 1;
+                grid-row: 1/span 1;
+                height: 150px;
+                justify-self: center;
+                width: 150px;
+            }
+            .circle-border {
+                align-self: center;
+                border-radius: 50%;
+                grid-column: 1/span 1;
+                grid-row: 1/span 1;
+                height: 180px;
+                justify-self: center;
+                width: 180px;
+            }
         }
-        .circle-border {
-            align-self: center;
-            border-radius: 50%;
-            grid-column: 1/span 1;
-            grid-row: 1/span 1;
-            height: 180px;
-            justify-self: center;
-            width: 180px;
-        }
+
         &> span {
             align-self: center;
             color: $homePageLinkHoverColor;

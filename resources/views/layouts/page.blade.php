@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, height=device-height">
-<title>clif jackson :: @yield('title')</title>
+<title>clif jackson page :: @yield('title')</title>
 @stack('styles')
 @stack('head-scripts')
 <script src="{{ asset('js/dims.test.js') }}" type="text/javascript"></script>
@@ -17,13 +17,13 @@
 <div id="content-box">
     @include('components.clouds')
 
-    <div id="main-section" class="page-wrap">
+    <main-section class="page-wrap">
         <div></div>
         <div>
             @yield('content')
         </div>
         <div></div>
-    </div>
+    </main-section>
 </div>
 
 @include('components.footer')

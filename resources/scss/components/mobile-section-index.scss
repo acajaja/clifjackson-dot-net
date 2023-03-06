@@ -1,40 +1,108 @@
-// Portrait
-@media (orientation: portrait) {
-    @media (max-width: 640px) {
-        html > body { background-color: rgb(176, 211, 240); }
-        my-left-side-middle-bg {
-            bottom: 55%;
-            transform: scale(0.6);
+// @media and (pointer: coarse) {
+    // Portrait
+    @media (orientation: portrait) {
+        @media (max-width: 640px) {
+            html > body { background-color: rgb(90, 248, 172); }
+            my-left-side-middle-bg {
+                bottom: 55%;
+                transform: scale(0.6);
+            }
+        }
+        @media (max-width: 320px) {
+            html > body { background-color: rgb(138, 159, 229); }
+            my-left-side-middle-bg {
+                bottom: 55%;
+                transform: scale(0.4);
+            }
+        }
+        @media (max-width: 240px) {
+            html > body { background-color: rgb(24, 18, 139); }
+            my-left-side-middle-bg {
+                bottom: 55%;
+                transform: scale(0.25);
+            }
         }
     }
-    @media (max-width: 320px) {
-        html > body { background-color: rgb(138, 159, 229); }
-        my-left-side-middle-bg {
-            bottom: 55%;
-            transform: scale(0.4);
-        }
-    }
-    @media (max-width: 240px) {
-        html > body { background-color: rgb(109, 106, 178); }
-        my-left-side-middle-bg {
-            bottom: 55%;
-            transform: scale(0.25);
-        }
-    }
-}
 
-// Landscape
-// @media (orientation: landscape) {
-//     @media (max-width: 926px) {
-//         my-left-side-middle-bg {
-//             bottom: 50%;
-//             transform: scale(0.6);
-//         }
-//     }
-//     @media (max-width: 568px) {
-//         my-left-side-middle-bg {
-//             bottom: 55%;
-//             transform: scale(0.6);
-//         }
-//     }
+    // Landscape
+    @media (orientation: landscape) {
+        @media (max-width: 926px) {
+            my-left-side-middle-bg {
+                bottom: 50%;
+                transform: scale(0.6);
+            }
+        }
+        @media (max-width: 568px) {
+            my-left-side-middle-bg {
+                bottom: 55%;
+                transform: scale(0.6);
+            }
+        }
+    }
+
+    main-section {
+        padding: $largeSpace 0;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        // justify-content: center;
+    
+        page-linkbox {
+            align-items: center;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            grid-template-areas: "boxlayout";
+            justify-items: center;
+
+            &> a {
+                align-items: center;
+                display: grid;
+                grid-area: boxlayout;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr;
+                grid-template-areas: "linkcontent";
+                justify-items: center;
+                margin-bottom: $smallSpace;
+                text-decoration: none;
+                width: 60vw;
+        
+                &> img {
+                    width: 100%;
+                }
+        
+                &> img, span {
+                    grid-area: linkcontent;
+                }
+        
+                &> .button-image {
+                    border-radius: 50%;
+                    width: 88%;
+                }
+        
+                &> .circle-border {
+                    width: 100%;
+                }
+            }
+
+            &> span {
+                font-size: $largeFont;
+                grid-area: boxlayout;
+                line-height: 1.2;
+                text-align: center;
+    
+                &> strong {
+                    .first-word::after {
+                        content: "\a";
+                        white-space: pre;
+                    }
+                    text-shadow: 0 0.2rem 0.2rem white,
+                        0.2rem 0 0.2rem white,
+                        -0.2rem 0 0.2rem white,
+                        0 -0.2rem 0.2rem white;
+                }
+            }
+        }
+    }
 // }
