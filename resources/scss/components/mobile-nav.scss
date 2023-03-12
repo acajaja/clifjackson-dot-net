@@ -1,12 +1,28 @@
 // @media (pointer: coarse) {
+    @keyframes navanime {
+        from {
+            left: -100%;
+        }
+        to {
+            left: 0;
+        }
+    }
+
+    .animate {
+        animation: navanime 0.35s ease-in-out forwards;
+    }
+
     #main-nav {
-        background-color: $mainBgColor;
-        display: block;
+        align-items: start;
+        background-color: rgba(255, 255, 255, 0.9);
+        display: grid;
+        grid-template-areas: "menu closebtn";
+        grid-template-columns: 1fr 1fr;
         height: 100vh;
         overflow-y: auto;
         position: fixed;
         top: $header-height + 0.1rem;
-        left: 0;
+        left: -100%;
         width: 100vw;
 
         ul#nav-list {
@@ -23,8 +39,18 @@
                     text-decoration: none;
                 }
 
-                font-size: $mediumFont;
+                font-size: $mediumSmallFont;
             }
+        }
+
+        &> button {
+            color: black;
+            font-size: $xlFont;
+            background: transparent;
+            border: none;
+            grid-area: closebtn;
+            justify-self: end;
+            padding: 0 $medSpace 0 0;
         }
     }
 // }

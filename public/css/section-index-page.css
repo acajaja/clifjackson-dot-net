@@ -4075,49 +4075,99 @@ my-floating-cloud {
     right: -9.4rem;
   }
 }
+@keyframes navanime {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0;
+  }
+}
+.animate {
+  animation: navanime 0.35s ease-in-out forwards;
+}
+
 #main-nav {
-  background-color: #fdfdfd;
-  display: block;
+  align-items: start;
+  background-color: rgba(255, 255, 255, 0.9);
+  display: grid;
+  grid-template-areas: "menu closebtn";
+  grid-template-columns: 1fr 1fr;
   height: 100vh;
   overflow-y: auto;
   position: fixed;
   top: 4.1rem;
-  left: 0;
+  left: -100%;
   width: 100vw;
 }
 #main-nav ul#nav-list {
   margin: 0 0 10rem;
+  padding: 0 0 0 1rem;
 }
 #main-nav ul {
   list-style-type: none;
   margin: 0;
 }
 #main-nav ul li {
-  font-size: 2.6rem;
+  font-size: 1.8rem;
 }
 #main-nav ul li a {
   text-decoration: none;
 }
+#main-nav > button {
+  color: black;
+  font-size: 5rem;
+  background: transparent;
+  border: none;
+  grid-area: closebtn;
+  justify-self: end;
+  padding: 0 2rem 0 0;
+}
 
 header {
+  align-items: center;
   background: white url("/media/images/both-circles-45x35.png") no-repeat 1rem center;
   border-bottom: 0.1rem solid #333;
   box-shadow: 0 0 0.4rem #ccc;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   height: 4rem;
+  justify-content: space-between;
   left: 0;
   position: fixed;
   top: 0;
   width: 100%;
 }
-
-header-textbox {
+header header-textbox {
   display: block;
   height: 4rem;
   padding: 0 0 0 6rem;
 }
-header-textbox > a {
+header header-textbox > a {
   font-size: 1.8rem;
   line-height: 4rem;
+}
+header #burger-button {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  height: 2rem;
+  justify-content: space-between;
+  margin: 0 1rem 0 0;
+  padding: 0;
+  width: 3.5rem;
+}
+header #burger-button > div {
+  background-color: black;
+  height: 0.3rem;
+  width: 100%;
+}
+
+body > my-top-right-corner-bg {
+  top: 4rem;
 }
 
 main-section {

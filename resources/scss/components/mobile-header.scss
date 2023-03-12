@@ -1,20 +1,44 @@
 header {
+    align-items: center;
     background: white url($smallCircles) no-repeat 1rem center;
     border-bottom: 0.1rem solid $homePageLinkColor;
     box-shadow: 0 0 0.4rem #ccc;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
     height: $header-height;
+    justify-content: space-between;
     left: 0;
     position: fixed;
     top: 0;
     width: 100%;
-}
-header-textbox {
-    display: block;
-    height: $header-height;
-    padding: 0 0 0 6rem;
 
-    &>a {
-        font-size: $mediumSmallFont;
-        line-height: $header-height;
+    header-textbox {
+        display: block;
+        height: $header-height;
+        padding: 0 0 0 6rem;
+    
+        &>a {
+            font-size: $mediumSmallFont;
+            line-height: $header-height;
+        }
+    }
+    #burger-button {
+        background-color: transparent;
+        border: none;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        height: 2rem;
+        justify-content: space-between;
+        margin: 0 1rem 0 0;
+        padding: 0;
+        width: $header-height - 0.5rem;
+
+        &> div {
+            background-color: black;
+            height: 0.3rem;
+            width: 100%;
+        }
     }
 }

@@ -1,4 +1,8 @@
 // @media (pointer: coarse) {
+    body > my-top-right-corner-bg {
+        top: $header-height;
+    }
+
     main-section {
         padding: $header-height 0 $largeSpace;
         display: flex;
@@ -20,17 +24,17 @@
             justify-items: center;
             margin-bottom: $smallSpace;
             text-decoration: none;
-    
+
             &> img {
                 width: 100%;
                 grid-area: linkcontent;
             }
-    
+
             &> .button-image {
                 border-radius: 50%;
                 width: 88%;
             }
-    
+
             &> .circle-border {
                 width: 100%;
             }
@@ -90,7 +94,7 @@
                 grid-area: boxlayout;
                 line-height: 1.2;
                 text-align: center;
-    
+
                 &> strong {
                     .first-word::after {
                         content: "\a";

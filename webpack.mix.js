@@ -14,6 +14,7 @@ const mix = require('laravel-mix');
 mix.js('resources/js/scrapbook.js', 'public/js')
     .js('resources/js/audio.js', 'public/js')
     .js('resources/js/sk8.js', 'public/js')
+    .js('resources/js/mobile-nav.js', 'public/js')
     .sass('resources/scss/home.scss', 'public/css')
     .sass('resources/scss/audio-page.scss', 'public/css')
     .sass('resources/scss/section-index-page.scss', 'public/css')
