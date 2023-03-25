@@ -3954,10 +3954,12 @@ html {
   font-size: 62.5%;
   line-height: 1.5;
 }
-html body {
+
+body {
   background-color: #fdfdfd;
   caret-color: transparent;
   font-family: open_sansregular, helvetica, arial, sans-serif;
+  padding-top: 4rem;
 }
 
 a {
@@ -4003,26 +4005,10 @@ iframe {
   border: none;
 }
 
-#content-box {
+content-box {
   background-color: white;
-}
-
-my-clear {
-  clear: both;
   display: block;
-}
-
-.image-left-25 {
-  float: left;
-  margin: 0 2.5rem 2.5rem 0;
-}
-
-my-top-right-corner-bg {
-  background-position: right 4rem;
-}
-
-my-left-side-middle-bg {
-  transform-origin: left bottom;
+  padding: 4rem 0 0;
 }
 
 /* VIDEO IFRAMES
@@ -4045,28 +4031,20 @@ my-left-side-middle-bg {
   height: 100%;
 }
 
-my-left-side-middle-bg {
+my-clouds {
+  background-image: url("http://me.local/media/images/rainbow_top-right-BW-142x80.png"), url("http://me.local/media/images/rainbow_corner-left-BW-340x137.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position: top 4rem right, bottom 5rem left;
+  background-size: 30%, 50%;
+  display: block;
+  height: 100%;
   left: 0;
   position: fixed;
-}
-
-my-top-right-corner-bg {
-  right: 0;
-  position: fixed;
   top: 0;
+  width: 100%;
 }
 
 /* Cloud Animation & decorations */
-my-floating-cloud {
-  animation: cloud1 130s infinite both cubic-bezier(0.54, 0.3, 0.72, 0.68);
-  height: 5rem;
-  right: 100%;
-  position: fixed;
-  top: 30%;
-  width: 9.4rem;
-  -webkit-animation: cloud1 130s infinite both cubic-bezier(0.54, 0.3, 0.72, 0.68);
-}
-
 @keyframes cloud1 {
   0% {
     right: 100%;
@@ -4075,171 +4053,275 @@ my-floating-cloud {
     right: -9.4rem;
   }
 }
-@keyframes navanime {
-  from {
-    left: -100%;
-  }
-  to {
-    left: 0;
-  }
-}
-.animate {
-  animation: navanime 0.35s ease-in-out forwards;
-}
-
-#main-nav {
-  align-items: start;
-  background-color: rgba(255, 255, 255, 0.9);
-  display: grid;
-  grid-template-areas: "menu closebtn";
-  grid-template-columns: 1fr 1fr;
-  height: 100vh;
-  overflow-y: auto;
-  position: fixed;
-  top: 4.1rem;
-  left: -100%;
-  width: 100vw;
-}
-#main-nav ul#nav-list {
-  margin: 0 0 10rem;
-  padding: 0 0 0 1rem;
-}
-#main-nav ul {
-  list-style-type: none;
-  margin: 0;
-}
-#main-nav ul li {
-  font-size: 1.8rem;
-}
-#main-nav ul li a {
-  text-decoration: none;
-}
-#main-nav > button {
-  color: black;
-  font-size: 5rem;
-  background: transparent;
-  border: none;
-  grid-area: closebtn;
-  justify-self: end;
-  padding: 0 2rem 0 0;
-}
-
-header {
-  align-items: center;
-  background: white url("/media/images/both-circles-45x35.png") no-repeat 1rem center;
-  border-bottom: 0.1rem solid #333;
-  box-shadow: 0 0 0.4rem #ccc;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  height: 4rem;
-  justify-content: space-between;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-header header-textbox {
+my-floating-cloud {
+  animation: cloud1 130s infinite both cubic-bezier(0.54, 0.3, 0.72, 0.68);
+  background: center/cover no-repeat url("http://me.local/media/images/floating-cloud-BW-94x50.png");
   display: block;
-  height: 4rem;
-  padding: 0 0 0 6rem;
+  height: 5rem;
+  right: 100%;
+  position: fixed;
+  top: 30%;
+  width: 9.4rem;
 }
-header header-textbox > a {
-  font-size: 1.8rem;
-  line-height: 4rem;
+
+my-left-side-middle-bg {
+  display: block;
+  transform-origin: left bottom;
 }
-header #burger-button {
+
+@keyframes burger-close-anime-1 {
+  to {
+    transform: translateY(0.85rem) rotate(45deg);
+  }
+}
+@keyframes burger-close-anime-3 {
+  to {
+    transform: translateY(-0.85rem) rotate(-45deg);
+  }
+}
+#burger-button {
   background-color: transparent;
   border: none;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
+  grid-area: burgermenu;
   height: 2rem;
+  justify-self: end;
   justify-content: space-between;
   margin: 0 1rem 0 0;
   padding: 0;
-  width: 3.5rem;
+  width: 3rem;
 }
-header #burger-button > div {
+#burger-button > div {
   background-color: black;
   height: 0.3rem;
+  transform: rotate(0deg);
+  transform-origin: center;
+  width: 100%;
+}
+#burger-button > div:first-child {
+  transform: translateY(0);
+}
+#burger-button > div:nth-child(2) {
+  visibility: visible;
+}
+#burger-button > div:nth-child(3) {
+  transform: translateY(0);
+}
+
+#burger-button.open > div:first-child {
+  animation: burger-close-anime-1 0.5s forwards;
+}
+#burger-button.open > div:nth-child(2) {
+  visibility: hidden;
+}
+#burger-button.open > div:nth-child(3) {
+  animation: burger-close-anime-3 0.5s forwards;
+}
+
+#burger-button.closed > div:first-child {
+  animation: burger-close-anime-1 0.5s reverse;
+}
+#burger-button.closed > div:nth-child(2) {
+  visibility: visible;
+}
+#burger-button.closed > div:nth-child(3) {
+  animation: burger-close-anime-3 0.5s reverse;
+}
+
+header {
+  align-items: center;
+  background-color: white;
+  border-bottom: 0.1rem solid #333;
+  box-shadow: 0 0 0.4rem #ccc;
+  display: grid;
+  grid-template-areas: "homelink burgermenu";
+  grid-template-columns: 75% 25%;
+  grid-template-rows: 4rem;
+  height: 4rem;
+  left: 0;
+  position: fixed;
+  top: 0;
   width: 100%;
 }
 
-body > my-top-right-corner-bg {
-  top: 4rem;
+header-textbox {
+  display: block;
+  height: 4rem;
+}
+header-textbox > a {
+  background: url("http://me.local/media/images/both-circles-45x35.png") no-repeat 1rem center;
+  display: block;
+  font-size: 1.8rem;
+  grid-area: homelink;
+  line-height: 4rem;
+  padding-left: 6rem;
+  text-decoration: none;
 }
 
-main-section {
-  padding: 4rem 0 4rem;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  position: relative;
+header > nav {
+  height: 4rem;
 }
 
+@media (orientation: landscape) and (max-width: 1920px) {
+  .breadcrumbs {
+    font-size: 1.2rem;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  #burger-button {
+    display: none;
+  }
+
+  nav > ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+  }
+  nav > ul a {
+    text-decoration: none;
+    transition-property: all;
+    transition-duration: 0.35s;
+    white-space: pre;
+  }
+  nav > ul > li {
+    position: relative;
+  }
+  nav > ul li:hover .child-menu {
+    box-shadow: 0 3px 3px #D5D5D5, 3px 3px 3px #D5D5D5, -3px 3px 3px #D5D5D5;
+    opacity: 1;
+    right: 0;
+  }
+  nav > ul .child-menu {
+    background-color: white;
+    border-radius: 0 0 7px 7px;
+    margin: 0;
+    min-width: 145px;
+    opacity: 0;
+    padding: 0;
+    position: absolute;
+    right: 50000px;
+    top: 4rem;
+    transition-duration: 1s;
+    transition-property: opacity, box-shadow;
+  }
+  nav > ul .child-menu .child-link {
+    border-radius: 0 0 0.6rem 0.6rem;
+    display: block;
+    font-size: 1.2rem;
+    line-height: 28px;
+    padding: 0 7px;
+  }
+  nav > ul .top-level-link:link {
+    color: #333;
+    display: block;
+    font-size: 1.8rem;
+    line-height: 4rem;
+    padding: 0 12px;
+  }
+  nav > ul .top-level-link.active,
+nav > ul .child-link.active,
+nav > ul .top-level-link:active, nav > ul > li:hover > .top-level-link,
+nav > ul .child-link:hover {
+    background-color: #333;
+    color: white;
+  }
+}
+@media (orientation: portrait) and (min-width: 320px), (orientation: portrait) and (min-width: 480px) {
+  @keyframes navanime {
+    from {
+      left: -100%;
+    }
+    to {
+      left: 0;
+    }
+  }
+  .animate {
+    animation: navanime 0.25s ease-in-out forwards;
+  }
+
+  #main-nav {
+    align-items: start;
+    background-color: rgba(255, 255, 255, 0.98);
+    display: grid;
+    grid-template-areas: "menu closebtn";
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+    overflow-y: auto;
+    position: fixed;
+    top: 4.1rem;
+    left: -100%;
+    width: 100vw;
+  }
+  #main-nav ul#nav-list {
+    padding: 2rem 4rem 0;
+  }
+  #main-nav ul {
+    list-style-type: none;
+    margin: 0;
+  }
+  #main-nav ul li {
+    font-size: 1.8rem;
+  }
+  #main-nav ul li a {
+    text-decoration: none;
+  }
+}
 page-linkbox {
   display: grid;
   grid-template-rows: 1fr;
+  margin-bottom: 1rem;
 }
-page-linkbox > a {
+page-linkbox > a:first-child {
   align-items: center;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   grid-template-areas: "linkcontent";
   justify-items: center;
-  margin-bottom: 1rem;
   text-decoration: none;
 }
-page-linkbox > a > img {
+page-linkbox > a:first-child > img {
   width: 100%;
   grid-area: linkcontent;
 }
-page-linkbox > a > .button-image {
+page-linkbox > a:first-child > .button-image {
   border-radius: 50%;
   width: 88%;
 }
-page-linkbox > a > .circle-border {
+page-linkbox > a:first-child > .circle-border {
   width: 100%;
 }
-page-linkbox > span > strong {
-  text-shadow: 0 0.2rem 0.2rem white, 0.2rem 0 0.2rem white, -0.2rem 0 0.2rem white, 0 -0.2rem 0.2rem white;
+page-linkbox > a:nth-child(2) {
+  text-decoration: none;
+}
+page-linkbox > a:nth-child(2) > strong {
+  text-shadow: 0rem 0.3rem 0.3rem white, 0 -0.3rem 0.3rem white, 0.3rem 0 0.3rem white, -0.3rem 0 0.3rem white;
 }
 
-@media (orientation: portrait) and (max-width: 640px) {
-  html > body {
-    background-color: rgb(90, 248, 172);
-  }
-
-  my-left-side-middle-bg {
-    bottom: 3%;
-    transform: scale(0.6);
-  }
-}
-@media (orientation: portrait) and (max-width: 320px) {
-  html > body {
-    background-color: rgb(138, 159, 229);
-  }
-
-  my-left-side-middle-bg {
-    bottom: 3%;
-    transform: scale(0.4);
-  }
-}
-@media (orientation: portrait) and (max-width: 240px) {
-  html > body {
-    background-color: rgb(24, 18, 139);
-  }
-
-  my-left-side-middle-bg {
-    bottom: 3%;
-    transform: scale(0.25);
-  }
-}
-@media (orientation: portrait) {
-  main-section {
+@media (orientation: landscape) {
+  page-linkbox {
     align-items: center;
+    grid-template-columns: 49% 2% 49%;
+    grid-template-areas: "images . text";
+  }
+  page-linkbox > a:first-child {
+    grid-area: images;
+    justify-self: end;
+    width: inherit;
+  }
+  page-linkbox > a:nth-child(2) {
+    font-size: 5rem;
+    grid-area: text;
+    line-height: 1;
+    text-align: left;
   }
 }
 @media (orientation: portrait) {
@@ -4248,56 +4330,75 @@ page-linkbox > span > strong {
     grid-template-columns: 1fr;
     grid-template-areas: "boxlayout";
     justify-items: center;
+    width: 85%;
   }
-  page-linkbox > a {
+  page-linkbox > a:first-child {
     grid-area: boxlayout;
-    width: 60vw;
+    width: inherit;
   }
-  page-linkbox > span {
-    font-size: 3.4rem;
+  page-linkbox > a:nth-child(2) {
+    font-size: 4.8rem;
     grid-area: boxlayout;
     line-height: 1.2;
     text-align: center;
   }
-  page-linkbox > span > strong .first-word::after {
+  page-linkbox > a:nth-child(2) > strong .first-word::after {
     content: "\a";
     white-space: pre;
   }
 }
-@media (orientation: landscape) and (max-width: 926px) {
-  my-left-side-middle-bg {
-    bottom: 20%;
-    transform: scale(1);
+footer {
+  box-sizing: border-box;
+  font-size: 12px;
+  height: 250px;
+  padding: 10px 25px 25px;
+  position: relative;
+  width: 100%;
+}
+footer > nav {
+  margin-bottom: 25px;
+}
+footer > nav > a {
+  display: block;
+  float: left;
+  padding: 5px 7px;
+}
+footer > nav > a:link, footer > nav > a:visited {
+  color: #777;
+}
+footer > nav > a.active, footer > nav > a:active, footer > nav > a:hover {
+  color: #000;
+}
+
+my-top-right-corner-bg {
+  top: 4rem;
+}
+
+main-section {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  position: relative;
+}
+
+@media (orientation: portrait) and (min-width: 162px) {
+  body {
+    background-color: green;
   }
 }
-@media (orientation: landscape) and (max-width: 568px) {
-  my-left-side-middle-bg {
-    bottom: 20%;
-    transform: scale(1);
+@media (orientation: portrait) and (min-width: 320px) and (max-width: 428px) {
+  body {
+    background-color: blue;
   }
 }
-@media (orientation: landscape) {
+@media (orientation: portrait) and (min-width: 768px) and (max-width: 884px) {
+  body {
+    background-color: purple;
+  }
+}
+@media (orientation: portrait) {
   main-section {
-    align-items: flex-start;
-  }
-}
-@media (orientation: landscape) {
-  page-linkbox {
     align-items: center;
-    grid-template-columns: 48vw 4vw 48vw;
-    grid-template-areas: "images . text";
-    padding: 0 17rem;
-  }
-  page-linkbox > a {
-    grid-area: images;
-    justify-self: end;
-    width: 50vw;
-  }
-  page-linkbox > span {
-    font-size: 5rem;
-    grid-area: text;
-    line-height: 1;
-    text-align: left;
   }
 }
 

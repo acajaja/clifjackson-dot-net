@@ -11,7 +11,7 @@
 <script src="{{ mix('js/mobile-nav.js') }}" type="text/javascript"></script>
 </head>
 
-<body>
+<body class="{{ $userAgent }}">
 
     <span id="page-top"></span>
 
@@ -21,11 +21,11 @@
         <p>clifjackson.net</p>
     </my-name> -->
 
-    <div id="content-box">
+    <content-box>
         <main-section>
             @yield('content')
         </main-section>
-    </div>
+    </content-box>
 
     @include('components.footer')
 

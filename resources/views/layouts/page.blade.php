@@ -20,7 +20,7 @@
 
     @include('components.clouds')
 
-    <div id="content-box">
+    <content-box>
         <main-section>
             <div></div>
             <div>
@@ -28,7 +28,7 @@
             </div>
             <div></div>
         </main-section>
-    </div>
+    </content-box>
 
     @include('components.footer')
 

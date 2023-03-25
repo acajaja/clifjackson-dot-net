@@ -13,12 +13,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+$userAgent = (
+    Agent::isDesktop() ? 'desktop' :
+        (
+            Agent::isTablet() && !Agent::isMobile() ? 'tablet' :
+                (
+                    Agent::isMobile() && !Agent::isTablet() ? 'mobile' : ''
+                )
+        )
+);
+
 Route::view('/', 'pages.home')
     ->name('home');
 
 Route::prefix('web')
-    ->group(function() {
-        Route::view('/', 'pages.web.index')
+    ->group(function() use ($userAgent) {
+        Route::view('/', 'pages.web.index', ['userAgent' => $userAgent])
             ->name('web-index');
         Route::view('/work-samples', 'pages.web.work-samples')
             ->name('work-samples-index');
@@ -34,11 +44,10 @@ Route::prefix('web')
             });
     });
 
-Route::view('/music', 'pages.music.index')
-    ->name('music-index');
-
 Route::prefix('music')
-    ->group(function() {
+    ->group(function() use ($userAgent) {
+        Route::view('/', 'pages.music.index', ['userAgent' => $userAgent])
+            ->name('music-index');
         Route::view('/discography', 'pages.music.complete-discography')
             ->name('discography');
         Route::view('/audio', 'pages.music.audio')
@@ -53,5 +62,5 @@ Route::prefix('music')
             ->name('player-producer');
     });
 
-Route::view('/in-between', 'pages.in-between.index')
+Route::view('/in-between', 'pages.in-between.index', ['userAgent' => $userAgent])
     ->name('in-between');

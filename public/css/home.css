@@ -4185,7 +4185,7 @@ my-rings-links my-inbetween a {
 
   my-rings-links {
     margin-bottom: 10rem;
-    transform: scale(0.45);
+    transform: scale(0.52);
   }
 }
 @media (orientation: portrait) and (max-width: 640px) and (orientation: portrait) and (max-width: 320px) {
@@ -4309,7 +4309,7 @@ my-rings-links my-circle-B a {
 
   my-rings-links {
     margin-bottom: 10rem;
-    transform: scale(0.45);
+    transform: scale(0.52);
   }
 }
 @media (orientation: landscape) and (max-width: 926px) and (orientation: portrait) and (max-width: 320px) {

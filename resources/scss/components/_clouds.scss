@@ -1,0 +1,40 @@
+@use 'settings';
+
+my-clouds {
+    background-image: url("#{settings.$cdn}/images/rainbow_top-right-BW-142x80.png"),
+        url("#{settings.$cdn}/images/rainbow_corner-left-BW-340x137.png");
+    background-repeat: no-repeat, no-repeat;
+    background-position: top 4rem right, bottom 5rem left;
+    background-size: 30%, 50%;
+    display: block;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+/* Cloud Animation & decorations */
+@keyframes cloud1 {
+    0% {
+      right: 100%;
+    }
+    100% {
+      right: settings.$floaterWidth * -1;
+    }
+}
+my-floating-cloud {
+    animation: cloud1 settings.$cloud-animation-dur infinite both cubic-bezier(settings.$easing);
+    background: center/cover no-repeat url("#{settings.$cdn}/images/floating-cloud-BW-94x50.png");
+    display: block;
+    height: settings.$floaterHeight;
+    right: 100%;
+    position: fixed;
+    top: 30%;
+    width: settings.$floaterWidth;
+}
+
+my-left-side-middle-bg {
+  display: block;
+  transform-origin: left bottom;
+}

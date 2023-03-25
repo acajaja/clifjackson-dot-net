@@ -1,10 +1,72 @@
-@import './components/base.scss';
-@import './components/backgrounds.scss';
-@import './components/mobile-nav.scss';
-// @import './components/main-nav.scss';
-@import './components/mobile-header.scss';
-@import './components/mobile-footer.scss';
-@import './components/mobile-section-index.scss';
-// @import './components/desktop-header.scss';
-// @import './components/desktop-footer.scss';
-// @import './components/desktop-section-index.scss';
+@use './components/settings' with (
+    $cdn: $myCdn
+);
+@use './components/base';
+@use './components/clouds';
+@use './components/header';
+@use './components/main-nav';
+@use './components/page-links';
+@use './components/footer';
+
+// All
+my-top-right-corner-bg {
+    top: settings.$header-height;
+}
+
+main-section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    position: relative;
+}
+
+// @media (orientation: landscape) {
+//     // Mobile
+//     @media (min-width: 560px) {// and (max-width: 1024px) {
+//         body {
+//             background-color: red;
+//         }
+//     }
+
+//     @media (min-width: 1024px) {// and (max-width: 1024px) {
+//         body {
+//             background-color: bisque;
+//         }
+//     }
+
+//     // Desktop
+//     @media (max-width: 1920px) {
+//         body {
+//             background-color: orange;
+//         }
+//     }
+
+//     main-section {
+//         align-items: flex-start;
+//     }
+// }
+
+@media (orientation: portrait) {
+    // Mobile
+    @media (min-width: 162px) {
+        body {
+            background-color: green;
+        }
+    }
+
+    @media (min-width: 320px) and (max-width: 428px) {
+        body {
+            background-color: blue;
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 884px) {
+        body {
+            background-color: purple;
+        }
+    }
+
+    main-section {
+        align-items: center;
+    }
+}

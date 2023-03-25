@@ -1,0 +1,92 @@
+@use 'settings';
+
+page-linkbox {
+    display: grid;
+    grid-template-rows: 1fr;
+    margin-bottom: settings.$smallSpace;
+
+    &> a:first-child {
+        align-items: center;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "linkcontent";
+        justify-items: center;
+        text-decoration: none;
+
+        &> img {
+            width: 100%;
+            grid-area: linkcontent;
+        }
+
+        &> .button-image {
+            border-radius: 50%;
+            width: 88%;
+        }
+
+        &> .circle-border {
+            width: 100%;
+        }
+    }
+
+    &> a:nth-child(2) {
+        text-decoration: none;
+
+        &> strong {
+            text-shadow: 0rem 0.3rem 0.3rem white,
+                0 -0.3rem 0.3rem white,
+                0.3rem 0 0.3rem white,
+                -0.3rem 0 0.3rem white;
+        }
+    }
+}
+
+@media (orientation: landscape) {
+    page-linkbox {
+        align-items: center;
+        grid-template-columns: 49% 2% 49%;
+        grid-template-areas: "images . text";
+
+        &> a:first-child {
+            grid-area: images;
+            justify-self: end;
+            width: inherit;
+        }
+
+        &> a:nth-child(2) {
+            font-size: settings.$xlFont;
+            grid-area: text;
+            line-height: 1;
+            text-align: left;
+        }
+    }
+}
+
+@media (orientation: portrait) {
+    page-linkbox {
+        align-items: center;
+        grid-template-columns: 1fr;
+        grid-template-areas: "boxlayout";
+        justify-items: center;
+        width: 85%;
+
+        &> a:first-child {
+            grid-area: boxlayout;
+            width: inherit;
+        }
+
+        &> a:nth-child(2) {
+            font-size: settings.$xlFont - 0.2rem;
+            grid-area: boxlayout;
+            line-height: 1.2;
+            text-align: center;
+
+            &> strong {
+                .first-word::after {
+                    content: "\a";
+                    white-space: pre;
+                }
+            }
+        }
+    }
+}

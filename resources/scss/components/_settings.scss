@@ -2,6 +2,8 @@ $general-fonts: open_sansregular,helvetica,arial,sans-serif;
 $header-fonts: open_sanssemibold,sans-serif;
 $header-height: 4rem;
 $easing: 0.54, 0.3, 0.72, 0.68;
+$cloud-animation-dur: 130s;
+$cdn: '' !default;
 
 // Colors
 $mainBgColor: #fdfdfd;
@@ -11,6 +13,9 @@ $homePageNameColor: #a0a0a0;
 $contentEntryBgColor: rgba(255, 255, 255, 0.5);
 $white-circle-gradient-A: #f7f0e3;
 $white-circle-gradient-B: #efd7b6;
+$header-shadow: #D5D5D5;
+$visited-links: #777;
+$active-hover-links: #000;
 
 // Shadows
 $boxShadow: #ccc;
@@ -24,7 +29,6 @@ $rainbowLeftSide: '/media/images/rainbow_corner-left-BW-340x137.png';
 $rainbowTopR: '/media/images/rainbow_top-right-BW-142x80.png';
 $circleA: '/media/images/circle-1b.png';
 $circleB: '/media/images/circle-2.png';
-$smallCircles: '/media/images/both-circles-45x35.png';
 
 // $rainbowLeftSide: '/me.local/media/images/rainbow_corner-left-BW-340x137.png';
 // $rainbowTopR: '/me.local/media/images/rainbow_top-right-BW-142x80.png';

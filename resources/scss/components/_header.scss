@@ -1,0 +1,33 @@
+@use 'settings';
+@use 'burger-menu';
+
+header {
+    align-items: center;
+    background-color: white;
+    border-bottom: 0.1rem solid settings.$homePageLinkColor;
+    box-shadow: 0 0 0.4rem #ccc;
+    display: grid;
+    grid-template-areas: "homelink burgermenu";
+    grid-template-columns: 75% 25%;
+    grid-template-rows: settings.$header-height;
+    height: settings.$header-height;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+header-textbox {
+    display: block;
+    height: settings.$header-height;
+
+    &>a {
+        background: url("#{settings.$cdn}/images/both-circles-45x35.png") no-repeat 1rem center;
+        display: block;
+        font-size: settings.$mediumSmallFont;
+        grid-area: homelink;
+        line-height: settings.$header-height;
+        padding-left: 6rem;
+        text-decoration: none;
+    }
+}

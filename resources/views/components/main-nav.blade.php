@@ -16,5 +16,4 @@
         </li>
 @endforeach
     </ul>
-    <button id="close-nav-btn">x</button>
 </nav>

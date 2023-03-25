@@ -4,31 +4,34 @@ var __webpack_exports__ = {};
   !*** ./resources/js/mobile-nav.js ***!
   \************************************/
 (function () {
-  var mediaQuery = window.matchMedia('(pointer: coarse)');
+  var mediaQuery;
+  var burgerButton;
   var mainNav;
 
-  var handleTouchStart = function handleTouchStart(e) {
+  var handleMenu = function handleMenu(e) {
     e.preventDefault();
-    mainNav.classList.toggle('animate');
-  };
 
-  var handleClose = function handleClose(e) {
-    e.preventDefault();
-    mainNav.classList.remove('animate');
+    if (mainNav.classList.contains('animate')) {
+      mainNav.classList.remove('animate');
+      burgerButton.classList.remove('open'); // burgerButton.classList.add('closed')
+    } else {
+      mainNav.classList.add('animate'); // burgerButton.classList.remove('closed')
+
+      burgerButton.classList.add('open');
+    }
   };
 
   var connectBurger = function connectBurger() {
-    var button = document.getElementById('burger-button');
-    button.addEventListener('click', handleTouchStart);
-    button.addEventListener('touchstart', handleTouchStart);
-    var closeBtn = document.getElementById('close-nav-btn');
-    closeBtn.addEventListener('click', handleClose);
-    closeBtn.addEventListener('touchstart', handleClose);
+    var eventType = mediaQuery.matches ? 'touchstart' : 'click';
+    console.log("ET: ".concat(eventType));
+    burgerButton.addEventListener(eventType, handleMenu);
   };
 
   if (true) {
     //mediaQuery.matches) {
     document.addEventListener('DOMContentLoaded', function (e) {
+      mediaQuery = window.matchMedia('(pointer: coarse)');
+      burgerButton = document.getElementById('burger-button');
       mainNav = document.getElementById('main-nav');
       connectBurger();
     });

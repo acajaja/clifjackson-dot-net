@@ -1,26 +1,33 @@
 (() => {
-    const mediaQuery = window.matchMedia('(pointer: coarse)')
+    let mediaQuery
+    let burgerButton
     let mainNav
-    const handleTouchStart = (e) => {
-        e.preventDefault();
-        mainNav.classList.toggle('animate')
-    }
-    const handleClose = (e) => {
-        e.preventDefault();
-        mainNav.classList.remove('animate')
-    }
-    const connectBurger = () => {
-        const button = document.getElementById('burger-button')
-        button.addEventListener('click', handleTouchStart)
-        button.addEventListener('touchstart', handleTouchStart)
 
-        const closeBtn = document.getElementById('close-nav-btn')
-        closeBtn.addEventListener('click', handleClose)
-        closeBtn.addEventListener('touchstart', handleClose)
+    const handleMenu = (e) => {
+        e.preventDefault();
+
+        if (mainNav.classList.contains('animate')) {
+            mainNav.classList.remove('animate')
+            burgerButton.classList.remove('open')
+            // burgerButton.classList.add('closed')
+        }
+        else {
+            mainNav.classList.add('animate')
+            // burgerButton.classList.remove('closed')
+            burgerButton.classList.add('open')
+        }
+    }
+
+    const connectBurger = () => {
+        const eventType = mediaQuery.matches ? 'touchstart' : 'click'
+        console.log(`ET: ${eventType}`)
+        burgerButton.addEventListener(eventType, handleMenu)
     }
 
     if (true) {//mediaQuery.matches) {
         document.addEventListener('DOMContentLoaded', (e) => {
+            mediaQuery = window.matchMedia('(pointer: coarse)')
+            burgerButton = document.getElementById('burger-button')
             mainNav = document.getElementById('main-nav')
             connectBurger()
         })    

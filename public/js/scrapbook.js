@@ -3224,58 +3224,10 @@ var Thumbnail = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./resources/scss/home.scss":
-/*!**********************************!*\
-  !*** ./resources/scss/home.scss ***!
-  \**********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
-/***/ "./resources/scss/audio-page.scss":
-/*!****************************************!*\
-  !*** ./resources/scss/audio-page.scss ***!
-  \****************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
 /***/ "./resources/scss/section-index-page.scss":
 /*!************************************************!*\
   !*** ./resources/scss/section-index-page.scss ***!
   \************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
-/***/ "./resources/scss/gallery.scss":
-/*!*************************************!*\
-  !*** ./resources/scss/gallery.scss ***!
-  \*************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
-/***/ "./resources/scss/general.scss":
-/*!*************************************!*\
-  !*** ./resources/scss/general.scss ***!
-  \*************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -3383,11 +3335,7 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
 /******/ 			"/js/scrapbook": 0,
-/******/ 			"css/general": 0,
-/******/ 			"css/gallery": 0,
-/******/ 			"css/section-index-page": 0,
-/******/ 			"css/audio-page": 0,
-/******/ 			"css/home": 0
+/******/ 			"css/section-index-page": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -3437,12 +3385,8 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["css/general","css/gallery","css/section-index-page","css/audio-page","css/home"], () => (__webpack_require__("./resources/js/scrapbook.js")))
-/******/ 	__webpack_require__.O(undefined, ["css/general","css/gallery","css/section-index-page","css/audio-page","css/home"], () => (__webpack_require__("./resources/scss/home.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/general","css/gallery","css/section-index-page","css/audio-page","css/home"], () => (__webpack_require__("./resources/scss/audio-page.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/general","css/gallery","css/section-index-page","css/audio-page","css/home"], () => (__webpack_require__("./resources/scss/section-index-page.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/general","css/gallery","css/section-index-page","css/audio-page","css/home"], () => (__webpack_require__("./resources/scss/gallery.scss")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/general","css/gallery","css/section-index-page","css/audio-page","css/home"], () => (__webpack_require__("./resources/scss/general.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/section-index-page"], () => (__webpack_require__("./resources/js/scrapbook.js")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/section-index-page"], () => (__webpack_require__("./resources/scss/section-index-page.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

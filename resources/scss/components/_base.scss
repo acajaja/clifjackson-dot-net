@@ -1,18 +1,18 @@
-@import 'settings';
-@import 'fonts';
-@import '../../css/normalize-8.0.1';
-@import '../../css/fontawesome.min';
-@import '../../css/fa-solid.min';
+@use 'fonts';
+@use 'settings';
+@use '../../css/normalize-8.0.1';
+@use '../../css/fontawesome.min';
+@use '../../css/fa-solid.min';
 
 html {
     font-size: 62.5%;
     line-height: 1.5;
-
-    body {
-        background-color: $mainBgColor;
-        caret-color: transparent;
-        font-family: $general-fonts;
-    }
+}
+body {
+    background-color: settings.$mainBgColor;
+    caret-color: transparent;
+    font-family: settings.$general-fonts;
+    padding-top: settings.$header-height;
 }
 a {
     color: inherit;
@@ -31,32 +31,34 @@ h1,h2,h3,h4,h5,h6,p {
 h1,h2,h3,h4,h5,h6,strong,
 .myh1,
 .myh2 {
-    font-family: $header-fonts;
+    font-family: settings.$header-fonts;
     letter-spacing: -0.1rem;
 }
 section {
     &> h1:first-child {
-        font-size: $largeFont;
+        font-size: settings.$largeFont;
     }
     &> h2:first-child {
-        font-size: $mediumLargeFont;
+        font-size: settings.$mediumLargeFont;
     }
 }
 blockquote {
-    color: $homePageLinkColor;
+    color: settings.$homePageLinkColor;
     font-style: italic;
     margin-left: 6vw;
     margin-right: 6vw;
 }
 code {
-	font-size: $mediumSmallFont;
+	font-size: settings.$mediumSmallFont;
 }
 iframe {
     border: none;
 }
 
-#content-box {
+content-box {
     background-color: white;
+    display: block;
+    padding: settings.$header-height 0 0;
 }
 
 // .page-wrap {
@@ -66,21 +68,18 @@ iframe {
 // 	transform: rotate(0deg);
 // }
 
-my-clear {
-    clear: both;
-    display: block;
-}
-.image-left-25 {
-    float: left;
-    margin: 0 2.5rem 2.5rem 0;
-}
+// my-clear {
+//     clear: both;
+//     display: block;
+// }
+// .image-left-25 {
+//     float: left;
+//     margin: 0 2.5rem 2.5rem 0;
+// }
 
-my-top-right-corner-bg {
-    background-position: right $header-height;
-}
-my-left-side-middle-bg {
-    transform-origin: left bottom;
-}
+// my-top-right-corner-bg {
+//     background-position: right settings.$header-height;
+// }
 
 /* VIDEO IFRAMES
 +------------------------------------------------------------------------------*/

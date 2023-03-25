@@ -1,0 +1,70 @@
+@use 'settings';
+
+@keyframes burger-close-anime-1 {
+    to {
+        transform: translateY(settings.$header-height/settings.$header-height - 0.15rem) rotate(45deg);
+    }
+}
+
+@keyframes burger-close-anime-3 {
+    to {
+        transform: translateY((settings.$header-height/settings.$header-height * -1) + 0.15rem) rotate(-45deg);
+    }
+}
+
+#burger-button {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    grid-area: burgermenu;
+    height: 2rem;
+    justify-self: end;
+    justify-content: space-between;
+    margin: 0 1rem 0 0;
+    padding: 0;
+    width: settings.$header-height - 1rem;
+
+    &> div {
+        background-color: black;
+        height: 0.3rem;
+        transform: rotate(0deg);
+        transform-origin: center;
+        width: 100%;
+    }
+
+    &> div:first-child {
+        transform: translateY(0);
+    }
+    &> div:nth-child(2) {
+        visibility: visible;
+    }
+    &> div:nth-child(3) {
+        transform: translateY(0);
+    }
+}
+
+#burger-button.open {
+    &> div:first-child {
+        animation: burger-close-anime-1 0.5s forwards;
+    }
+    &> div:nth-child(2) {
+        visibility: hidden;
+    }
+    &> div:nth-child(3) {
+        animation: burger-close-anime-3 0.5s forwards;
+    }
+}
+
+#burger-button.closed {
+    &> div:first-child {
+        animation: burger-close-anime-1 0.5s reverse;
+    }
+    &> div:nth-child(2) {
+        visibility: visible;
+    }
+    &> div:nth-child(3) {
+        animation: burger-close-anime-3 0.5s reverse;
+    }
+}
