@@ -8,19 +8,7 @@
 @use './components/page-links';
 @use './components/footer';
 
-// All
-my-top-right-corner-bg {
-    top: settings.$header-height;
-}
-
-main-section {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    position: relative;
-}
-
-// @media (orientation: landscape) {
+@media (orientation: landscape) {
 //     // Mobile
 //     @media (min-width: 560px) {// and (max-width: 1024px) {
 //         body {
@@ -41,32 +29,32 @@ main-section {
 //         }
 //     }
 
-//     main-section {
-//         align-items: flex-start;
-//     }
-// }
+    main-section[role="main"] {
+        align-items: flex-start;
+    }
+}
 
 @media (orientation: portrait) {
     // Mobile
-    @media (min-width: 162px) {
-        body {
-            background-color: green;
-        }
-    }
+    // @media (min-width: 162px) {
+    //     body {
+    //         background-color: green;
+    //     }
+    // }
 
-    @media (min-width: 320px) and (max-width: 428px) {
-        body {
-            background-color: blue;
-        }
-    }
+    // @media (min-width: 320px) and (max-width: 428px) {
+    //     body {
+    //         background-color: blue;
+    //     }
+    // }
 
-    @media (min-width: 768px) and (max-width: 884px) {
-        body {
-            background-color: purple;
-        }
-    }
+    // @media (min-width: 768px) and (max-width: 884px) {
+    //     body {
+    //         background-color: purple;
+    //     }
+    // }
 
-    main-section {
+    main-section[role="main"] {
         align-items: center;
     }
 }

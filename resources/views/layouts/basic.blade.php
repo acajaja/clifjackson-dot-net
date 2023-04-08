@@ -8,9 +8,10 @@
 @stack('styles')
 @stack('head-scripts')
 <!-- <script src="/js/dims.test.js" type="text/javascript"></script> -->
+<script src="{{ mix('js/mobile-nav.js') }}" type="text/javascript"></script>
 </head>
 
-<body>
+<body class="{{ $userAgent }}">
 
     @yield('content')
 

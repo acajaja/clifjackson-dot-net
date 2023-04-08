@@ -1,0 +1,136 @@
+@use './components/settings' with (
+    $cdn: $myCdn
+);
+@use './components/base';
+@use './components/clouds';
+@use './components/header';
+@use './components/main-nav';
+// @use './components/content-style-A';
+// @use './components/content-style-B';
+@use './components/footer';
+
+.clear {
+    clear: both;
+}
+
+content-box {
+    display: flex;
+    justify-content: center;
+}
+main-section {
+    &> h1:first-child {
+        font-size: settings.$largeFont;
+    }
+    &> p {
+        font-size: settings.$mediumSmallFont;
+        margin-bottom: settings.$smallSpace;
+    }
+
+    max-width: 57vw;
+
+    &> section {
+        background-color: settings.$contentEntryBgColor;
+        border-radius: settings.$medSpace;
+        box-shadow: 0 2rem 2rem -1rem settings.$boxShadow;
+    	display: block;
+        padding: settings.$medSpace;
+        margin-bottom: 7.5rem;
+
+        blockquote {
+            font-size: settings.$mediumSmallFont;
+        }
+        h2 {
+            font-size: settings.$mediumFont;
+            margin: 0 0 settings.$smallSpace;
+        }
+        h3 {
+            font-size: settings.$mediumSmallFont;
+            margin: 0 0 settings.$xSmallSpace;
+        }
+        img.wide {
+            width: 100%
+        }
+        p {
+            font-size: settings.$mediumSmallFont;
+            margin-bottom: settings.$smallSpace;
+        }
+        ul {
+            font-size: settings.$mediumSmallFont;
+            grid-area: mylist;
+            list-style-type: disc;
+            margin: 0 0 settings.$medSpace;
+            text-align: left;
+            padding: 0 0 0 1.6rem;
+        }
+    
+        .list-center {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            grid-template-rows: 1fr;
+            grid-template-areas: ". mylist .";
+        }
+    }
+}
+
+@media (orientation: landscape) {
+    @media (min-width: 480px) {
+        body {
+            background-color: rgb(211, 254, 126);
+        }
+        media-box-150 {
+            display: block;
+
+            &> img {
+                width: 100%;
+            }
+        }
+    }
+
+    @media (min-width: 881px) {
+        body {
+            background-color: rgb(254, 196, 126);
+        }
+        content-box {
+            padding-left: settings.$maxLargeSpace;
+            padding-right: settings.$maxLargeSpace;
+        }
+        media-box-150 {
+            float: left;
+            margin: 0 2.5rem 1.5rem 0;
+            min-width: 1%;
+        }
+    }
+}
+
+@media (orientation: portrait) {
+    media-box-150 {
+        display: block;
+    
+        &> img {
+            width: 100%;
+        }
+    }
+
+    // Mobile
+    @media (min-width: 162px) {
+        body {
+            background-color: green;
+        }
+    }
+
+    @media (min-width: 320px) {
+        body {
+            background-color: blue;
+        }
+    }
+
+    @media (min-width: 428px) and (max-width: 928px) {
+        body {
+            background-color: purple;
+        }
+    }
+
+    main-section[role="main"] {
+        align-items: center;
+    }
+}

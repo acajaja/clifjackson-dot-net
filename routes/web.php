@@ -30,16 +30,16 @@ Route::prefix('web')
     ->group(function() use ($userAgent) {
         Route::view('/', 'pages.web.index', ['userAgent' => $userAgent])
             ->name('web-index');
-        Route::view('/work-samples', 'pages.web.work-samples')
+        Route::view('/work-samples', 'pages.web.work-samples', ['userAgent' => $userAgent])
             ->name('work-samples-index');
-        Route::view('/geeking-out', 'pages.web.geeking-out')
+        Route::view('/geeking-out', 'pages.web.geeking-out', ['userAgent' => $userAgent])
             ->name('geeking-out');
 
         Route::prefix('work-samples')
-            ->group(function() {
-                Route::view('/canvas-app', 'pages.web.canvas-app')
+            ->group(function() use ($userAgent) {
+                Route::view('/canvas-app', 'pages.web.canvas-app', ['userAgent' => $userAgent])
                     ->name('canvas-app');
-                Route::view('/interactive-map', 'pages.web.interactive-map')
+                Route::view('/interactive-map', 'pages.web.interactive-map', ['userAgent' => $userAgent])
                     ->name('interactive-map');
             });
     });
@@ -48,17 +48,17 @@ Route::prefix('music')
     ->group(function() use ($userAgent) {
         Route::view('/', 'pages.music.index', ['userAgent' => $userAgent])
             ->name('music-index');
-        Route::view('/discography', 'pages.music.complete-discography')
+        Route::view('/discography', 'pages.music.complete-discography', ['userAgent' => $userAgent])
             ->name('discography');
-        Route::view('/audio', 'pages.music.audio')
+        Route::view('/audio', 'pages.music.audio', ['userAgent' => $userAgent])
             ->name('audio');
-        Route::view('/scrapbook', 'pages.music.scrapbook')
+        Route::view('/scrapbook', 'pages.music.scrapbook', ['userAgent' => $userAgent])
             ->name('scrapbook');
-        Route::view('/bass-player', 'pages.music.bass-player')
+        Route::view('/bass-player', 'pages.music.bass-player', ['userAgent' => $userAgent])
             ->name('bass-player');
-        Route::view('/producer', 'pages.music.producer')
+        Route::view('/producer', 'pages.music.producer', ['userAgent' => $userAgent])
             ->name('producer');
-        Route::view('/player-producer', 'pages.music.player-producer')
+        Route::view('/player-producer', 'pages.music.player-producer', ['userAgent' => $userAgent])
             ->name('player-producer');
     });
 

@@ -16,3 +16,5 @@ yarn-error.log
 /**/*.map
 /build/
 /public/mix-manifest.json
+public/css
+public/js

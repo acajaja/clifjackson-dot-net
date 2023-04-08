@@ -1,6 +1,6 @@
 
     <section class="content-entry-box-B">
-        <div class="media-box-150">
+        <media-box-150>
             <img src="{{ asset('images/discography/ZukCDCover_New.jpg') }}" alt="Zuk: An Evening in the Clouds">
             <div class="disco-downloads">
                 <p>
@@ -11,7 +11,7 @@
                     <a class="download-link" download href="{{ asset('audio/downloads/An_Evening_in_the_Clouds_mp3.zip') }}" title="An_Evening_in_the_Clouds_mp3.zip">Zuk Sky Bar Audio - mp3 Archive</a>
                 </p>
             </div>
-        </div>
+        </media-box-150>
         <div class="content-entry-info-box zuk-box">
             <h2>Zuk: An Evening in the Clouds</h2>
             <h3>October, 2005<br>CJ3 Music</h3>
@@ -21,7 +21,7 @@
             </p>
             <div class="thumbnail-gallery">
                 <a class="thumb-link" href="{{ asset('images/misc-press/Zuk_Demo_Rev-640.jpg') }}" title="Album review">
-                    <img alt="Review Scan" class="img-100" src="{{ asset('images/misc-press/Zuk_Demo_Rev-450w.jpg') }}">
+                    <img alt="Review Scan" class="wide" src="{{ asset('images/misc-press/Zuk_Demo_Rev-450w.jpg') }}">
                 </a>
             </div>
             <p><strong>Zuk</strong><br>Personnel:<br>Zuk - turntables</p>

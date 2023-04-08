@@ -1,10 +1,12 @@
+@use 'settings';
+
 /*
 	3 columns, 3 rows
 */
 .content-entry-box-A {
-    background-color: $contentEntryBgColor;
+    background-color: settings.$contentEntryBgColor;
     border-radius: 1rem;
-    box-shadow: 0 0 1rem $boxShadow;
+    box-shadow: 0 0 1rem settings.$boxShadow;
 	display: grid;
 	grid-template-columns: 3.5rem 1fr 3.5rem;
 	grid-template-rows: 3.5rem 1fr 3.5rem;
@@ -17,28 +19,28 @@
     }
 
 	blockquote {
-		font-size: $mediumSmallFont;
+		font-size: settings.$mediumSmallFont;
 	}
 	h1 {
-		font-size: $largeFont;
+		font-size: settings.$largeFont;
 	}
 	h2 {
-		font-size: $mediumFont;
-		margin: 0 0 $smallSpace;
+		font-size: settings.$mediumFont;
+		margin: 0 0 settings.$smallSpace;
 	}
 	h3 {
-		font-size: $mediumSmallFont;
-		margin: 0 0 $xSmallSpace;
+		font-size: settings.$mediumSmallFont;
+		margin: 0 0 settings.$xSmallSpace;
 	}
     p {
-		font-size: $mediumSmallFont;
-        margin-bottom: $smallSpace;
+		font-size: settings.$mediumSmallFont;
+        margin-bottom: settings.$smallSpace;
     }
 	ul {
-		font-size: $mediumSmallFont;
+		font-size: settings.$mediumSmallFont;
 		grid-area: mylist;
 		list-style-type: disc;
-		margin: 0 0 $medSpace;
+		margin: 0 0 settings.$medSpace;
 		text-align: left;
 		padding: 0 0 0 1.6rem;
 	}

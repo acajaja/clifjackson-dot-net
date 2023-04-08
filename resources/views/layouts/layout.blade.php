@@ -22,7 +22,7 @@
     </my-name> -->
 
     <content-box>
-        <main-section>
+        <main-section role="main">
             @yield('content')
         </main-section>
     </content-box>
